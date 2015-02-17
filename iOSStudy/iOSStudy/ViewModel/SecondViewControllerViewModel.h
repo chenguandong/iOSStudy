@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "NetWorkTools.h"
 #import "JsonTools.h"
-#import "BlogBean.h"
+#import "WebBean.h"
 typedef void (^modelSuccess)();
 typedef void (^modelError)();
 typedef void (^modelNetWorking)(BOOL isNetWorking);
@@ -21,5 +21,5 @@ typedef void (^modelNetWorking)(BOOL isNetWorking);
 
 - (NSInteger)getNumberOfRowsInSection;
 
--(BlogBean*)getBlogBean:(NSIndexPath *)indexPath;
+-(WebBean*)getBlogBean:(NSIndexPath *)indexPath;
 @end

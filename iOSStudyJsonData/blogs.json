@@ -52,7 +52,7 @@
   "url": "http://www.jianshu.com/users/b82d2721ba07/latest_articles",
   "rssUrl": "http://www.jianshu.com/users/b82d2721ba07/latest_articles",
   "date": "2015-01-30 17:08:03"
-<<<<<<< HEAD
+
   },
   {
   "name": "王轲",
@@ -71,7 +71,5 @@
   "url": "http://blog.txx.im/",
   "rssUrl": "http://blog.txx.im/atom.xml",
   "date": "2015-01-30 17:08:03"
-=======
->>>>>>> FETCH_HEAD
   }
   ]

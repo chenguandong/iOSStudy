@@ -95,7 +95,7 @@
     cell.detailTextLabel.text = [_viewModel getBlogBean:indexPath].subTitle;
     
     
-    [cell.imageView setImageWithURL:[NSURL URLWithString:[_viewModel getBlogBean:indexPath].image] placeholderImage:[UIImage imageNamed:@"SVWebViewControllerActivitySafari-iPad"]];
+    [cell.imageView setImageWithURL:[NSURL URLWithString:[_viewModel getBlogBean:indexPath].webImage] placeholderImage:[UIImage imageNamed:@"SVWebViewControllerActivitySafari-iPad"]];
     
     
     
@@ -105,7 +105,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
-    SVModalWebViewController *webViewController = [[SVModalWebViewController alloc] initWithAddress:[_viewModel getBlogBean:indexPath].url];
+    SVModalWebViewController *webViewController = [[SVModalWebViewController alloc] initWithAddress:[_viewModel getBlogBean:indexPath].webUrl];
     [self presentViewController:webViewController animated:NO completion:NULL];
 }
 

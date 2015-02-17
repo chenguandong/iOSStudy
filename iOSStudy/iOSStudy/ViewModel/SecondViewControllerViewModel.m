@@ -25,7 +25,7 @@
 
 
 
--(BlogBean*)getBlogBean:(NSIndexPath *)indexPath{
+-(WebBean*)getBlogBean:(NSIndexPath *)indexPath{
     
     return _array[indexPath.row];
 }
@@ -35,7 +35,7 @@
     
     
     //
-    [NetWorkTools postHttp:Address_blogs success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [NetWorkTools postHttp:Adress_webs success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         NSLog(@"JSON: %@", [operation responseString]);
         
@@ -44,10 +44,10 @@
         //将JSON数据和Model的属性进行绑定
         
         
-        NSArray *arr = [MTLJSONAdapter modelsOfClass:[BlogBean class] fromJSONArray:dic error:nil];
+        NSArray *arr = [MTLJSONAdapter modelsOfClass:[WebBean class] fromJSONArray:dic error:nil];
         
-        for (BlogBean *bean in arr) {
-            NSLog(@"%@",bean.image);
+        for (WebBean *bean in arr) {
+            NSLog(@"%@",bean.webImage);
         }
         
         _array = [arr copy];
