@@ -9,7 +9,7 @@
 #import "SVWebViewControllerActivityChrome.h"
 #import "SVWebViewControllerActivitySafari.h"
 #import "SVWebViewController.h"
-
+#import <SVProgressHUD.h>
 @interface SVWebViewController () <UIWebViewDelegate>
 
 @property (nonatomic, strong) UIBarButtonItem *backBarButtonItem;
@@ -61,6 +61,7 @@
 }
 
 - (id)initWithURL:(NSURL*)pageURL {
+    
     
     if(self = [super init]) {
         self.URL = pageURL;
@@ -235,21 +236,31 @@
 #pragma mark - UIWebViewDelegate
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
+    
+    [SVProgressHUD show];
+    
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     [self updateToolbarItems];
 }
 
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
+    
+    [SVProgressHUD dismiss];
+    
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     
     self.navigationItem.title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
     [self updateToolbarItems];
+    
+    
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     [self updateToolbarItems];
+    
+    [SVProgressHUD dismiss];
 }
 
 #pragma mark - Target actions
@@ -279,6 +290,7 @@
 }
 
 - (void)doneButtonClicked:(id)sender {
+    [SVProgressHUD dismiss];
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 

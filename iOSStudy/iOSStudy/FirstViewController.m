@@ -16,6 +16,7 @@
 #import "BlogDetailViewController.h"
 #import <SVWebViewController.h>
 #import <MJRefresh.h>
+
 @interface FirstViewController ()
 
 @end
@@ -108,9 +109,10 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    
+
     SVModalWebViewController *webViewController = [[SVModalWebViewController alloc] initWithAddress:[_viewModel getBlogBean:indexPath].url];
     [self presentViewController:webViewController animated:NO completion:NULL];
+ 
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
