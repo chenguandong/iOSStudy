@@ -39,24 +39,21 @@
             
             [_tableView reloadData];
             
-            if ([_tableView isHeaderRefreshing]) {
-                [_tableView headerEndRefreshing];
-            }
+             [self stopEndRefreshing];
             
         } modelDataErrors:^{
             
-            if ([_tableView isHeaderRefreshing]) {
-                [_tableView headerEndRefreshing];
-            }
+            [self stopEndRefreshing];
             
         } modelDataIsNetworking:^(BOOL isNetWorking) {
             
-            if ([_tableView isHeaderRefreshing]) {
-                [_tableView headerEndRefreshing];
-            }
+            [self stopEndRefreshing];
             
         }];
     }];
+    
+    
+    
     
     
     [self.tableView headerBeginRefreshing];
@@ -64,6 +61,14 @@
     
 }
 
+/**
+ *  停止UITableView刷新
+ */
+-(void)stopEndRefreshing{
+    if ([_tableView isHeaderRefreshing]) {
+        [_tableView headerEndRefreshing];
+    }
+}
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];

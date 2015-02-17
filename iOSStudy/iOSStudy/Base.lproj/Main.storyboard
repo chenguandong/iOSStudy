@@ -84,7 +84,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="C22-48-lZS">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="webCell" textLabel="M4f-kL-fAq" detailTextLabel="ztq-Gu-DHg" imageView="Wj3-Wv-pSc" style="IBUITableViewCellStyleSubtitle" id="YKa-B9-2ga">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WebCell" textLabel="M4f-kL-fAq" detailTextLabel="ztq-Gu-DHg" imageView="Wj3-Wv-pSc" style="IBUITableViewCellStyleSubtitle" id="YKa-B9-2ga">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YKa-B9-2ga" id="coQ-Hg-VNK">
@@ -109,6 +109,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="QS5-Rx-YEW" id="QmD-LX-NdU"/>
+                                    <outlet property="delegate" destination="QS5-Rx-YEW" id="IDX-ZV-jCO"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

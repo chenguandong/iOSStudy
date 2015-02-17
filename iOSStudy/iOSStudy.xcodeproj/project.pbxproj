@@ -72,7 +72,6 @@
 		18B23B4C1A7A234800E80854 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = Base/BaseViewController.m; sourceTree = "<group>"; };
 		18CECC081A91ACB6005598E4 /* FirstViewControllerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewControllerViewModel.h; path = iOSStudy/ViewModel/FirstViewControllerViewModel.h; sourceTree = "<group>"; };
 		18CECC091A91ACB7005598E4 /* FirstViewControllerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewControllerViewModel.m; path = iOSStudy/ViewModel/FirstViewControllerViewModel.m; sourceTree = "<group>"; };
-		18CECC0E1A921228005598E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18CECC101A921272005598E4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		18D908A51A8A205600B42A42 /* ThirdTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdTableViewController.h; sourceTree = "<group>"; };
 		18D908A61A8A205600B42A42 /* ThirdTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdTableViewController.m; sourceTree = "<group>"; };
@@ -445,7 +444,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				18B23B301A7A14D100E80854 /* Base */,
-				18CECC0E1A921228005598E4 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
