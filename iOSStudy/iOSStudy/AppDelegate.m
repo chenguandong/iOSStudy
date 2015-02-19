@@ -20,17 +20,47 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    [self setGlobalStyle];
     
     [self checkNetworking];
     
     return YES;
 }
 
+/**
+ *  设置全局样式
+ */
+-(void)setGlobalStyle{
+    
+    //设置tabBar的默认颜色
+    [UITabBar appearance].tintColor = [UIColor redColor];
+    
+    //设置tabBar背景颜色
+    [UITabBar appearance].barTintColor = [UIColor whiteColor];
+    
+    
+    //设置导航条的默认颜色
+    [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
+    
+    //设置导航栏字体样式
+    
+    NSShadow *shadow = [[NSShadow alloc] init];
+    
+    shadow.shadowColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8];
+    shadow.shadowOffset = CGSizeMake(0, 0);
+    
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys: [UIColor redColor], NSForegroundColorAttributeName, shadow, NSShadowAttributeName, [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:18.0], NSFontAttributeName, nil]];
+
+    
+    //导航返回按钮颜色
+    [[UINavigationBar appearance] setTintColor:[UIColor redColor]];
+}
+
 -(void)checkNetworking{
     
     
     // Allocate a reachability object
-    Reachability* reach = [Reachability reachabilityWithHostname:@"www.baidu.com"];
+    Reachability* reach = [Reachability reachabilityWithHostname:@"http://www.baidu.com"];
     
     // Set the blocks
     reach.reachableBlock = ^(Reachability*reach)
@@ -76,6 +106,11 @@
     [reach startNotifier];
 }
 
+-(void)dealloc{
+    // 删除通知对象
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+
+}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

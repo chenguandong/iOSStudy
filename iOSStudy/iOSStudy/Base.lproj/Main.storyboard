@@ -156,7 +156,7 @@
         <scene sceneID="dz9-JO-KpG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K1y-G1-Ga4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="博客" id="acW-dT-cKf">
+                    <tabBarItem key="tabBarItem" title="博客" image="tabbar_blog.png" badgeValue="1" id="acW-dT-cKf" colorLabel="IBBuiltInLabel-Red">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -177,7 +177,7 @@
         <scene sceneID="r33-0d-o6N">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kUc-C0-CbU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="网站" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="网站" image="tabbar_web.png" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JsJ-xc-irs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -223,7 +223,7 @@
         <scene sceneID="igk-be-Xhs">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="i5r-Af-Qz3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="视频" id="fbE-WQ-JZW"/>
+                    <tabBarItem key="tabBarItem" title="视频" image="tabbar_video.png" id="fbE-WQ-JZW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="V29-tW-fSw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -242,6 +242,9 @@
     <resources>
         <image name="SVWebViewControllerActivitySafari-iPad.png" width="76" height="76"/>
         <image name="SVWebViewControllerActivitySafari.png" width="60" height="60"/>
+        <image name="tabbar_blog.png" width="25" height="25"/>
+        <image name="tabbar_video.png" width="25" height="25"/>
+        <image name="tabbar_web.png" width="25" height="25"/>
     </resources>
     <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
