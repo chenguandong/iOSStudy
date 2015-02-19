@@ -209,7 +209,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="webIdentifier" id="H19-X5-F4V">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCell" id="H19-X5-F4V">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H19-X5-F4V" id="aH6-kU-51L">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -218,10 +218,13 @@
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="Rvc-NZ-9G2" id="9jE-jc-h82"/>
-                            <outlet property="delegate" destination="Rvc-NZ-9G2" id="mFK-9U-xFi"/>
+                            <outlet property="delegate" destination="Rvc-NZ-9G2" id="ikF-So-RtP"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="推荐视频" id="otE-MF-bXm"/>
+                    <connections>
+                        <outlet property="tableView" destination="AD1-h2-xnj" id="QvZ-oP-jOR"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w8a-zX-RZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

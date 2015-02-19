@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ThirdViewControllerViewModel.h"
+@interface ThirdTableViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
-@interface ThirdTableViewController : UITableViewController
-
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property(nonatomic,strong)ThirdViewControllerViewModel *viewModel;
 @end

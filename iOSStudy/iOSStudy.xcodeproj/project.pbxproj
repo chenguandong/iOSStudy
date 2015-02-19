@@ -48,6 +48,7 @@
 		18D2013D1A960B6100D5F095 /* app_img_1024x768.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D201391A960B6100D5F095 /* app_img_1024x768.png */; };
 		18D2013E1A960B6100D5F095 /* app_img_1536x2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D2013A1A960B6100D5F095 /* app_img_1536x2048.png */; };
 		18D2013F1A960B6100D5F095 /* app_img_2048x1536.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D2013B1A960B6100D5F095 /* app_img_2048x1536.png */; };
+		18D201421A96143300D5F095 /* ThirdViewControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D201411A96143300D5F095 /* ThirdViewControllerViewModel.m */; };
 		18D908A71A8A205600B42A42 /* ThirdTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D908A61A8A205600B42A42 /* ThirdTableViewController.m */; };
 		18DF6D3D1A80D3BC005751E8 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DF6D3C1A80D3BC005751E8 /* Reachability.m */; };
 		18DF6D3F1A80D40D005751E8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DF6D3E1A80D40D005751E8 /* SystemConfiguration.framework */; };
@@ -123,6 +124,8 @@
 		18D201391A960B6100D5F095 /* app_img_1024x768.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_img_1024x768.png; path = " Resource/images/start_img/app_img_1024x768.png"; sourceTree = "<group>"; };
 		18D2013A1A960B6100D5F095 /* app_img_1536x2048.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_img_1536x2048.png; path = " Resource/images/start_img/app_img_1536x2048.png"; sourceTree = "<group>"; };
 		18D2013B1A960B6100D5F095 /* app_img_2048x1536.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_img_2048x1536.png; path = " Resource/images/start_img/app_img_2048x1536.png"; sourceTree = "<group>"; };
+		18D201401A96143300D5F095 /* ThirdViewControllerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThirdViewControllerViewModel.h; path = iOSStudy/ViewModel/ThirdViewControllerViewModel.h; sourceTree = "<group>"; };
+		18D201411A96143300D5F095 /* ThirdViewControllerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThirdViewControllerViewModel.m; path = iOSStudy/ViewModel/ThirdViewControllerViewModel.m; sourceTree = "<group>"; };
 		18D908A51A8A205600B42A42 /* ThirdTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdTableViewController.h; sourceTree = "<group>"; };
 		18D908A61A8A205600B42A42 /* ThirdTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdTableViewController.m; sourceTree = "<group>"; };
 		18DF6D391A80CF76005751E8 /* Constants .h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Constants .h"; path = "iOSStudy/Constants .h"; sourceTree = "<group>"; };
@@ -285,6 +288,8 @@
 		18CECC0B1A91ACD6005598E4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				18D201401A96143300D5F095 /* ThirdViewControllerViewModel.h */,
+				18D201411A96143300D5F095 /* ThirdViewControllerViewModel.m */,
 				18CECC081A91ACB6005598E4 /* FirstViewControllerViewModel.h */,
 				18CECC091A91ACB7005598E4 /* FirstViewControllerViewModel.m */,
 				184F48B01A93323F00C5C22F /* SecondViewControllerViewModel.h */,
@@ -548,6 +553,7 @@
 				18B23B4D1A7A234800E80854 /* BaseViewController.m in Sources */,
 				18A998931A7C77D0002E7219 /* NetWorkTools.m in Sources */,
 				18D908A71A8A205600B42A42 /* ThirdTableViewController.m in Sources */,
+				18D201421A96143300D5F095 /* ThirdViewControllerViewModel.m in Sources */,
 				18CECC0A1A91ACB7005598E4 /* FirstViewControllerViewModel.m in Sources */,
 				189EF8361A839FC600F19327 /* JsonTools.m in Sources */,
 				18DF6D3D1A80D3BC005751E8 /* Reachability.m in Sources */,
