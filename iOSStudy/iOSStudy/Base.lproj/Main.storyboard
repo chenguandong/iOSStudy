@@ -60,7 +60,11 @@
                             <constraint firstItem="sNb-7Z-lc0" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="ZxQ-cW-m1S"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="推荐博客" id="WaC-jM-KHt"/>
+                    <navigationItem key="navigationItem" title="推荐博客" id="WaC-jM-KHt">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0B8-ql-ct7">
+                            <color key="tintColor" red="0.9450981021" green="0.13725490870000001" blue="0.03529411927" alpha="1" colorSpace="deviceRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="sNb-7Z-lc0" id="l2V-vl-YZx"/>
                     </connections>
@@ -123,7 +127,11 @@
                             <constraint firstItem="C22-48-lZS" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="mCa-dL-Gfy"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="推荐网站" id="YiK-bv-9gx"/>
+                    <navigationItem key="navigationItem" title="推荐网站" id="YiK-bv-9gx">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qm0-Cv-LSq">
+                            <color key="tintColor" red="0.9450981021" green="0.13725490870000001" blue="0.03529411927" alpha="1" colorSpace="deviceRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="C22-48-lZS" id="8kZ-qN-vCP"/>
                     </connections>
