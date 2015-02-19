@@ -41,6 +41,13 @@
 		18D2012E1A95A9D600D5F095 /* tabbar_web.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D201281A95A9D600D5F095 /* tabbar_web.png */; };
 		18D2012F1A95A9D600D5F095 /* tabbar_web@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D201291A95A9D600D5F095 /* tabbar_web@2x.png */; };
 		18D201301A95A9D600D5F095 /* tabbar_web@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D2012A1A95A9D600D5F095 /* tabbar_web@3x.png */; };
+		18D201351A96090A00D5F095 /* app_img_640.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D201321A96090A00D5F095 /* app_img_640.png */; };
+		18D201361A96090A00D5F095 /* app_img_1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D201331A96090A00D5F095 /* app_img_1136.png */; };
+		18D201371A96090A00D5F095 /* app_img_iOS8.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D201341A96090A00D5F095 /* app_img_iOS8.png */; };
+		18D2013C1A960B6100D5F095 /* app_img_768x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D201381A960B6100D5F095 /* app_img_768x1024.png */; };
+		18D2013D1A960B6100D5F095 /* app_img_1024x768.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D201391A960B6100D5F095 /* app_img_1024x768.png */; };
+		18D2013E1A960B6100D5F095 /* app_img_1536x2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D2013A1A960B6100D5F095 /* app_img_1536x2048.png */; };
+		18D2013F1A960B6100D5F095 /* app_img_2048x1536.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D2013B1A960B6100D5F095 /* app_img_2048x1536.png */; };
 		18D908A71A8A205600B42A42 /* ThirdTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D908A61A8A205600B42A42 /* ThirdTableViewController.m */; };
 		18DF6D3D1A80D3BC005751E8 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DF6D3C1A80D3BC005751E8 /* Reachability.m */; };
 		18DF6D3F1A80D40D005751E8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DF6D3E1A80D40D005751E8 /* SystemConfiguration.framework */; };
@@ -109,6 +116,13 @@
 		18D201281A95A9D600D5F095 /* tabbar_web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabbar_web.png; path = " Resource/images/tabbar/tabbar_web.png"; sourceTree = "<group>"; };
 		18D201291A95A9D600D5F095 /* tabbar_web@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabbar_web@2x.png"; path = " Resource/images/tabbar/tabbar_web@2x.png"; sourceTree = "<group>"; };
 		18D2012A1A95A9D600D5F095 /* tabbar_web@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabbar_web@3x.png"; path = " Resource/images/tabbar/tabbar_web@3x.png"; sourceTree = "<group>"; };
+		18D201321A96090A00D5F095 /* app_img_640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_img_640.png; path = " Resource/images/start_img/app_img_640.png"; sourceTree = "<group>"; };
+		18D201331A96090A00D5F095 /* app_img_1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_img_1136.png; path = " Resource/images/start_img/app_img_1136.png"; sourceTree = "<group>"; };
+		18D201341A96090A00D5F095 /* app_img_iOS8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_img_iOS8.png; path = " Resource/images/start_img/app_img_iOS8.png"; sourceTree = "<group>"; };
+		18D201381A960B6100D5F095 /* app_img_768x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_img_768x1024.png; path = " Resource/images/start_img/app_img_768x1024.png"; sourceTree = "<group>"; };
+		18D201391A960B6100D5F095 /* app_img_1024x768.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_img_1024x768.png; path = " Resource/images/start_img/app_img_1024x768.png"; sourceTree = "<group>"; };
+		18D2013A1A960B6100D5F095 /* app_img_1536x2048.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_img_1536x2048.png; path = " Resource/images/start_img/app_img_1536x2048.png"; sourceTree = "<group>"; };
+		18D2013B1A960B6100D5F095 /* app_img_2048x1536.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_img_2048x1536.png; path = " Resource/images/start_img/app_img_2048x1536.png"; sourceTree = "<group>"; };
 		18D908A51A8A205600B42A42 /* ThirdTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdTableViewController.h; sourceTree = "<group>"; };
 		18D908A61A8A205600B42A42 /* ThirdTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdTableViewController.m; sourceTree = "<group>"; };
 		18DF6D391A80CF76005751E8 /* Constants .h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Constants .h"; path = "iOSStudy/Constants .h"; sourceTree = "<group>"; };
@@ -290,6 +304,7 @@
 		18D200F81A95A21A00D5F095 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				18D201311A9608E600D5F095 /* startImg */,
 				18D2010C1A95A6D500D5F095 /* tabBar */,
 				18D2010B1A95A6C800D5F095 /* appIcon */,
 			);
@@ -326,6 +341,20 @@
 				18D201211A95A70900D5F095 /* tabbar_blog@3x.png */,
 			);
 			name = tabBar;
+			sourceTree = "<group>";
+		};
+		18D201311A9608E600D5F095 /* startImg */ = {
+			isa = PBXGroup;
+			children = (
+				18D201381A960B6100D5F095 /* app_img_768x1024.png */,
+				18D201391A960B6100D5F095 /* app_img_1024x768.png */,
+				18D2013A1A960B6100D5F095 /* app_img_1536x2048.png */,
+				18D2013B1A960B6100D5F095 /* app_img_2048x1536.png */,
+				18D201321A96090A00D5F095 /* app_img_640.png */,
+				18D201331A96090A00D5F095 /* app_img_1136.png */,
+				18D201341A96090A00D5F095 /* app_img_iOS8.png */,
+			);
+			name = startImg;
 			sourceTree = "<group>";
 		};
 		18DF6D3A1A80D3A4005751E8 /* libs */ = {
@@ -437,24 +466,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18D201351A96090A00D5F095 /* app_img_640.png in Resources */,
 				18B23B311A7A14D100E80854 /* Main.storyboard in Resources */,
+				18D201371A96090A00D5F095 /* app_img_iOS8.png in Resources */,
 				18D2012D1A95A9D600D5F095 /* tabbar_video@3x.png in Resources */,
 				18D201181A95A6F400D5F095 /* icon_58.png in Resources */,
 				18D2011D1A95A6F400D5F095 /* icon_152.png in Resources */,
 				18D201191A95A6F400D5F095 /* icon_76.png in Resources */,
 				18D2011E1A95A6F400D5F095 /* icon_180.png in Resources */,
 				18D2012B1A95A9D600D5F095 /* tabbar_video.png in Resources */,
+				18D2013F1A960B6100D5F095 /* app_img_2048x1536.png in Resources */,
+				18D2013D1A960B6100D5F095 /* app_img_1024x768.png in Resources */,
 				18D201161A95A6F400D5F095 /* icon_29.png in Resources */,
+				18D2013C1A960B6100D5F095 /* app_img_768x1024.png in Resources */,
 				18D2011B1A95A6F400D5F095 /* icon_87.png in Resources */,
 				18D2012E1A95A9D600D5F095 /* tabbar_web.png in Resources */,
 				18D201301A95A9D600D5F095 /* tabbar_web@3x.png in Resources */,
 				18D2012C1A95A9D600D5F095 /* tabbar_video@2x.png in Resources */,
 				18D2012F1A95A9D600D5F095 /* tabbar_web@2x.png in Resources */,
 				18D201171A95A6F400D5F095 /* icon_40.png in Resources */,
+				18D201361A96090A00D5F095 /* app_img_1136.png in Resources */,
 				18D2011C1A95A6F400D5F095 /* icon_120.png in Resources */,
 				18D201221A95A70900D5F095 /* tabbar_blog.png in Resources */,
 				18B23B361A7A14D100E80854 /* LaunchScreen.xib in Resources */,
 				18D2011A1A95A6F400D5F095 /* icon_80.png in Resources */,
+				18D2013E1A960B6100D5F095 /* app_img_1536x2048.png in Resources */,
 				18D201241A95A70900D5F095 /* tabbar_blog@3x.png in Resources */,
 				18D201231A95A70900D5F095 /* tabbar_blog@2x.png in Resources */,
 				18B23B331A7A14D100E80854 /* Images.xcassets in Resources */,
@@ -649,6 +685,7 @@
 			baseConfigurationReference = 05EB633B553B549AA5102110 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = iOSStudy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -661,6 +698,7 @@
 			baseConfigurationReference = 2E2CC00A58FD0A745C574BAD /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = iOSStudy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
