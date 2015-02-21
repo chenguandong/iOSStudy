@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		184F48AF1A93321700C5C22F /* SecondViewControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 184F48AE1A93321700C5C22F /* SecondViewControllerViewModel.m */; };
 		184F48B41A93340F00C5C22F /* WebBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 184F48B31A93340F00C5C22F /* WebBean.m */; };
+		185EEB4B1A98DC9900BFDB79 /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EEB4A1A98DC9900BFDB79 /* SettingTableViewController.m */; };
+		185EEB4F1A98E0BA00BFDB79 /* tabbar_setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 185EEB4C1A98E0BA00BFDB79 /* tabbar_setting.png */; };
+		185EEB501A98E0BA00BFDB79 /* tabbar_setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 185EEB4D1A98E0BA00BFDB79 /* tabbar_setting@2x.png */; };
+		185EEB511A98E0BA00BFDB79 /* tabbar_setting@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 185EEB4E1A98E0BA00BFDB79 /* tabbar_setting@3x.png */; };
 		189EF8331A8399B100F19327 /* BlogBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 189EF8321A8399B100F19327 /* BlogBean.m */; };
 		189EF8361A839FC600F19327 /* JsonTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 189EF8351A839FC600F19327 /* JsonTools.m */; };
 		189EF83A1A83C3AF00F19327 /* BlogDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189EF8391A83C3AF00F19327 /* BlogDetailViewController.m */; };
@@ -71,6 +75,11 @@
 		184F48B01A93323F00C5C22F /* SecondViewControllerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecondViewControllerViewModel.h; path = iOSStudy/ViewModel/SecondViewControllerViewModel.h; sourceTree = "<group>"; };
 		184F48B21A93340F00C5C22F /* WebBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebBean.h; path = Bean/webBean/WebBean.h; sourceTree = "<group>"; };
 		184F48B31A93340F00C5C22F /* WebBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebBean.m; path = Bean/webBean/WebBean.m; sourceTree = "<group>"; };
+		185EEB491A98DC9900BFDB79 /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
+		185EEB4A1A98DC9900BFDB79 /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
+		185EEB4C1A98E0BA00BFDB79 /* tabbar_setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabbar_setting.png; path = " Resource/images/tabbar/tabbar_setting.png"; sourceTree = "<group>"; };
+		185EEB4D1A98E0BA00BFDB79 /* tabbar_setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabbar_setting@2x.png"; path = " Resource/images/tabbar/tabbar_setting@2x.png"; sourceTree = "<group>"; };
+		185EEB4E1A98E0BA00BFDB79 /* tabbar_setting@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabbar_setting@3x.png"; path = " Resource/images/tabbar/tabbar_setting@3x.png"; sourceTree = "<group>"; };
 		189EF8311A8399B100F19327 /* BlogBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlogBean.h; path = Bean/blogBean/BlogBean.h; sourceTree = "<group>"; };
 		189EF8321A8399B100F19327 /* BlogBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlogBean.m; path = Bean/blogBean/BlogBean.m; sourceTree = "<group>"; };
 		189EF8341A839FC600F19327 /* JsonTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JsonTools.h; path = Tools/JsonTools.h; sourceTree = "<group>"; };
@@ -241,6 +250,8 @@
 				18B23B2D1A7A14D100E80854 /* SecondViewController.m */,
 				18D908A51A8A205600B42A42 /* ThirdTableViewController.h */,
 				18D908A61A8A205600B42A42 /* ThirdTableViewController.m */,
+				185EEB491A98DC9900BFDB79 /* SettingTableViewController.h */,
+				185EEB4A1A98DC9900BFDB79 /* SettingTableViewController.m */,
 				18B23B2F1A7A14D100E80854 /* Main.storyboard */,
 				18B23B321A7A14D100E80854 /* Images.xcassets */,
 				18B23B341A7A14D100E80854 /* LaunchScreen.xib */,
@@ -335,6 +346,9 @@
 		18D2010C1A95A6D500D5F095 /* tabBar */ = {
 			isa = PBXGroup;
 			children = (
+				185EEB4C1A98E0BA00BFDB79 /* tabbar_setting.png */,
+				185EEB4D1A98E0BA00BFDB79 /* tabbar_setting@2x.png */,
+				185EEB4E1A98E0BA00BFDB79 /* tabbar_setting@3x.png */,
 				18D201251A95A9D600D5F095 /* tabbar_video.png */,
 				18D201261A95A9D600D5F095 /* tabbar_video@2x.png */,
 				18D201271A95A9D600D5F095 /* tabbar_video@3x.png */,
@@ -474,13 +488,16 @@
 				18D201351A96090A00D5F095 /* app_img_640.png in Resources */,
 				18B23B311A7A14D100E80854 /* Main.storyboard in Resources */,
 				18D201371A96090A00D5F095 /* app_img_iOS8.png in Resources */,
+				185EEB501A98E0BA00BFDB79 /* tabbar_setting@2x.png in Resources */,
 				18D2012D1A95A9D600D5F095 /* tabbar_video@3x.png in Resources */,
 				18D201181A95A6F400D5F095 /* icon_58.png in Resources */,
+				185EEB511A98E0BA00BFDB79 /* tabbar_setting@3x.png in Resources */,
 				18D2011D1A95A6F400D5F095 /* icon_152.png in Resources */,
 				18D201191A95A6F400D5F095 /* icon_76.png in Resources */,
 				18D2011E1A95A6F400D5F095 /* icon_180.png in Resources */,
 				18D2012B1A95A9D600D5F095 /* tabbar_video.png in Resources */,
 				18D2013F1A960B6100D5F095 /* app_img_2048x1536.png in Resources */,
+				185EEB4F1A98E0BA00BFDB79 /* tabbar_setting.png in Resources */,
 				18D2013D1A960B6100D5F095 /* app_img_1024x768.png in Resources */,
 				18D201161A95A6F400D5F095 /* icon_29.png in Resources */,
 				18D2013C1A960B6100D5F095 /* app_img_768x1024.png in Resources */,
@@ -561,6 +578,7 @@
 				184F48AF1A93321700C5C22F /* SecondViewControllerViewModel.m in Sources */,
 				18B23B2B1A7A14D100E80854 /* FirstViewController.m in Sources */,
 				189EF83A1A83C3AF00F19327 /* BlogDetailViewController.m in Sources */,
+				185EEB4B1A98DC9900BFDB79 /* SettingTableViewController.m in Sources */,
 				18B23B251A7A14D100E80854 /* main.m in Sources */,
 				184F48B41A93340F00C5C22F /* WebBean.m in Sources */,
 				189EF8331A8399B100F19327 /* BlogBean.m in Sources */,
