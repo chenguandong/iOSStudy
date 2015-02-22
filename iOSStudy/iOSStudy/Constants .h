@@ -13,6 +13,7 @@
 
 #define Address_blogs @"https://raw.githubusercontent.com/chenguandong/iOSStudy/master/iOSStudyJsonData/blogs.json"
 #define Adress_webs @"https://raw.githubusercontent.com/chenguandong/iOSStudy/master/iOSStudyJsonData/webs.json"
+#define Adress_videos @"https://raw.githubusercontent.com/chenguandong/iOSStudy/master/iOSStudyJsonData/videos.json"
 #define SharedApp ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 
 

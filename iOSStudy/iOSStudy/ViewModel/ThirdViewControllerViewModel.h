@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "NetWorkTools.h"
 #import "JsonTools.h"
-#import "WebBean.h"
+#import "VideoBean.h"
 typedef void (^modelSuccess)();
 typedef void (^modelError)();
 typedef void (^modelNetWorking)(BOOL isNetWorking);

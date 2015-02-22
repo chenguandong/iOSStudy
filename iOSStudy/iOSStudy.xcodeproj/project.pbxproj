@@ -17,6 +17,7 @@
 		189EF8361A839FC600F19327 /* JsonTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 189EF8351A839FC600F19327 /* JsonTools.m */; };
 		189EF83A1A83C3AF00F19327 /* BlogDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189EF8391A83C3AF00F19327 /* BlogDetailViewController.m */; };
 		18A998931A7C77D0002E7219 /* NetWorkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A998921A7C77D0002E7219 /* NetWorkTools.m */; };
+		18AB47951A99969600E4C030 /* VideoBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB47941A99969600E4C030 /* VideoBean.m */; };
 		18B23B251A7A14D100E80854 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B23B241A7A14D100E80854 /* main.m */; };
 		18B23B281A7A14D100E80854 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B23B271A7A14D100E80854 /* AppDelegate.m */; };
 		18B23B2B1A7A14D100E80854 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B23B2A1A7A14D100E80854 /* FirstViewController.m */; };
@@ -88,6 +89,8 @@
 		189EF8391A83C3AF00F19327 /* BlogDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlogDetailViewController.m; path = ViewColl/BlogDetailViewController.m; sourceTree = "<group>"; };
 		18A998911A7C77D0002E7219 /* NetWorkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetWorkTools.h; path = Tools/NetWorkTools.h; sourceTree = "<group>"; };
 		18A998921A7C77D0002E7219 /* NetWorkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetWorkTools.m; path = Tools/NetWorkTools.m; sourceTree = "<group>"; };
+		18AB47931A99969600E4C030 /* VideoBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoBean.h; path = Bean/videoBean/VideoBean.h; sourceTree = "<group>"; };
+		18AB47941A99969600E4C030 /* VideoBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoBean.m; path = Bean/videoBean/VideoBean.m; sourceTree = "<group>"; };
 		18B23B1F1A7A14D000E80854 /* iOSStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B23B231A7A14D100E80854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18B23B241A7A14D100E80854 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -177,6 +180,7 @@
 		189EF82F1A83994B00F19327 /* Bean */ = {
 			isa = PBXGroup;
 			children = (
+				18AB47921A99965A00E4C030 /* videoBean */,
 				184F48B51A93341B00C5C22F /* webBean */,
 				189EF8301A83996500F19327 /* blogBean */,
 			);
@@ -210,6 +214,15 @@
 				189EF8351A839FC600F19327 /* JsonTools.m */,
 			);
 			name = Tools;
+			sourceTree = "<group>";
+		};
+		18AB47921A99965A00E4C030 /* videoBean */ = {
+			isa = PBXGroup;
+			children = (
+				18AB47931A99969600E4C030 /* VideoBean.h */,
+				18AB47941A99969600E4C030 /* VideoBean.m */,
+			);
+			name = videoBean;
 			sourceTree = "<group>";
 		};
 		18B23B161A7A14D000E80854 = {
@@ -571,6 +584,7 @@
 				18A998931A7C77D0002E7219 /* NetWorkTools.m in Sources */,
 				18D908A71A8A205600B42A42 /* ThirdTableViewController.m in Sources */,
 				18D201421A96143300D5F095 /* ThirdViewControllerViewModel.m in Sources */,
+				18AB47951A99969600E4C030 /* VideoBean.m in Sources */,
 				18CECC0A1A91ACB7005598E4 /* FirstViewControllerViewModel.m in Sources */,
 				189EF8361A839FC600F19327 /* JsonTools.m in Sources */,
 				18DF6D3D1A80D3BC005751E8 /* Reachability.m in Sources */,

@@ -35,7 +35,7 @@
     
     
     //
-    [NetWorkTools postHttp:Adress_webs success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [NetWorkTools postHttp:Adress_videos success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         NSLog(@"JSON: %@", [operation responseString]);
         
@@ -44,9 +44,9 @@
         //将JSON数据和Model的属性进行绑定
         
         
-        NSArray *arr = [MTLJSONAdapter modelsOfClass:[WebBean class] fromJSONArray:dic error:nil];
+        NSArray *arr = [MTLJSONAdapter modelsOfClass:[VideoBean class] fromJSONArray:dic error:nil];
         
-        for (WebBean *bean in arr) {
+        for (VideoBean *bean in arr) {
             NSLog(@"%@",bean.webImage);
         }
         
