@@ -102,8 +102,7 @@
     
     [cell.imageView setImageWithURL:[NSURL URLWithString:[_viewModel getBlogBean:indexPath].webImage] placeholderImage:[UIImage imageNamed:@"SVWebViewControllerActivitySafari-iPad"]];
     
-    
-    
+
     return cell;
 }
 

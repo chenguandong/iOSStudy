@@ -16,6 +16,9 @@
 #import "BlogDetailViewController.h"
 #import <SVWebViewController.h>
 #import <MJRefresh.h>
+#import "BaseTableViewCell.h"
+#import "UIImage+Resize.h"
+#import "VideoCell.h"
 @interface ThirdTableViewController ()
 
 @end
@@ -87,21 +90,24 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     static NSString *CellIdentifier = @"VideoCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    VideoCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell = [[VideoCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
+
+   
+  
     
-    ;
-    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
-    
-    cell.textLabel.text = [_viewModel getBlogBean:indexPath].title;
-    cell.detailTextLabel.text = [_viewModel getBlogBean:indexPath].subTitle;
+    cell.videoTitle.text = [_viewModel getBlogBean:indexPath].title;
+    cell.videoSubTitle.text = [_viewModel getBlogBean:indexPath].subTitle;
     
     
-    [cell.imageView setImageWithURL:[NSURL URLWithString:[_viewModel getBlogBean:indexPath].webImage] placeholderImage:[UIImage imageNamed:@"SVWebViewControllerActivitySafari-iPad"]];
     
+    [cell.videoImageView setImageWithURL:[NSURL URLWithString:[_viewModel getBlogBean:indexPath].webImage] placeholderImage:[UIImage imageNamed:@"SVWebViewControllerActivitySafari-iPad"]];
+
+    
+
     
     
     return cell;

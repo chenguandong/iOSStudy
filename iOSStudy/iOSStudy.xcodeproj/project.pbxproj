@@ -18,6 +18,9 @@
 		189EF83A1A83C3AF00F19327 /* BlogDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189EF8391A83C3AF00F19327 /* BlogDetailViewController.m */; };
 		18A998931A7C77D0002E7219 /* NetWorkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A998921A7C77D0002E7219 /* NetWorkTools.m */; };
 		18AB47951A99969600E4C030 /* VideoBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB47941A99969600E4C030 /* VideoBean.m */; };
+		18AB47981A99A51200E4C030 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB47971A99A51200E4C030 /* BaseTableViewCell.m */; };
+		18AB479B1A9C59CB00E4C030 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB479A1A9C59CB00E4C030 /* UIImage+Resize.m */; };
+		18AB479F1A9C5E3300E4C030 /* VideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB479E1A9C5E3300E4C030 /* VideoCell.m */; };
 		18B23B251A7A14D100E80854 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B23B241A7A14D100E80854 /* main.m */; };
 		18B23B281A7A14D100E80854 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B23B271A7A14D100E80854 /* AppDelegate.m */; };
 		18B23B2B1A7A14D100E80854 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B23B2A1A7A14D100E80854 /* FirstViewController.m */; };
@@ -91,6 +94,12 @@
 		18A998921A7C77D0002E7219 /* NetWorkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetWorkTools.m; path = Tools/NetWorkTools.m; sourceTree = "<group>"; };
 		18AB47931A99969600E4C030 /* VideoBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoBean.h; path = Bean/videoBean/VideoBean.h; sourceTree = "<group>"; };
 		18AB47941A99969600E4C030 /* VideoBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoBean.m; path = Bean/videoBean/VideoBean.m; sourceTree = "<group>"; };
+		18AB47961A99A51200E4C030 /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTableViewCell.h; path = Base/BaseTableViewCell.h; sourceTree = "<group>"; };
+		18AB47971A99A51200E4C030 /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTableViewCell.m; path = Base/BaseTableViewCell.m; sourceTree = "<group>"; };
+		18AB47991A9C59CB00E4C030 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Resize.h"; path = "libs/UIImage+Resize.h"; sourceTree = "<group>"; };
+		18AB479A1A9C59CB00E4C030 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Resize.m"; path = "libs/UIImage+Resize.m"; sourceTree = "<group>"; };
+		18AB479D1A9C5E3300E4C030 /* VideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoCell.h; path = Cell/VideoCell.h; sourceTree = "<group>"; };
+		18AB479E1A9C5E3300E4C030 /* VideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoCell.m; path = Cell/VideoCell.m; sourceTree = "<group>"; };
 		18B23B1F1A7A14D000E80854 /* iOSStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B23B231A7A14D100E80854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18B23B241A7A14D100E80854 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -225,9 +234,19 @@
 			name = videoBean;
 			sourceTree = "<group>";
 		};
+		18AB479C1A9C5D7300E4C030 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				18AB479D1A9C5E3300E4C030 /* VideoCell.h */,
+				18AB479E1A9C5E3300E4C030 /* VideoCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		18B23B161A7A14D000E80854 = {
 			isa = PBXGroup;
 			children = (
+				18AB479C1A9C5D7300E4C030 /* Cell */,
 				18CECC0B1A91ACD6005598E4 /* ViewModel */,
 				189EF8371A83C37B00F19327 /* ViewColl */,
 				189EF82F1A83994B00F19327 /* Bean */,
@@ -305,6 +324,8 @@
 			children = (
 				18B23B4B1A7A234800E80854 /* BaseViewController.h */,
 				18B23B4C1A7A234800E80854 /* BaseViewController.m */,
+				18AB47961A99A51200E4C030 /* BaseTableViewCell.h */,
+				18AB47971A99A51200E4C030 /* BaseTableViewCell.m */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -392,6 +413,8 @@
 		18DF6D3A1A80D3A4005751E8 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				18AB47991A9C59CB00E4C030 /* UIImage+Resize.h */,
+				18AB479A1A9C59CB00E4C030 /* UIImage+Resize.m */,
 				18DF6D3B1A80D3BC005751E8 /* Reachability.h */,
 				18DF6D3C1A80D3BC005751E8 /* Reachability.m */,
 			);
@@ -579,10 +602,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18AB47981A99A51200E4C030 /* BaseTableViewCell.m in Sources */,
+				18AB479F1A9C5E3300E4C030 /* VideoCell.m in Sources */,
 				18B23B2E1A7A14D100E80854 /* SecondViewController.m in Sources */,
 				18B23B4D1A7A234800E80854 /* BaseViewController.m in Sources */,
 				18A998931A7C77D0002E7219 /* NetWorkTools.m in Sources */,
 				18D908A71A8A205600B42A42 /* ThirdTableViewController.m in Sources */,
+				18AB479B1A9C59CB00E4C030 /* UIImage+Resize.m in Sources */,
 				18D201421A96143300D5F095 /* ThirdViewControllerViewModel.m in Sources */,
 				18AB47951A99969600E4C030 /* VideoBean.m in Sources */,
 				18CECC0A1A91ACB7005598E4 /* FirstViewControllerViewModel.m in Sources */,
