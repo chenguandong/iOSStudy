@@ -21,6 +21,7 @@
 		18AB47981A99A51200E4C030 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB47971A99A51200E4C030 /* BaseTableViewCell.m */; };
 		18AB479B1A9C59CB00E4C030 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB479A1A9C59CB00E4C030 /* UIImage+Resize.m */; };
 		18AB479F1A9C5E3300E4C030 /* VideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB479E1A9C5E3300E4C030 /* VideoCell.m */; };
+		18AB47A51A9C82FA00E4C030 /* AddBlogTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB47A41A9C82FA00E4C030 /* AddBlogTableViewController.m */; };
 		18B23B251A7A14D100E80854 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B23B241A7A14D100E80854 /* main.m */; };
 		18B23B281A7A14D100E80854 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B23B271A7A14D100E80854 /* AppDelegate.m */; };
 		18B23B2B1A7A14D100E80854 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B23B2A1A7A14D100E80854 /* FirstViewController.m */; };
@@ -100,6 +101,8 @@
 		18AB479A1A9C59CB00E4C030 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Resize.m"; path = "libs/UIImage+Resize.m"; sourceTree = "<group>"; };
 		18AB479D1A9C5E3300E4C030 /* VideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoCell.h; path = Cell/VideoCell.h; sourceTree = "<group>"; };
 		18AB479E1A9C5E3300E4C030 /* VideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoCell.m; path = Cell/VideoCell.m; sourceTree = "<group>"; };
+		18AB47A31A9C82FA00E4C030 /* AddBlogTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBlogTableViewController.h; sourceTree = "<group>"; };
+		18AB47A41A9C82FA00E4C030 /* AddBlogTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBlogTableViewController.m; sourceTree = "<group>"; };
 		18B23B1F1A7A14D000E80854 /* iOSStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B23B231A7A14D100E80854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18B23B241A7A14D100E80854 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -284,6 +287,8 @@
 				18D908A61A8A205600B42A42 /* ThirdTableViewController.m */,
 				185EEB491A98DC9900BFDB79 /* SettingTableViewController.h */,
 				185EEB4A1A98DC9900BFDB79 /* SettingTableViewController.m */,
+				18AB47A31A9C82FA00E4C030 /* AddBlogTableViewController.h */,
+				18AB47A41A9C82FA00E4C030 /* AddBlogTableViewController.m */,
 				18B23B2F1A7A14D100E80854 /* Main.storyboard */,
 				18B23B321A7A14D100E80854 /* Images.xcassets */,
 				18B23B341A7A14D100E80854 /* LaunchScreen.xib */,
@@ -607,6 +612,7 @@
 				18B23B2E1A7A14D100E80854 /* SecondViewController.m in Sources */,
 				18B23B4D1A7A234800E80854 /* BaseViewController.m in Sources */,
 				18A998931A7C77D0002E7219 /* NetWorkTools.m in Sources */,
+				18AB47A51A9C82FA00E4C030 /* AddBlogTableViewController.m in Sources */,
 				18D908A71A8A205600B42A42 /* ThirdTableViewController.m in Sources */,
 				18AB479B1A9C59CB00E4C030 /* UIImage+Resize.m in Sources */,
 				18D201421A96143300D5F095 /* ThirdViewControllerViewModel.m in Sources */,
