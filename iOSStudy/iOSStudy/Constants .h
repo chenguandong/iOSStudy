@@ -16,5 +16,7 @@
 #define Adress_videos @"https://raw.githubusercontent.com/chenguandong/iOSStudy/master/iOSStudyJsonData/videos.json"
 #define SharedApp ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 
+#define PATH_OF_DOCUMENT    [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+
 
 #endif

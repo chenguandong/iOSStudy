@@ -7,7 +7,7 @@
 //
 
 #import "BlogDetailViewController.h"
-
+#import "DBUtils.h"
 @interface BlogDetailViewController ()
 
 @end
@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [DBUtils executeSQL:^(FMDatabase *db) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
