@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
 #import "FirstViewControllerViewModel.h"
-@interface FirstViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate>
+#import <SWTableViewCell.h>
+@interface FirstViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate,SWTableViewCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property(nonatomic,strong)FirstViewControllerViewModel *viewModel;
 

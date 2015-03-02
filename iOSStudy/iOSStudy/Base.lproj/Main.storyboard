@@ -22,27 +22,24 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="hU9-0U-oi2" detailTextLabel="5dU-cy-vS7" imageView="FMv-q2-esF" style="IBUITableViewCellStyleSubtitle" id="6Mg-Lb-fjc">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="fOg-Cz-UlX" detailTextLabel="cSP-4E-xit" style="IBUITableViewCellStyleSubtitle" id="6Mg-Lb-fjc" customClass="SWTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Mg-Lb-fjc" id="9PO-w5-R7x">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hU9-0U-oi2">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fOg-Cz-UlX">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5dU-cy-vS7">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cSP-4E-xit">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="SVWebViewControllerActivitySafari.png" id="FMv-q2-esF">
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -262,7 +259,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2374" y="360"/>
+            <point key="canvasLocation" x="3186" y="360"/>
         </scene>
         <!--博客-->
         <scene sceneID="yl2-sM-qoP">
@@ -278,12 +275,13 @@
                         <segue destination="K1y-G1-Ga4" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="kUc-C0-CbU" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="i5r-Af-Qz3" kind="relationship" relationship="viewControllers" id="hul-rm-LMW"/>
+                        <segue destination="KNB-eQ-hTP" kind="relationship" relationship="viewControllers" id="qzb-Eo-fKM"/>
                         <segue destination="DnD-Yi-2P1" kind="relationship" relationship="viewControllers" id="Du5-ID-BZZ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-68" y="84"/>
+            <point key="canvasLocation" x="-148" y="4"/>
         </scene>
         <!--博客-->
         <scene sceneID="dz9-JO-KpG">
@@ -323,7 +321,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nSd-8h-Gn2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1562" y="360"/>
+            <point key="canvasLocation" x="2374" y="360"/>
         </scene>
         <!--推荐视频-->
         <scene sceneID="uEb-h7-OeY">
@@ -410,7 +408,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w8a-zX-RZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2274" y="1106"/>
+            <point key="canvasLocation" x="3086" y="1106"/>
         </scene>
         <!--视频-->
         <scene sceneID="igk-be-Xhs">
@@ -429,7 +427,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jGy-aq-DRZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1462" y="1112"/>
+            <point key="canvasLocation" x="2274" y="1112"/>
         </scene>
         <!--设置-->
         <scene sceneID="aOU-uZ-Osz">
@@ -553,7 +551,48 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PYC-5D-VsV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="665" y="902"/>
+            <point key="canvasLocation" x="1477" y="902"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QX2-KR-1Qy">
+            <objects>
+                <viewController id="vrd-Q0-oVQ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tau-g2-N54"/>
+                        <viewControllerLayoutGuide type="bottom" id="QDR-ND-fLn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cPP-n0-FLj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jr4-z3-IqP">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jr4-z3-IqP" firstAttribute="leading" secondItem="cPP-n0-FLj" secondAttribute="leading" id="VkY-X1-NQf"/>
+                            <constraint firstAttribute="bottom" secondItem="Jr4-z3-IqP" secondAttribute="bottom" id="e83-77-i45"/>
+                            <constraint firstAttribute="trailing" secondItem="Jr4-z3-IqP" secondAttribute="trailing" id="hhH-Nx-Suo"/>
+                            <constraint firstItem="Jr4-z3-IqP" firstAttribute="top" secondItem="cPP-n0-FLj" secondAttribute="top" id="vPB-7P-l1N"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ma6-ZC-kJN">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Byh-AH-pW0">
+                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="博客"/>
+                                <segment title="网站"/>
+                                <segment title="视频"/>
+                            </segments>
+                        </segmentedControl>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="67M-g5-vVE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-414" y="1451"/>
         </scene>
         <!--设置-->
         <scene sceneID="Jjs-IR-QSD">
@@ -572,12 +611,30 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vlm-je-fwp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-147" y="902"/>
+            <point key="canvasLocation" x="937" y="1098"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="a8f-1P-R3z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KNB-eQ-hTP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="8Gx-f0-bsw"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZGN-nB-PQU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vrd-Q0-oVQ" kind="relationship" relationship="rootViewController" id="ehn-nF-mtx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4sA-eL-gtH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-446" y="656"/>
         </scene>
     </scenes>
     <resources>
         <image name="SVWebViewControllerActivitySafari-iPad.png" width="76" height="76"/>
-        <image name="SVWebViewControllerActivitySafari.png" width="60" height="60"/>
         <image name="tabbar_blog.png" width="25" height="25"/>
         <image name="tabbar_setting.png" width="25" height="25"/>
         <image name="tabbar_video.png" width="25" height="25"/>

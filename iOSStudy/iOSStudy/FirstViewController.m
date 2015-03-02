@@ -87,24 +87,40 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    SWTableViewCell *cell = (SWTableViewCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell = [[SWTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+       
     }
-
     
-    ;
-    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    cell.rightUtilityButtons =[self rightButtons];
+    cell.delegate = self;
+
 
     cell.textLabel.text = [_viewModel getBlogBean:indexPath].title;
     cell.detailTextLabel.text = [_viewModel getBlogBean:indexPath].subTitle;
 
     
-    [cell.imageView setImageWithURL:[NSURL URLWithString:[_viewModel getBlogBean:indexPath].image] placeholderImage:[UIImage imageNamed:@"SVWebViewControllerActivitySafari-iPad"]];
+    
+    [cell.imageView setImageWithURL:[NSURL URLWithString:[_viewModel getBlogBean:indexPath].image] placeholderImage:[UIImage imageNamed:@"SVWebViewControllerActivitySafari-iPad.png"]];
     
 
-
     return cell;
+}
+
+
+#pragma mark --设置又滑菜单
+- (NSArray *)rightButtons
+{
+    NSMutableArray *rightUtilityButtons = [NSMutableArray new];
+    [rightUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:0.78f green:0.78f blue:0.8f alpha:1.0]
+                                                title:@"收藏"];
+    [rightUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:1.0f green:0.231f blue:0.188 alpha:1.0f]
+                                                title:@"不喜欢"];
+    
+    return rightUtilityButtons;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -122,6 +138,49 @@
         
     }
 }
+
+
+#pragma mark-- SWTableViewCell delagate
+
+- (BOOL)swipeableTableViewCellShouldHideUtilityButtonsOnSwipe:(SWTableViewCell *)cell
+{
+
+    return  YES;
+}
+- (BOOL)swipeableTableViewCell:(SWTableViewCell *)cell canSwipeToState:(SWCellState)state{
+    
+    return YES;
+
+}
+
+- (void)swipeableTableViewCellDidEndScrolling:(SWTableViewCell *)cell{
+    
+    //根据侧滑按钮是否显示设置箭头标志
+    if (cell.isUtilityButtonsHidden) {
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }else{
+        cell.accessoryType = UITableViewCellAccessoryNone;
+
+    }
+}
+
+- (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index{
+    switch (index) {
+        case 0:
+            NSLog(@"unlove");
+            break;
+        case 1:
+            NSLog(@"love");
+            break;
+            
+        default:
+            break;
+    }
+    [cell hideUtilityButtonsAnimated:YES];
+    
+}
+
+
 
 
 -(void)dealloc{

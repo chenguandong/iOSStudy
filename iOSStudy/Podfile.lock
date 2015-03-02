@@ -34,6 +34,7 @@ PODS:
   - SDWebImage/Core (3.7.1)
   - SVProgressHUD (1.1.2)
   - SVWebViewController (1.0)
+  - SWTableViewCell (0.3.7)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
@@ -43,6 +44,7 @@ DEPENDENCIES:
   - SDWebImage
   - SVProgressHUD
   - SVWebViewController
+  - SWTableViewCell (~> 0.3.7)
 
 SPEC CHECKSUMS:
   AFNetworking: 8bee59492a6ff15d69130efa4d0dc67e0094a52a
@@ -52,5 +54,6 @@ SPEC CHECKSUMS:
   SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
   SVProgressHUD: da7a49e789af645d9279ffbca62318945a832438
   SVWebViewController: fbf917baa92744c54cfb89a52a4c056e409973a4
+  SWTableViewCell: 25de71898e3fcd11cf75707ef90245acf990ec03
 
 COCOAPODS: 0.35.0
