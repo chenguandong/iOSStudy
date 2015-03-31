@@ -7,7 +7,7 @@
 //
 
 #import "FirstViewControllerViewModel.h"
-
+#import "FavouriteBean.h"
 @implementation FirstViewControllerViewModel
 - (instancetype)init
 {
@@ -70,4 +70,8 @@
     
     
 }
+
+
+//-(void)saveFavourite
+
 @end

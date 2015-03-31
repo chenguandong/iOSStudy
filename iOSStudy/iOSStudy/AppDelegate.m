@@ -8,8 +8,7 @@
 
 #import "AppDelegate.h"
 #import "NetWorkTools.h"
-#import "Reachability.h"
-#import <SVProgressHUD.h>
+
 @interface AppDelegate ()
 
 @end
@@ -19,11 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    NSLog(@"------checkNetworking");
     
+    [NetWorkTools checkNetworking];
+
     [self setGlobalStyle];
-    
-    [self checkNetworking];
-    
+
     return YES;
 }
 
@@ -56,55 +56,6 @@
     [[UINavigationBar appearance] setTintColor:[UIColor redColor]];
 }
 
--(void)checkNetworking{
-    
-    
-    // Allocate a reachability object
-    Reachability* reach = [Reachability reachabilityWithHostname:@"http://www.baidu.com"];
-    
-    // Set the blocks
-    reach.reachableBlock = ^(Reachability*reach)
-    {
-        // keep in mind this is called on a background thread
-        // and if you are updating the UI it needs to happen
-        // on the main thread, like this:
-        
-        NSLog(@"网络已经连接!");
-        
-        _isNetworking = YES;
-    
-        
-        [SVProgressHUD dismiss];
-        
-        
-    };
-    
-    reach.unreachableBlock = ^(Reachability*reach)
-    {
-        NSLog(@"网络断开!");
-        
-        
-        
-        _isNetworking = NO;
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
-            [SVProgressHUD showErrorWithStatus:@"无网络连接" maskType:SVProgressHUDMaskTypeGradient];
-            
-            double delayInSeconds = 2.0; dispatch_time_t
-            popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-                // code to be executed on the main queue after delay
-                
-                [SVProgressHUD dismiss];
-            });
-        });
-        
-    };
-    
-    // Start the notifier, which will cause the reachability object to retain itself!
-    [reach startNotifier];
-}
 
 -(void)dealloc{
     // 删除通知对象
@@ -125,6 +76,8 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    
+    
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {

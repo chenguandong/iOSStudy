@@ -23,6 +23,7 @@
 		18AB479F1A9C5E3300E4C030 /* VideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB479E1A9C5E3300E4C030 /* VideoCell.m */; };
 		18AB47A51A9C82FA00E4C030 /* AddBlogTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB47A41A9C82FA00E4C030 /* AddBlogTableViewController.m */; };
 		18AB47A81A9DA40500E4C030 /* DBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB47A71A9DA40500E4C030 /* DBUtils.m */; };
+		18AB47AB1AA415A400E4C030 /* FavouriteBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB47AA1AA415A400E4C030 /* FavouriteBean.m */; };
 		18B23B251A7A14D100E80854 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B23B241A7A14D100E80854 /* main.m */; };
 		18B23B281A7A14D100E80854 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B23B271A7A14D100E80854 /* AppDelegate.m */; };
 		18B23B2B1A7A14D100E80854 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B23B2A1A7A14D100E80854 /* FirstViewController.m */; };
@@ -106,6 +107,8 @@
 		18AB47A41A9C82FA00E4C030 /* AddBlogTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBlogTableViewController.m; sourceTree = "<group>"; };
 		18AB47A61A9DA40500E4C030 /* DBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBUtils.h; path = Tools/DBUtils.h; sourceTree = "<group>"; };
 		18AB47A71A9DA40500E4C030 /* DBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBUtils.m; path = Tools/DBUtils.m; sourceTree = "<group>"; };
+		18AB47A91AA415A400E4C030 /* FavouriteBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavouriteBean.h; path = Bean/FavouriteBean.h; sourceTree = "<group>"; };
+		18AB47AA1AA415A400E4C030 /* FavouriteBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavouriteBean.m; path = Bean/FavouriteBean.m; sourceTree = "<group>"; };
 		18B23B1F1A7A14D000E80854 /* iOSStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B23B231A7A14D100E80854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18B23B241A7A14D100E80854 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -198,6 +201,8 @@
 				18AB47921A99965A00E4C030 /* videoBean */,
 				184F48B51A93341B00C5C22F /* webBean */,
 				189EF8301A83996500F19327 /* blogBean */,
+				18AB47A91AA415A400E4C030 /* FavouriteBean.h */,
+				18AB47AA1AA415A400E4C030 /* FavouriteBean.m */,
 			);
 			name = Bean;
 			sourceTree = "<group>";
@@ -632,6 +637,7 @@
 				189EF83A1A83C3AF00F19327 /* BlogDetailViewController.m in Sources */,
 				185EEB4B1A98DC9900BFDB79 /* SettingTableViewController.m in Sources */,
 				18B23B251A7A14D100E80854 /* main.m in Sources */,
+				18AB47AB1AA415A400E4C030 /* FavouriteBean.m in Sources */,
 				184F48B41A93340F00C5C22F /* WebBean.m in Sources */,
 				189EF8331A8399B100F19327 /* BlogBean.m in Sources */,
 			);

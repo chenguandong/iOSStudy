@@ -22,4 +22,8 @@ typedef void(^isNetwork) (BOOL isNetwork);
 
 +(void)postHttp:(NSString*)httpUrl success:(success)success error:(error)error isNetworking:(isNetwork)isNetworking;
 
+/*
+ *检查网络连接注册通知
+ */
++(void)checkNetworking;
 @end

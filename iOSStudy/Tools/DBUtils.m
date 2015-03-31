@@ -67,7 +67,7 @@ NSString *const DBPath = @"iOSStudy.db";
         FMDatabase * db = [FMDatabase databaseWithPath:[self getDBPath]];
     
         if ([db open]) {
-            NSString * sql = [NSString stringWithFormat:@"CREATE TABLE '%@' ('id' INTEGER PRIMARY KEY AUTOINCREMENT  NOT NULL , 'name' VARCHAR(30), 'password' VARCHAR(30))",blogsTableName];
+            NSString * sql = [NSString stringWithFormat:@"CREATE TABLE '%@' ('id' INTEGER PRIMARY KEY AUTOINCREMENT  NOT NULL , 'title' VARCHAR(255), 'subtitle' VARCHAR(255),'image_name' VARCHAR(255)),'url' VARCHAR(255)),'type' INTEGER)",blogsTableName];
             
             if (![db tableExists:blogsTableName]) {
                 BOOL res = [db executeUpdate:sql];
