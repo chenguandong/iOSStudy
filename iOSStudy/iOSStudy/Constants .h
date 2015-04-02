@@ -18,5 +18,5 @@
 
 #define PATH_OF_DOCUMENT    [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 
-
+#define CD_FAVOURITE_BEAN @"FavouriteBean"
 #endif
