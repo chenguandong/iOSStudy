@@ -41,11 +41,4 @@ typedef void (^modelNetWorking)(BOOL isNetWorking);
  *  @return cell的数据
  */
 -(BlogBean*)getBlogBean:(NSIndexPath *)indexPath;
-
-
-
-
--(void)saveFavourite:(NSIndexPath*)indexPath;
-
--(BOOL)isExistURL:(NSString*)url;
 @end
