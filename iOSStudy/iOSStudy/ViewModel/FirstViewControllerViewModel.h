@@ -10,20 +10,8 @@
 #import "NetWorkTools.h"
 #import "JsonTools.h"
 #import "BlogBean.h"
-/**
- *  网络请求成功回调
- */
 typedef void (^modelSuccess)();
-/**
- *  网络请求失败回调
- */
 typedef void (^modelError)();
-
-/**
- *  网络是否链接回调
- *
- *  @param isNetWorking YES 有网络 NO 没有网络
- */
 typedef void (^modelNetWorking)(BOOL isNetWorking);
 
 @interface FirstViewControllerViewModel : NSObject
@@ -56,19 +44,8 @@ typedef void (^modelNetWorking)(BOOL isNetWorking);
 
 
 
-/**
- *  添加收藏到数据库
- *
- *  @param indexPath indexPath
- */
+
 -(void)saveFavourite:(NSIndexPath*)indexPath;
 
-/**
- *  此链接是否在数据库已经存在
- *
- *  @param url url地址
- *
- *  @return YES 存在 NO 不存在
- */
 -(BOOL)isExistURL:(NSString*)url;
 @end
