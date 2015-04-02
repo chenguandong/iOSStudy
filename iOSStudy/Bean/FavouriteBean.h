@@ -8,12 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSInteger, FAVOURITE_TYPE) {
-    BLOG_TYPE = 1,
-    WEB_TYPE = 2,
-    VIDEO_TYPE = 3
-};
-
 @interface FavouriteBean : NSObject
 /**
  *  标题
@@ -34,5 +28,5 @@ typedef NS_ENUM(NSInteger, FAVOURITE_TYPE) {
 /**
  *  类型 1 博客 2 网站 3 视频
  */
-@property(nonatomic,copy)NSString* type;
+@property(nonatomic,assign)NSInteger *type;
 @end

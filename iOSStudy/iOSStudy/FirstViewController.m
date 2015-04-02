@@ -167,16 +167,10 @@
 - (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index{
     switch (index) {
         case 0:
-            NSLog(@"不喜欢");
-            {
-                NSIndexPath *indexPath = [_tableView indexPathForCell:cell];
-                [_viewModel saveFavourite:indexPath];
-
-            }
+            NSLog(@"unlove");
             break;
         case 1:
-            NSLog(@"收藏");
-
+            NSLog(@"love");
             break;
             
         default:

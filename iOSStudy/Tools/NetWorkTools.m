@@ -77,7 +77,7 @@
     {
         NSLog(@"网络断开!");
         
-        SharedApp.isNetworking = YES;
+        SharedApp.isNetworking = NO;
         
         dispatch_async(dispatch_get_main_queue(), ^{
             
