@@ -10,6 +10,13 @@
 #import "NetWorkTools.h"
 #import "JsonTools.h"
 #import "BlogBean.h"
+
+
+/**
+ *  网络请求开始
+ */
+typedef void (^modelPersistentReload)();
+
 /**
  *  网络请求成功回调
  */
@@ -71,4 +78,15 @@ typedef void (^modelNetWorking)(BOOL isNetWorking);
  *  @return YES 存在 NO 不存在
  */
 -(BOOL)isExistURL:(NSString*)url;
+
+
+/**
+ *  请求网络数据
+ *
+ *  @param modelDataSuccess     请求成功
+ *  @param modelPersistentReload 刷新Table
+ *  @param modelDataErrors      请求失败
+ *  @param modelDataIsNetWoring 网络状态
+ */
+-(void)getDate:(modelSuccess)modelDataSuccess modelDataReload:(modelPersistentReload)modelDataReload modelDataErrors:(modelError)modelDataErrors modelDataIsNetworking:(modelNetWorking)modelDataIsNetWoring;
 @end

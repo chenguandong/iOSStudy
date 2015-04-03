@@ -136,15 +136,21 @@
 +(BOOL)checkHttpVersion:(NSString*)url nowVersion:(NSString*)nowVersion{
     
     
-    //从数据库拿到URL 版本号  如果没有说明第一次请求 直接发送请求
     
-    if ([[self getLocalHttpVersion:url]floatValue]!=[nowVersion floatValue]) {
-
+    
+    if (nowVersion!=nil) {
+        //从数据库拿到URL 版本号  如果没有说明第一次请求 直接发送请求
         
-        
-        return YES;
+        if ([[self getLocalHttpVersion:url]floatValue]!=[nowVersion floatValue]) {
+            
+            
+            
+            return YES;
+        }else{
+            return NO;
+        }
     }else{
-        return NO;
+        return YES;
     }
     
 
@@ -179,7 +185,7 @@
         
         return [objt valueForKey:@"url_version"];
     }else{
-        NSLog(@"222%lu",resultArr.count);
+        NSLog(@"没有查到本地版本%lu",resultArr.count);
         return nil;
     }
     

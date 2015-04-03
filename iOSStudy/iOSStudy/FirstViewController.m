@@ -36,26 +36,25 @@
     
     
     [self.tableView addHeaderWithCallback:^{
+ 
+        
         [_viewModel getDate:^{
-
-             [_tableView reloadData];
-             
+            [_tableView reloadData];
+            
             [self stopTableRefreshing];
+        } modelDataReload:^{
+            [_tableView reloadData];
 
         } modelDataErrors:^{
-
             [self stopTableRefreshing];
-
         } modelDataIsNetworking:^(BOOL isNetWorking) {
-
             [self stopTableRefreshing];
-
         }];
+        
     }];
     
-
     [self.tableView headerBeginRefreshing];
-
+   
 
 }
 

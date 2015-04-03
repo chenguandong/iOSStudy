@@ -38,6 +38,85 @@
 
 
 
+/**
+ *  请求网络数据
+ *
+ *  @param modelDataSuccess     请求成功
+ *  @param modelDataStart       请求开始
+ *  @param modelDataErrors      请求失败
+ *  @param modelDataIsNetWoring 网络状态
+ */
+-(void)getDate:(modelSuccess)modelDataSuccess modelDataReload:(modelPersistentReload)modelDataReload modelDataErrors:(modelError)modelDataErrors modelDataIsNetworking:(modelNetWorking)modelDataIsNetWoring{
+    
+    
+    _array = [[self getPersistenceData]copy];
+   
+    //modelDataSuccess();
+    modelDataReload();
+    
+    __block NSString *versionStr;
+    
+    if ([HttpVersionTools checkHttpVersion:Address_blogs nowVersion:[HttpVersionTools getNowHttpVersion:Address_blogs]]) {
+        
+        //
+ 
+        [NetWorkTools postHttp:Address_blogs success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            
+            NSLog(@"JSON: %@", [operation responseString]);
+            
+            NSDictionary *dic = [JsonTools getJsonNSDictionary:[operation responseString]];
+            
+            //NSLog(@"jsonVersion=%@",dic[@"version"]);
+            
+            
+            versionStr =dic[@"version"];
+            
+            //将JSON数据和Model的属性进行绑定
+            
+            // NSLog(@"%@arr=",dic[@"bloglists"]);
+            
+            NSArray *arr = [MTLJSONAdapter modelsOfClass:[BlogBean class] fromJSONArray:dic[@"bloglists"] error:nil];
+            
+            
+            
+            _array = [arr copy];
+            
+            
+            modelDataSuccess();
+            
+            //持久化数据
+            [self persistenceData];
+            
+            //当前最新版本号存入数据库
+            
+            [HttpVersionTools saveNowHttpVersion:Address_blogs version:versionStr];
+            
+            
+        } error:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"Error: %@", error);
+            
+            modelDataErrors();
+            
+        } isNetworking:^(BOOL isNetwork) {
+            
+            
+            modelDataIsNetWoring(isNetwork);
+            
+            
+        }];
+    }else{
+        //直接显示持久化数据 数据显示完毕
+        modelDataSuccess();
+        
+        NSLog(@"cout====%ld",_array.count);
+    }
+    
+    
+    
+   
+    
+}
+
 
 -(void)getDate:(modelSuccess)modelDataSuccess modelDataErrors:(modelError)modelDataErrors modelDataIsNetworking:(modelNetWorking)modelDataIsNetWoring{
     
@@ -119,20 +198,20 @@
     
     NSMutableArray *blogArr = [NSMutableArray arrayWithCapacity:10];
     
-    
-    for (NSManagedObject *info in fetchedObjects) {
 
-        BlogBean *blogBean = [[BlogBean alloc]init];
-        blogBean.title = [info valueForKey:@"title"];
-        blogBean.subTitle=[info valueForKey:@"subtitle"];
-        blogBean.image = [info valueForKey:@"image_name"];
-        blogBean.url = [info valueForKey:@"url"];
-        NSLog(@"image=%@",blogBean.image);
-        [blogArr addObject:blogBean];
-        
-        
-        
-    }
+        for (NSManagedObject *info in fetchedObjects) {
+            
+            BlogBean *blogBean = [[BlogBean alloc]init];
+            blogBean.title = [info valueForKey:@"title"];
+            blogBean.subTitle=[info valueForKey:@"subtitle"];
+            blogBean.image = [info valueForKey:@"image_name"];
+            blogBean.url = [info valueForKey:@"url"];
+            NSLog(@"image=%@",blogBean.image);
+            [blogArr addObject:blogBean];
+            
+        }
+
+    
 
     return blogArr;
 
