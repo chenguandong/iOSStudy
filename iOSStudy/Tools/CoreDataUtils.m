@@ -32,10 +32,14 @@
     
     
     
-    NSPredicate *titlePredicate = [NSPredicate predicateWithFormat:@"%@ = %@",rowName, url];
+    //NSPredicate *titlePredicate = [NSPredicate predicateWithFormat:@"%@ = %@",rowName, url];
+    
+    NSPredicate *titlePredicate = [NSPredicate predicateWithFormat:@"url= %@", url];
     
     
     NSArray *resultArr = [fetchedObjects filteredArrayUsingPredicate:titlePredicate];
+    
+    
     if (resultArr.count!=0) {
        // NSLog(@"111%lu",resultArr.count);
         return YES;

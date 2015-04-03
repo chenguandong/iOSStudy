@@ -8,12 +8,11 @@
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="VersionsEntity" syncable="YES">
-        <attribute name="refresh" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url_version" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="FavouriteBean" positionX="-2691" positionY="-261" width="128" height="118"/>
-        <element name="VersionsEntity" positionX="-2439" positionY="-225" width="128" height="88"/>
+        <element name="VersionsEntity" positionX="-2439" positionY="-225" width="128" height="73"/>
     </elements>
 </model>
