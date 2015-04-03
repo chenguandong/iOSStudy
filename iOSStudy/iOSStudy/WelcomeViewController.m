@@ -11,7 +11,7 @@
 #import "NetWorkTools.h"
 #import "HttpVersionTools.h"
 #import "MainTabBarViewController.h"
-#import <SVProgressHUD/SVProgressHUD.h>
+#import <SVProgressHUD.h>
 #import "VersionBean.h"
 @interface WelcomeViewController ()
 

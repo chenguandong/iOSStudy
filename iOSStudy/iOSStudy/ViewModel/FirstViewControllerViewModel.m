@@ -43,7 +43,7 @@
     
     
     _array = [[self getPersistenceData]copy];
-    
+     modelDataSuccess();
    
     
     __block NSString *versionStr;
@@ -68,11 +68,7 @@
             
             NSArray *arr = [MTLJSONAdapter modelsOfClass:[BlogBean class] fromJSONArray:dic[@"bloglists"] error:nil];
             
-            
-            
-            //        for (BlogBean *bean in arr) {
-            //            NSLog(@"%@imae=",bean.image);
-            //        }
+       
             
             _array = [arr copy];
             
@@ -102,6 +98,8 @@
     }else{
         //直接显示持久化数据 数据显示完毕
          modelDataSuccess();
+        
+        NSLog(@"cout====%ld",_array.count);
     }
     
 
@@ -129,7 +127,10 @@
         blogBean.subTitle=[info valueForKey:@"subtitle"];
         blogBean.image = [info valueForKey:@"image_name"];
         blogBean.url = [info valueForKey:@"url"];
+        NSLog(@"image=%@",blogBean.image);
         [blogArr addObject:blogBean];
+        
+        
         
     }
 
@@ -137,7 +138,7 @@
 
 }
 
-//持久化所有数据
+#pragma mark -- 持久化所有数据
 -(void)persistenceData{
     
     for (BlogBean *bean in _array) {

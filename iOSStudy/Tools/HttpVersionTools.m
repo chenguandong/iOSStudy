@@ -63,13 +63,11 @@
     NSString *versionStr ;
     for (VersionBean *vBean in SharedApp.versionLists) {
         
-        NSLog(@"url=%@",url);
-        NSLog(@"%@",vBean.url);
         
         if ([vBean.url isEqualToString:url]) {
             
             versionStr =  vBean.urlVersion;
-            
+            return versionStr;
         }else{
             versionStr = nil;
         }
