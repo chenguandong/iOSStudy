@@ -9,12 +9,17 @@
 #import "FirstViewControllerViewModel.h"
 #import "FavouriteBean.h"
 #import "Constants .h"
+#import "BlogJsonBean.h"
+#import "HttpVersionTools.h"
+#import "CoreDataUtils.h"
 @implementation FirstViewControllerViewModel
 - (instancetype)init
 {
     self = [super init];
     if (self) {
         _array = [NSMutableArray array];
+        
+        
     }
     return self;
 }
@@ -32,50 +37,74 @@
 }
 
 
+
+
 -(void)getDate:(modelSuccess)modelDataSuccess modelDataErrors:(modelError)modelDataErrors modelDataIsNetworking:(modelNetWorking)modelDataIsNetWoring{
     
     
     _array = [[self getPersistenceData]copy];
     
-    modelDataSuccess();
+   
     
+    __block NSString *versionStr;
     
+    if ([HttpVersionTools checkHttpVersion:Address_blogs nowVersion:[HttpVersionTools getNowHttpVersion:Address_blogs]]) {
+        
+        //
+        [NetWorkTools postHttp:Address_blogs success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            
+            NSLog(@"JSON: %@", [operation responseString]);
+            
+            NSDictionary *dic = [JsonTools getJsonNSDictionary:[operation responseString]];
+            
+            //NSLog(@"jsonVersion=%@",dic[@"version"]);
+            
+            
+            versionStr =dic[@"version"];
+            
+            //将JSON数据和Model的属性进行绑定
+            
+            // NSLog(@"%@arr=",dic[@"bloglists"]);
+            
+            NSArray *arr = [MTLJSONAdapter modelsOfClass:[BlogBean class] fromJSONArray:dic[@"bloglists"] error:nil];
+            
+            
+            
+            //        for (BlogBean *bean in arr) {
+            //            NSLog(@"%@imae=",bean.image);
+            //        }
+            
+            _array = [arr copy];
+            
+            
+            modelDataSuccess();
+            
+            //持久化数据
+            [self persistenceData];
+            
+            //当前最新版本号存入数据库
+            
+            [HttpVersionTools saveNowHttpVersion:Address_blogs version:versionStr];
+            
+            
+        } error:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"Error: %@", error);
+            
+            modelDataErrors();
+            
+        } isNetworking:^(BOOL isNetwork) {
+            
+            
+            modelDataIsNetWoring(isNetwork);
+            
+            
+        }];
+    }else{
+        //直接显示持久化数据 数据显示完毕
+         modelDataSuccess();
+    }
     
-    
-    //
-    [NetWorkTools postHttp:Address_blogs success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        
-        NSLog(@"JSON: %@", [operation responseString]);
-        
-        NSArray *dic = [JsonTools getJsonNSDictionary:[operation responseString]];
-        
-        //将JSON数据和Model的属性进行绑定
-        
-        NSArray *arr = [MTLJSONAdapter modelsOfClass:[BlogBean class] fromJSONArray:dic error:nil];
-        
-        for (BlogBean *bean in arr) {
-            NSLog(@"%@",bean.image);
-        }
-        
-        _array = [arr copy];
-        
-       
-        modelDataSuccess();
-        
-        [self persistenceData];
-    
-    } error:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-        
-        modelDataErrors();
-       
-    } isNetworking:^(BOOL isNetwork) {
-        
-        
-        modelDataIsNetWoring(isNetwork);
-       
-        
-    }];
+
     
     
 }
@@ -177,37 +206,9 @@
 
 //检查这个URL在数据库是否存在
 -(BOOL)isExistURL:(NSString*)url{
-    NSError *error;
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription
-                                   entityForName:CD_FAVOURITE_BEAN inManagedObjectContext:SharedApp.managedObjectContext];
-    [fetchRequest setEntity:entity];
-    
-    NSArray *fetchedObjects = [SharedApp.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    
 
-    for (NSManagedObject *info in fetchedObjects) {
-        NSLog(@"Name: %@", [info valueForKey:@"title"]);
-        /*
-        NSManagedObject *details = [info valueForKey:@"details"];
-        NSLog(@"Zip: %@", [details valueForKey:@"zip"]);
-         */
-    }
+   return  [CoreDataUtils dataisExist:url inTable:CD_FAVOURITE_BEAN tableRowName:@"url"];
 
-    
-    NSPredicate *titlePredicate = [NSPredicate predicateWithFormat:@"url = %@", url];
-    
-
-    NSArray *resultArr = [fetchedObjects filteredArrayUsingPredicate:titlePredicate];
-    if (resultArr.count!=0) {
-        NSLog(@"111%lu",resultArr.count);
-        return YES;
-    }else{
-        NSLog(@"222%lu",resultArr.count);
-        return NO;
-    }
-    
-    
 }
 
 

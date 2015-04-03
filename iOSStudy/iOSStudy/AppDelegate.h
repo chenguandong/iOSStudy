@@ -14,6 +14,10 @@
 @property(nonatomic,assign)__block BOOL isNetworking;
 @property(nonatomic,copy)NSString *str;
 
+#pragma mark --version list
+@property(nonatomic,strong)NSArray *versionLists;
+
+
 #pragma mark --coreData
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;

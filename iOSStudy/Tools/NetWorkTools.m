@@ -24,6 +24,7 @@
 
 
 +(void)postHttp:(NSString*)httpUrl success:(success)success error:(error)error isNetworking:(isNetwork)isNetworking{
+    
 
     if (SharedApp.isNetworking) {
         AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];

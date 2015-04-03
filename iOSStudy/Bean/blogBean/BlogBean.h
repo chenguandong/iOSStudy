@@ -38,4 +38,6 @@
  *  博客地址
  */
 @property(nonatomic,copy)NSString*date;
+
+@property(nonatomic,copy)NSString*version;
 @end

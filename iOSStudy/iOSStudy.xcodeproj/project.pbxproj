@@ -34,6 +34,10 @@
 		18B23B421A7A14D100E80854 /* iOSStudyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B23B411A7A14D100E80854 /* iOSStudyTests.m */; };
 		18B23B4D1A7A234800E80854 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B23B4C1A7A234800E80854 /* BaseViewController.m */; };
 		18C845091ACCFC690053884F /* HttpVersionTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C845081ACCFC690053884F /* HttpVersionTools.m */; };
+		18C8450C1ACD41C40053884F /* BlogJsonBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C8450B1ACD41C40053884F /* BlogJsonBean.m */; };
+		18C8450F1ACE3E580053884F /* CoreDataUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C8450E1ACE3E580053884F /* CoreDataUtils.m */; };
+		18C845121ACE4A580053884F /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C845111ACE4A580053884F /* WelcomeViewController.m */; };
+		18C845151ACE56150053884F /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C845141ACE56150053884F /* MainTabBarViewController.m */; };
 		18CECC0A1A91ACB7005598E4 /* FirstViewControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CECC091A91ACB7005598E4 /* FirstViewControllerViewModel.m */; };
 		18D201161A95A6F400D5F095 /* icon_29.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D2010D1A95A6F400D5F095 /* icon_29.png */; };
 		18D201171A95A6F400D5F095 /* icon_40.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D2010E1A95A6F400D5F095 /* icon_40.png */; };
@@ -132,6 +136,14 @@
 		18B23B4C1A7A234800E80854 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = Base/BaseViewController.m; sourceTree = "<group>"; };
 		18C845071ACCFC690053884F /* HttpVersionTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpVersionTools.h; path = Tools/HttpVersionTools.h; sourceTree = "<group>"; };
 		18C845081ACCFC690053884F /* HttpVersionTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpVersionTools.m; path = Tools/HttpVersionTools.m; sourceTree = "<group>"; };
+		18C8450A1ACD41C40053884F /* BlogJsonBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlogJsonBean.h; path = Bean/blogBean/BlogJsonBean.h; sourceTree = "<group>"; };
+		18C8450B1ACD41C40053884F /* BlogJsonBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlogJsonBean.m; path = Bean/blogBean/BlogJsonBean.m; sourceTree = "<group>"; };
+		18C8450D1ACE3E580053884F /* CoreDataUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataUtils.h; path = Tools/CoreDataUtils.h; sourceTree = "<group>"; };
+		18C8450E1ACE3E580053884F /* CoreDataUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataUtils.m; path = Tools/CoreDataUtils.m; sourceTree = "<group>"; };
+		18C845101ACE4A580053884F /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		18C845111ACE4A580053884F /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		18C845131ACE56150053884F /* MainTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarViewController.h; sourceTree = "<group>"; };
+		18C845141ACE56150053884F /* MainTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarViewController.m; sourceTree = "<group>"; };
 		18CECC081A91ACB6005598E4 /* FirstViewControllerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewControllerViewModel.h; path = iOSStudy/ViewModel/FirstViewControllerViewModel.h; sourceTree = "<group>"; };
 		18CECC091A91ACB7005598E4 /* FirstViewControllerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewControllerViewModel.m; path = iOSStudy/ViewModel/FirstViewControllerViewModel.m; sourceTree = "<group>"; };
 		18CECC101A921272005598E4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -224,6 +236,8 @@
 			children = (
 				189EF8311A8399B100F19327 /* BlogBean.h */,
 				189EF8321A8399B100F19327 /* BlogBean.m */,
+				18C8450A1ACD41C40053884F /* BlogJsonBean.h */,
+				18C8450B1ACD41C40053884F /* BlogJsonBean.m */,
 			);
 			name = blogBean;
 			sourceTree = "<group>";
@@ -248,6 +262,8 @@
 				18AB47A71A9DA40500E4C030 /* DBUtils.m */,
 				18C845071ACCFC690053884F /* HttpVersionTools.h */,
 				18C845081ACCFC690053884F /* HttpVersionTools.m */,
+				18C8450D1ACE3E580053884F /* CoreDataUtils.h */,
+				18C8450E1ACE3E580053884F /* CoreDataUtils.m */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -301,6 +317,8 @@
 		18B23B211A7A14D000E80854 /* iOSStudy */ = {
 			isa = PBXGroup;
 			children = (
+				18C845101ACE4A580053884F /* WelcomeViewController.h */,
+				18C845111ACE4A580053884F /* WelcomeViewController.m */,
 				18B23B261A7A14D100E80854 /* AppDelegate.h */,
 				18B23B271A7A14D100E80854 /* AppDelegate.m */,
 				18B23B291A7A14D100E80854 /* FirstViewController.h */,
@@ -318,6 +336,8 @@
 				18B23B341A7A14D100E80854 /* LaunchScreen.xib */,
 				18B23B221A7A14D000E80854 /* Supporting Files */,
 				18E016E31ACAAB35002A6E59 /* iOSStudy.xcdatamodeld */,
+				18C845131ACE56150053884F /* MainTabBarViewController.h */,
+				18C845141ACE56150053884F /* MainTabBarViewController.m */,
 			);
 			path = iOSStudy;
 			sourceTree = "<group>";
@@ -651,6 +671,7 @@
 				18AB47A81A9DA40500E4C030 /* DBUtils.m in Sources */,
 				18AB47A51A9C82FA00E4C030 /* AddBlogTableViewController.m in Sources */,
 				18D908A71A8A205600B42A42 /* ThirdTableViewController.m in Sources */,
+				18C8450C1ACD41C40053884F /* BlogJsonBean.m in Sources */,
 				18AB479B1A9C59CB00E4C030 /* UIImage+Resize.m in Sources */,
 				18D201421A96143300D5F095 /* ThirdViewControllerViewModel.m in Sources */,
 				18AB47951A99969600E4C030 /* VideoBean.m in Sources */,
@@ -664,9 +685,12 @@
 				18B23B2B1A7A14D100E80854 /* FirstViewController.m in Sources */,
 				189EF83A1A83C3AF00F19327 /* BlogDetailViewController.m in Sources */,
 				185EEB4B1A98DC9900BFDB79 /* SettingTableViewController.m in Sources */,
+				18C845121ACE4A580053884F /* WelcomeViewController.m in Sources */,
 				18B23B251A7A14D100E80854 /* main.m in Sources */,
 				18AB47AB1AA415A400E4C030 /* FavouriteBean.m in Sources */,
 				184F48B41A93340F00C5C22F /* WebBean.m in Sources */,
+				18C845151ACE56150053884F /* MainTabBarViewController.m in Sources */,
+				18C8450F1ACE3E580053884F /* CoreDataUtils.m in Sources */,
 				189EF8331A8399B100F19327 /* BlogBean.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

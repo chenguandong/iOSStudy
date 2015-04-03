@@ -13,6 +13,7 @@
     
     
     return @{
+             @"version":@"version",
              @"name": @"name",
              @"title": @"title",
              @"subTitle": @"subTitle",
