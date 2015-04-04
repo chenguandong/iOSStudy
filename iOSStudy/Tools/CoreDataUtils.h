@@ -29,4 +29,14 @@
  *  @return NSManagedObject 集合
  */
 +(NSArray*)queryDataFromTableName:(NSString*)tableName andNSPredicate:(NSPredicate*)predicate;
+
+
+/**
+ *  删除指定表中的数据
+ 
+ *
+ *  @param tableName      表名
+ *  @param andNSPredicate 删除条件  为nil 删除所有数据
+ */
++(void)deleteDateFromTableName:(NSString*)tableName andNSPredicate:(NSPredicate*)andNSPredicate;
 @end

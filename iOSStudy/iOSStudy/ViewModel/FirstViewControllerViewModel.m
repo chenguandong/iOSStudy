@@ -220,6 +220,11 @@
 #pragma mark -- 持久化所有数据
 -(void)persistenceData{
     
+    //删除已经存在的数据
+    NSPredicate *titlePredicate = [NSPredicate predicateWithFormat:@"type= %@", @"11"];
+    [CoreDataUtils deleteDateFromTableName:CD_FAVOURITE_BEAN andNSPredicate:titlePredicate];
+    
+    
     for (BlogBean *bean in _array) {
         
         if ([self isExistURL:bean.url]) {
@@ -232,20 +237,22 @@
             favouriteBean.subtitle = bean.subTitle;
             favouriteBean.image_name = bean.image;
             favouriteBean.url= bean.url;
-            favouriteBean.type =@"0";
+            favouriteBean.type =@"11";
       
             
-            NSError *error;
-            BOOL isSaveSuccess =[SharedApp.managedObjectContext save:&error];
-            if (!isSaveSuccess) {
-                NSLog(@"Error: %@,%@",error,[error userInfo]);
-            }else {
-                NSLog(@"Save successful favourite!");
-            }
+           
             
             
         }
         
+    }
+    
+    NSError *error;
+    BOOL isSaveSuccess =[SharedApp.managedObjectContext save:&error];
+    if (!isSaveSuccess) {
+        NSLog(@"Error: %@,%@",error,[error userInfo]);
+    }else {
+        NSLog(@"Save successful favourite!");
     }
 
 }

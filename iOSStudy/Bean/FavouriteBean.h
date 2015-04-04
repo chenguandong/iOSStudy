@@ -32,7 +32,7 @@ typedef NS_ENUM(NSInteger, FAVOURITE_TYPE) {
  */
 @property(nonatomic,copy)NSString *url;
 /**
- *  类型 1 博客 2 网站 3 视频
+ *  类型 1 收藏博客 2 收藏网站 3 收藏视频   11,持久化博客  22,持久化网站 33,持久化视频
  */
 @property(nonatomic,copy)NSString* type;
 @end

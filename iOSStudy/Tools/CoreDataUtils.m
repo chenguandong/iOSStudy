@@ -83,4 +83,32 @@
     
 
 }
+
+
+/**
+ *  删除指定表中的数据
+
+ *
+ *  @param tableName      表名
+ *  @param andNSPredicate 删除条件  为nil 删除所有数据
+ */
++(void)deleteDateFromTableName:(NSString*)tableName andNSPredicate:(NSPredicate*)andNSPredicate{
+    //存储之前先删除原来的数据
+    
+    //NSPredicate *titlePredicate = [NSPredicate predicateWithFormat:@"type= %@", @"11"];
+    
+    NSArray* managerObjtList = [CoreDataUtils queryDataFromTableName:tableName andNSPredicate:andNSPredicate];
+    
+    for (NSManagedObject *obct in managerObjtList) {
+        [SharedApp.managedObjectContext deleteObject:obct];
+    }
+    
+    
+    NSError *error = nil;
+    if (![SharedApp.managedObjectContext save:&error]) {
+        NSLog(@"Can't Delete! %@ %@", error, [error localizedDescription]);
+        return;
+    }
+    
+}
 @end
