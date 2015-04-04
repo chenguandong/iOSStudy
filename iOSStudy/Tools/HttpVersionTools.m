@@ -85,23 +85,25 @@
  */
 +(void)saveNowHttpVersion:(NSString*)url version:(NSString*)version{
     
+    NSString *log ;
     
     //当数据存在事后执行更新操作
     if ([CoreDataUtils dataisExist:url inTable:CD_VersionsEntity tableRowName:@"url"])
         
     {
         
-        NSManagedObject *updateObjt = [[NSManagedObject alloc]init];
         
-        [updateObjt setValue:url forKey:@"url"];
-        [updateObjt setValue:version forKey:@"url_version"];
+        NSPredicate *urlPredicate = [NSPredicate predicateWithFormat:@"url= %@", url];
         
-        NSError *error;
-        if (![SharedApp.managedObjectContext save:&error])
-        {
-            NSLog(@"版本号更新失败: %@", [error localizedDescription]);
-            
+        NSArray *managerList = [CoreDataUtils queryDataFromTableName:CD_VersionsEntity andNSPredicate:urlPredicate];
+        
+        if (managerList.count!=0) {
+           NSManagedObject *updateObjt=  managerList.firstObject;
+            [updateObjt setValue:url forKey:@"url"];
+            [updateObjt setValue:version forKey:@"url_version"];
         }
+        
+        log = @"版本更新成功";
             
     }
     else
@@ -113,12 +115,15 @@
         [managerObjt setValue:url forKey:@"url"];
         [managerObjt setValue:version forKey:@"url_version"];;
         
-        NSError *error;
-        if (![SharedApp.managedObjectContext save:&error])
-        {
-            NSLog(@"版本号存储失败: %@", [error localizedDescription]);
-            
-        }
+        log = @"版本插入成功";
+        
+    }
+    
+    NSError *error;
+    if (![SharedApp.managedObjectContext save:&error])
+    {
+        NSLog(@"%@: %@", log,[error localizedDescription]);
+        
     }
 
     
