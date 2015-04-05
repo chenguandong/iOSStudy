@@ -92,13 +92,16 @@
        
     }
     
-    cell.rightUtilityButtons =[self rightButtons];
+   
     cell.delegate = self;
 
 
     cell.textLabel.text = [_viewModel getBlogBean:indexPath].title;
     cell.detailTextLabel.text = [_viewModel getBlogBean:indexPath].subTitle;
 
+    
+    
+     cell.rightUtilityButtons =[_viewModel setRightSWCellButtons:[_viewModel getBlogBean:indexPath].url withType:TYPE_BLOG_FAVOURITE_TYPE];
     
     
     [cell.imageView setImageWithURL:[NSURL URLWithString:[_viewModel getBlogBean:indexPath].image] placeholderImage:[UIImage imageNamed:@"SVWebViewControllerActivitySafari-iPad.png"]];
@@ -108,19 +111,7 @@
 }
 
 
-#pragma mark --设置又滑菜单
-- (NSArray *)rightButtons
-{
-    NSMutableArray *rightUtilityButtons = [NSMutableArray new];
-    [rightUtilityButtons sw_addUtilityButtonWithColor:
-     [UIColor colorWithRed:0.78f green:0.78f blue:0.8f alpha:1.0]
-                                                title:@"收藏"];
-    [rightUtilityButtons sw_addUtilityButtonWithColor:
-     [UIColor colorWithRed:1.0f green:0.231f blue:0.188 alpha:1.0f]
-                                                title:@"不喜欢"];
-    
-    return rightUtilityButtons;
-}
+
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -164,24 +155,17 @@
 }
 
 - (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index{
-    switch (index) {
-        case 0:
-            NSLog(@"不喜欢");
-            {
-                NSIndexPath *indexPath = [_tableView indexPathForCell:cell];
-                [_viewModel saveFavourite:indexPath];
+    
+    
+    NSIndexPath *indexPath = [_tableView indexPathForCell:cell];
 
-            }
-            break;
-        case 1:
-            NSLog(@"收藏");
-
-            break;
-            
-        default:
-            break;
-    }
+    
+    [_viewModel saveFavourite:indexPath];
+    
+    
     [cell hideUtilityButtonsAnimated:YES];
+    
+    [_tableView reloadData];
     
 }
 

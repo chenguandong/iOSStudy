@@ -12,13 +12,12 @@
 /**
  *  检查数据是否在表中已经存在
  *
- *  @param url       http地址
  *  @param tableName 表名
- *  @param rowName   数据所在的列名
+ *  @param predicate 查询条件
  *
- *  @return YES 存在 NO 不存在
+ *  @return YES 存在 NO不存在
  */
-+(BOOL)dataisExist:(NSString*)url inTable:(NSString*)tableName tableRowName:(NSString*)rowName;
++(BOOL)dataisExistTableName:(NSString*)tableName withPredicate:(NSPredicate*)predicate;
 
 
 /**

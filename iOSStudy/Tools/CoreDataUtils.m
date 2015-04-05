@@ -20,7 +20,7 @@
  *
  *  @return YES 存在 NO 不存在
  */
-+(BOOL)dataisExist:(NSString*)url inTable:(NSString*)tableName tableRowName:(NSString*)rowName{
++(BOOL)dataisExistTableName:(NSString*)tableName withPredicate:(NSPredicate*)predicate{
 
     NSError *error;
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
@@ -28,20 +28,18 @@
                                    entityForName:tableName inManagedObjectContext:SharedApp.managedObjectContext];
     [fetchRequest setEntity:entity];
     
+    if (predicate) {
+        fetchRequest.predicate = predicate;
+    }
+    
     NSArray *fetchedObjects = [SharedApp.managedObjectContext executeFetchRequest:fetchRequest error:&error];
     
     
     
     //NSPredicate *titlePredicate = [NSPredicate predicateWithFormat:@"%@ = %@",rowName, url];
+
     
-    NSPredicate *titlePredicate = [NSPredicate predicateWithFormat:@"url= %@", url];
-    
-    
-    NSArray *resultArr = [fetchedObjects filteredArrayUsingPredicate:titlePredicate];
-    
-   
-    
-    if (resultArr.count!=0) {
+    if (fetchedObjects.count!=0) {
        // NSLog(@"111%lu",resultArr.count);
         return YES;
     }else{
@@ -67,20 +65,16 @@
                                    entityForName:tableName inManagedObjectContext:SharedApp.managedObjectContext];
     [fetchRequest setEntity:entity];
     
+    // NSPredicate *titlePredicate = [NSPredicate predicateWithFormat:@"url= %@", url];
+    if (predicate) {
+        fetchRequest.predicate = predicate;
+    }
+    
     NSArray *fetchedObjects = [SharedApp.managedObjectContext executeFetchRequest:fetchRequest error:&error];
     
     
-    //若果有过滤条件返回过滤后的NSManagedObject 对象   没有的话直接返回全部
-    if (predicate) {
-        
-       // NSPredicate *titlePredicate = [NSPredicate predicateWithFormat:@"url= %@", url];
-        
-        return [fetchedObjects filteredArrayUsingPredicate:predicate];
-    }else{
-    
-        return fetchedObjects;
-    }
-    
+    return [fetchedObjects filteredArrayUsingPredicate:predicate];
+
 
 }
 

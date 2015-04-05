@@ -89,4 +89,15 @@ typedef void (^modelNetWorking)(BOOL isNetWorking);
  *  @param modelDataIsNetWoring 网络状态
  */
 -(void)getDate:(modelSuccess)modelDataSuccess modelDataReload:(modelPersistentReload)modelDataReload modelDataErrors:(modelError)modelDataErrors modelDataIsNetworking:(modelNetWorking)modelDataIsNetWoring;
+
+
+/**
+ *  设置SWTableViewCell 滑动文字
+ *
+ *  @param url  url地址
+ *  @param type 1 博客 2 网址 3 视频
+ *
+ *  @return 要显示的Button集合
+ */
+- (NSArray *)setRightSWCellButtons:(NSString*)url withType:(NSString*)type;
 @end

@@ -29,4 +29,19 @@
  *  http版本号数据库表明
  */
 #define CD_VersionsEntity @"VersionsEntity"
+
+
+static NSString *const textNameFavourite = @"收藏";
+static NSString *const textNameUnFavourite = @"取消收藏";
+
+static NSString *const TYPE_BLOG_SIMPLE_TYPE = @"1";
+static NSString *const TYPE_WEB_SIMPLE_TYPE = @"2";
+static NSString *const TYPE_VIDEO_SIMPLE_TYPE = @"3";
+
+static NSString *const TYPE_BLOG_FAVOURITE_TYPE = @"11";
+static NSString *const TYPE_WEB_FAVOURITE_TYPE = @"22";
+static NSString *const TYPE_VIDEO_FAVOURITE_TYPE = @"33";
+
+
+
 #endif
