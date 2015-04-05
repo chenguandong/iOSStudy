@@ -16,7 +16,7 @@
 #import "BlogDetailViewController.h"
 #import <SVWebViewController.h>
 #import <MJRefresh.h>
-
+#import "EntityConstants.h"
 @interface FirstViewController ()
 
 @end
@@ -96,15 +96,15 @@
     cell.delegate = self;
 
 
-    cell.textLabel.text = [_viewModel getBlogBean:indexPath].title;
-    cell.detailTextLabel.text = [_viewModel getBlogBean:indexPath].subTitle;
+    cell.textLabel.text = [[_viewModel getBlogBean:indexPath]valueForKey:FavouriteBean_title];
+    cell.detailTextLabel.text = [[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_subtitle];
 
     
     
-     cell.rightUtilityButtons =[_viewModel setRightSWCellButtons:[_viewModel getBlogBean:indexPath].url withType:TYPE_BLOG_FAVOURITE_TYPE];
+     cell.rightUtilityButtons =[_viewModel setRightSWCellButtons:[[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_url] withType:TYPE_BLOG_FAVOURITE_TYPE];
     
     
-    [cell.imageView setImageWithURL:[NSURL URLWithString:[_viewModel getBlogBean:indexPath].image] placeholderImage:[UIImage imageNamed:@"SVWebViewControllerActivitySafari-iPad.png"]];
+    [cell.imageView setImageWithURL:[NSURL URLWithString:[[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_image_name]] placeholderImage:[UIImage imageNamed:@"SVWebViewControllerActivitySafari-iPad.png"]];
     
 
     return cell;
@@ -116,7 +116,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
 
-    SVModalWebViewController *webViewController = [[SVModalWebViewController alloc] initWithAddress:[_viewModel getBlogBean:indexPath].url];
+    SVModalWebViewController *webViewController = [[SVModalWebViewController alloc] initWithAddress:[[_viewModel getBlogBean:indexPath]valueForKey:FavouriteBean_url]];
     [self presentViewController:webViewController animated:NO completion:NULL];
  
 }

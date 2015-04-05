@@ -65,6 +65,7 @@
 		18D2013E1A960B6100D5F095 /* app_img_1536x2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D2013A1A960B6100D5F095 /* app_img_1536x2048.png */; };
 		18D2013F1A960B6100D5F095 /* app_img_2048x1536.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D2013B1A960B6100D5F095 /* app_img_2048x1536.png */; };
 		18D201421A96143300D5F095 /* ThirdViewControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D201411A96143300D5F095 /* ThirdViewControllerViewModel.m */; };
+		18D4ECA61AD17F56009FE9F0 /* EntityConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D4ECA51AD17F56009FE9F0 /* EntityConstants.m */; };
 		18D908A71A8A205600B42A42 /* ThirdTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D908A61A8A205600B42A42 /* ThirdTableViewController.m */; };
 		18DF6D3D1A80D3BC005751E8 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DF6D3C1A80D3BC005751E8 /* Reachability.m */; };
 		18DF6D3F1A80D40D005751E8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DF6D3E1A80D40D005751E8 /* SystemConfiguration.framework */; };
@@ -174,6 +175,8 @@
 		18D2013B1A960B6100D5F095 /* app_img_2048x1536.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_img_2048x1536.png; path = " Resource/images/start_img/app_img_2048x1536.png"; sourceTree = "<group>"; };
 		18D201401A96143300D5F095 /* ThirdViewControllerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThirdViewControllerViewModel.h; path = iOSStudy/ViewModel/ThirdViewControllerViewModel.h; sourceTree = "<group>"; };
 		18D201411A96143300D5F095 /* ThirdViewControllerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThirdViewControllerViewModel.m; path = iOSStudy/ViewModel/ThirdViewControllerViewModel.m; sourceTree = "<group>"; };
+		18D4ECA41AD17F56009FE9F0 /* EntityConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EntityConstants.h; path = Constants/EntityConstants.h; sourceTree = "<group>"; };
+		18D4ECA51AD17F56009FE9F0 /* EntityConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EntityConstants.m; path = Constants/EntityConstants.m; sourceTree = "<group>"; };
 		18D908A51A8A205600B42A42 /* ThirdTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdTableViewController.h; sourceTree = "<group>"; };
 		18D908A61A8A205600B42A42 /* ThirdTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdTableViewController.m; sourceTree = "<group>"; };
 		18DF6D391A80CF76005751E8 /* Constants .h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Constants .h"; path = "iOSStudy/Constants .h"; sourceTree = "<group>"; };
@@ -295,6 +298,8 @@
 				189EF82F1A83994B00F19327 /* Bean */,
 				18DF6D3A1A80D3A4005751E8 /* libs */,
 				18DF6D391A80CF76005751E8 /* Constants .h */,
+				18D4ECA41AD17F56009FE9F0 /* EntityConstants.h */,
+				18D4ECA51AD17F56009FE9F0 /* EntityConstants.m */,
 				18A998901A7C7772002E7219 /* Tools */,
 				18B23B4E1A7A235E00E80854 /* Base */,
 				18B23B211A7A14D000E80854 /* iOSStudy */,
@@ -677,6 +682,7 @@
 				18AB47951A99969600E4C030 /* VideoBean.m in Sources */,
 				18CECC0A1A91ACB7005598E4 /* FirstViewControllerViewModel.m in Sources */,
 				189EF8361A839FC600F19327 /* JsonTools.m in Sources */,
+				18D4ECA61AD17F56009FE9F0 /* EntityConstants.m in Sources */,
 				18C845091ACCFC690053884F /* HttpVersionTools.m in Sources */,
 				18E6A0B51ACCF7FD00B28D32 /* VersionBean.m in Sources */,
 				18DF6D3D1A80D3BC005751E8 /* Reachability.m in Sources */,

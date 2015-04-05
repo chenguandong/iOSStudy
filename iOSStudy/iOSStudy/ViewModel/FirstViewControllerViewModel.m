@@ -32,7 +32,7 @@
 
 
 
--(BlogBean*)getBlogBean:(NSIndexPath *)indexPath{
+-(NSManagedObject*)getBlogBean:(NSIndexPath *)indexPath{
     
     return _array[indexPath.row];
 }
@@ -52,7 +52,7 @@
     
     _array = [[self getPersistenceDataWithType:TYPE_BLOG_SIMPLE_TYPE]copy];
    
-    //modelDataSuccess();
+
     modelDataReload();
     
     __block NSString *versionStr;
@@ -82,8 +82,7 @@
             
             _array = [arr copy];
             
-            
-            modelDataSuccess();
+ 
             
             //持久化数据
             [self persistenceData];
@@ -91,6 +90,11 @@
             //当前最新版本号存入数据库
             
             [HttpVersionTools saveNowHttpVersion:Address_blogs version:versionStr];
+            
+             _array = [[self getPersistenceDataWithType:TYPE_BLOG_SIMPLE_TYPE]copy];
+            
+            modelDataSuccess();
+            
             
             
         } error:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -202,6 +206,8 @@
     
     NSArray *fetchedObjects = [SharedApp.managedObjectContext executeFetchRequest:fetchRequest error:&error];
     
+    /*
+    
     NSMutableArray *blogArr = [NSMutableArray arrayWithCapacity:10];
     
 
@@ -220,8 +226,9 @@
         }
 
     
-
-    return blogArr;
+     */
+     
+    return fetchedObjects;
 
 }
 
@@ -273,6 +280,7 @@
     
     if ([self isEXistFavouriteDataWithURL:loveBean.url andUrlType:TYPE_BLOG_FAVOURITE_TYPE]) {
         NSLog(@"已经有这条数据了 ");//更新收藏的状态
+        
         
         
         

@@ -59,7 +59,7 @@ typedef void (^modelNetWorking)(BOOL isNetWorking);
  *
  *  @return cell的数据
  */
--(BlogBean*)getBlogBean:(NSIndexPath *)indexPath;
+-(NSManagedObject*)getBlogBean:(NSIndexPath *)indexPath;
 
 
 
@@ -70,14 +70,7 @@ typedef void (^modelNetWorking)(BOOL isNetWorking);
  */
 -(void)saveFavourite:(NSIndexPath*)indexPath;
 
-/**
- *  此链接是否在数据库已经存在
- *
- *  @param url url地址
- *
- *  @return YES 存在 NO 不存在
- */
--(BOOL)isExistURL:(NSString*)url;
+
 
 
 /**
