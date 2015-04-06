@@ -41,6 +41,7 @@
 		18CECC0A1A91ACB7005598E4 /* FirstViewControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CECC091A91ACB7005598E4 /* FirstViewControllerViewModel.m */; };
 		18D184821AD28D1900188C3C /* FavouriteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D184811AD28D1900188C3C /* FavouriteTableViewController.m */; };
 		18D184851AD2904900188C3C /* FavouriteViewControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D184841AD2904900188C3C /* FavouriteViewControllerViewModel.m */; };
+		18D184871AD2E0B700188C3C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D184861AD2E0B700188C3C /* MessageUI.framework */; };
 		18D201161A95A6F400D5F095 /* icon_29.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D2010D1A95A6F400D5F095 /* icon_29.png */; };
 		18D201171A95A6F400D5F095 /* icon_40.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D2010E1A95A6F400D5F095 /* icon_40.png */; };
 		18D201181A95A6F400D5F095 /* icon_58.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D2010F1A95A6F400D5F095 /* icon_58.png */; };
@@ -154,6 +155,7 @@
 		18D184811AD28D1900188C3C /* FavouriteTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavouriteTableViewController.m; path = iOSStudy/FavouriteTableViewController.m; sourceTree = "<group>"; };
 		18D184831AD2904900188C3C /* FavouriteViewControllerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavouriteViewControllerViewModel.h; path = iOSStudy/ViewModel/FavouriteViewControllerViewModel.h; sourceTree = "<group>"; };
 		18D184841AD2904900188C3C /* FavouriteViewControllerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavouriteViewControllerViewModel.m; path = iOSStudy/ViewModel/FavouriteViewControllerViewModel.m; sourceTree = "<group>"; };
+		18D184861AD2E0B700188C3C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		18D2010D1A95A6F400D5F095 /* icon_29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_29.png; path = " Resource/images/appicon/icon_29.png"; sourceTree = "<group>"; };
 		18D2010E1A95A6F400D5F095 /* icon_40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_40.png; path = " Resource/images/appicon/icon_40.png"; sourceTree = "<group>"; };
 		18D2010F1A95A6F400D5F095 /* icon_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_58.png; path = " Resource/images/appicon/icon_58.png"; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18D184871AD2E0B700188C3C /* MessageUI.framework in Frameworks */,
 				18E016AA1ACAA898002A6E59 /* CoreData.framework in Frameworks */,
 				18DF6D3F1A80D40D005751E8 /* SystemConfiguration.framework in Frameworks */,
 				54A0444849F1931415392FC1 /* libPods.a in Frameworks */,
@@ -498,6 +501,7 @@
 		910A021243EF9C731476BCA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18D184861AD2E0B700188C3C /* MessageUI.framework */,
 				18E016A91ACAA898002A6E59 /* CoreData.framework */,
 				18DF6D3E1A80D40D005751E8 /* SystemConfiguration.framework */,
 				E83ED1B8EA89BC57ACF91BA5 /* libPods.a */,

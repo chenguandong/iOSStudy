@@ -17,17 +17,18 @@ typedef NS_ENUM(NSInteger, segmentedSelect) {
 };
 
 @implementation FavouriteTableViewController
-
+{
+    NSString *favouriteType;
+}
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
     
-    [_viewModel getFavouriteData:TYPE_BLOG_FAVOURITE_TYPE];
-    [self.tableView reloadData];
+    [self reloadData];
 }
 - (IBAction)changeFavouriteType:(id)sender {
     
-    NSString *favouriteType;
+
     
     UISegmentedControl *seColl = (UISegmentedControl*)sender;
     switch (seColl.selectedSegmentIndex) {
@@ -60,10 +61,17 @@ typedef NS_ENUM(NSInteger, segmentedSelect) {
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+    
+    favouriteType = TYPE_BLOG_FAVOURITE_TYPE;
 
     _viewModel  = [[FavouriteViewControllerViewModel alloc]init];
     
-   
+}
+
+
+-(void)reloadData{
+    [_viewModel getFavouriteData:favouriteType];
+    [self.tableView reloadData];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -88,6 +96,38 @@ typedef NS_ENUM(NSInteger, segmentedSelect) {
     return cell;
 
 }
+
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Return NO if you do not want the specified item to be editable.
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete object from database
+        [SharedApp.managedObjectContext deleteObject:[self.viewModel.array objectAtIndex:indexPath.row]];
+        
+        NSError *error = nil;
+        if (![SharedApp.managedObjectContext save:&error]) {
+            NSLog(@"Can't Delete! %@ %@", error, [error localizedDescription]);
+            return;
+        }
+        
+        // Remove device from table view
+//        [self.viewModel.array removeObjectAtIndex:indexPath.row];
+//        
+//
+//        [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
+        [self reloadData];
+    }
+}
+
 
 
 @end

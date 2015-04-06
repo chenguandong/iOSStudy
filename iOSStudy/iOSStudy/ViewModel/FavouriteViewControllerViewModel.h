@@ -13,7 +13,7 @@
 
 @interface FavouriteViewControllerViewModel : NSObject
 
-@property(nonatomic,strong)NSArray *array;
+@property(nonatomic,strong)NSMutableArray *array;
 
 - (NSInteger)getNumberOfRowsInSection;
 /**

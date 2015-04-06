@@ -9,7 +9,7 @@
 #import "SVModalWebViewController.h"
 
 @interface SVWebViewController : UIViewController
-@property(nonatomic,copy)NSString*urlString;
+
 - (id)initWithAddress:(NSString*)urlString;
 - (id)initWithURL:(NSURL*)URL;
 
