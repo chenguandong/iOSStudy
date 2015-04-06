@@ -206,13 +206,15 @@
             NSLog(@"删除收藏成功");
         }
     }else{
+        
+        //添加收藏
         NSManagedObject *favouriteBean  = [NSEntityDescription insertNewObjectForEntityForName:CD_FAVOURITE_BEAN inManagedObjectContext:SharedApp.managedObjectContext];
         
         [favouriteBean setValue:[loveBean valueForKey:FavouriteBean_title] forKey:FavouriteBean_title];
         [favouriteBean setValue:[loveBean valueForKey:FavouriteBean_subtitle] forKey:FavouriteBean_subtitle];
         [favouriteBean setValue:[loveBean valueForKey:FavouriteBean_image_name] forKey:FavouriteBean_image_name];
         [favouriteBean setValue:[loveBean valueForKey:FavouriteBean_url] forKey:FavouriteBean_url];
-        [favouriteBean setValue:TYPE_BLOG_FAVOURITE_TYPE forKey:FavouriteBean_type];
+        [favouriteBean setValue:type forKey:FavouriteBean_type];
     }
     
     NSError *error;
@@ -230,20 +232,7 @@
 }
 
 
-/**
- *  判断收藏的条目是否存在
- *
- *  @param url  url地址
- *  @param type url 类型
- *
- *  @return YES 存在 NO 不存在
- */
-//-(BOOL)isEXistFavouriteDataWithURL:(NSString*)url andUrlType:(NSString*)type{
-//
-//    NSPredicate *urlAndurlTypePredicate = [NSPredicate predicateWithFormat:@"url = %@ AND type=%@",url,TYPE_BLOG_FAVOURITE_TYPE];
-//    
-//    return [CoreDataUtils dataisExistTableName:CD_FAVOURITE_BEAN withPredicate:urlAndurlTypePredicate];
-//}
+
 
 /**
  *  判断收藏的URL地址是否存在

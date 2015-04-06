@@ -59,7 +59,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="推荐博客" id="WaC-jM-KHt">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0B8-ql-ct7">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="add" id="0B8-ql-ct7">
                             <color key="tintColor" red="0.9450981021" green="0.13725490870000001" blue="0.03529411927" alpha="1" colorSpace="deviceRGB"/>
                             <connections>
                                 <segue destination="sDM-eF-cOg" kind="push" id="E6A-Tg-gKS"/>
@@ -553,47 +553,6 @@
             </objects>
             <point key="canvasLocation" x="1477" y="902"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="QX2-KR-1Qy">
-            <objects>
-                <viewController id="vrd-Q0-oVQ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="tau-g2-N54"/>
-                        <viewControllerLayoutGuide type="bottom" id="QDR-ND-fLn"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cPP-n0-FLj">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jr4-z3-IqP">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Jr4-z3-IqP" firstAttribute="leading" secondItem="cPP-n0-FLj" secondAttribute="leading" id="VkY-X1-NQf"/>
-                            <constraint firstAttribute="bottom" secondItem="Jr4-z3-IqP" secondAttribute="bottom" id="e83-77-i45"/>
-                            <constraint firstAttribute="trailing" secondItem="Jr4-z3-IqP" secondAttribute="trailing" id="hhH-Nx-Suo"/>
-                            <constraint firstItem="Jr4-z3-IqP" firstAttribute="top" secondItem="cPP-n0-FLj" secondAttribute="top" id="vPB-7P-l1N"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="ma6-ZC-kJN">
-                        <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Byh-AH-pW0">
-                            <rect key="frame" x="180" y="7" width="240" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <segments>
-                                <segment title="博客"/>
-                                <segment title="网站"/>
-                                <segment title="视频"/>
-                            </segments>
-                        </segmentedControl>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="67M-g5-vVE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-414" y="1451"/>
-        </scene>
         <!--设置-->
         <scene sceneID="Jjs-IR-QSD">
             <objects>
@@ -654,12 +613,67 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="vrd-Q0-oVQ" kind="relationship" relationship="rootViewController" id="ehn-nF-mtx"/>
+                        <segue destination="Vtf-Ce-loB" kind="relationship" relationship="rootViewController" id="baE-f8-2rC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4sA-eL-gtH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-446" y="656"/>
+            <point key="canvasLocation" x="-473" y="770"/>
+        </scene>
+        <!--Favourite Table View Controller-->
+        <scene sceneID="D9k-ha-qd0">
+            <objects>
+                <tableViewController id="Vtf-Ce-loB" customClass="FavouriteTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2Li-Jr-5y0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FCell" textLabel="DUN-jA-nZ1" detailTextLabel="rkz-vV-hB8" style="IBUITableViewCellStyleSubtitle" id="hod-UI-RsU">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hod-UI-RsU" id="i7D-T3-mfG">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DUN-jA-nZ1">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rkz-vV-hB8">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Vtf-Ce-loB" id="rE5-Rr-cBE"/>
+                            <outlet property="delegate" destination="Vtf-Ce-loB" id="gDY-wS-TQ2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="DuB-RD-LKe">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="VcJ-XZ-Bc3">
+                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="博客"/>
+                                <segment title="网站"/>
+                                <segment title="视频"/>
+                            </segments>
+                            <connections>
+                                <action selector="changeFavouriteType:" destination="Vtf-Ce-loB" eventType="valueChanged" id="spY-PQ-Pk7"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t0L-Zc-i7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-775" y="1517"/>
         </scene>
     </scenes>
     <resources>

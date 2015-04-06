@@ -39,7 +39,7 @@
 
 -(void)initViewData{
     
-    _favouriteType = TYPE_BLOG_FAVOURITE_TYPE;
+    _favouriteType = TYPE_WEB_FAVOURITE_TYPE;
     
     _viewModel = [[SecondViewControllerViewModel alloc]init];
     

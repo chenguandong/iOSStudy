@@ -41,7 +41,7 @@
 
 -(void)initViewData{
     
-    _favouriteType = TYPE_BLOG_FAVOURITE_TYPE;
+    _favouriteType = TYPE_VIDEO_FAVOURITE_TYPE;
     
     _viewModel = [[ThirdViewControllerViewModel alloc]init];
     

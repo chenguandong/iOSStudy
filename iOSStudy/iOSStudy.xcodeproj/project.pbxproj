@@ -39,6 +39,8 @@
 		18C845121ACE4A580053884F /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C845111ACE4A580053884F /* WelcomeViewController.m */; };
 		18C845151ACE56150053884F /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C845141ACE56150053884F /* MainTabBarViewController.m */; };
 		18CECC0A1A91ACB7005598E4 /* FirstViewControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CECC091A91ACB7005598E4 /* FirstViewControllerViewModel.m */; };
+		18D184821AD28D1900188C3C /* FavouriteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D184811AD28D1900188C3C /* FavouriteTableViewController.m */; };
+		18D184851AD2904900188C3C /* FavouriteViewControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D184841AD2904900188C3C /* FavouriteViewControllerViewModel.m */; };
 		18D201161A95A6F400D5F095 /* icon_29.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D2010D1A95A6F400D5F095 /* icon_29.png */; };
 		18D201171A95A6F400D5F095 /* icon_40.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D2010E1A95A6F400D5F095 /* icon_40.png */; };
 		18D201181A95A6F400D5F095 /* icon_58.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D2010F1A95A6F400D5F095 /* icon_58.png */; };
@@ -148,6 +150,10 @@
 		18CECC081A91ACB6005598E4 /* FirstViewControllerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewControllerViewModel.h; path = iOSStudy/ViewModel/FirstViewControllerViewModel.h; sourceTree = "<group>"; };
 		18CECC091A91ACB7005598E4 /* FirstViewControllerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewControllerViewModel.m; path = iOSStudy/ViewModel/FirstViewControllerViewModel.m; sourceTree = "<group>"; };
 		18CECC101A921272005598E4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		18D184801AD28D1900188C3C /* FavouriteTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavouriteTableViewController.h; path = iOSStudy/FavouriteTableViewController.h; sourceTree = "<group>"; };
+		18D184811AD28D1900188C3C /* FavouriteTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavouriteTableViewController.m; path = iOSStudy/FavouriteTableViewController.m; sourceTree = "<group>"; };
+		18D184831AD2904900188C3C /* FavouriteViewControllerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavouriteViewControllerViewModel.h; path = iOSStudy/ViewModel/FavouriteViewControllerViewModel.h; sourceTree = "<group>"; };
+		18D184841AD2904900188C3C /* FavouriteViewControllerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavouriteViewControllerViewModel.m; path = iOSStudy/ViewModel/FavouriteViewControllerViewModel.m; sourceTree = "<group>"; };
 		18D2010D1A95A6F400D5F095 /* icon_29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_29.png; path = " Resource/images/appicon/icon_29.png"; sourceTree = "<group>"; };
 		18D2010E1A95A6F400D5F095 /* icon_40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_40.png; path = " Resource/images/appicon/icon_40.png"; sourceTree = "<group>"; };
 		18D2010F1A95A6F400D5F095 /* icon_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_58.png; path = " Resource/images/appicon/icon_58.png"; sourceTree = "<group>"; };
@@ -343,6 +349,8 @@
 				18E016E31ACAAB35002A6E59 /* iOSStudy.xcdatamodeld */,
 				18C845131ACE56150053884F /* MainTabBarViewController.h */,
 				18C845141ACE56150053884F /* MainTabBarViewController.m */,
+				18D184801AD28D1900188C3C /* FavouriteTableViewController.h */,
+				18D184811AD28D1900188C3C /* FavouriteTableViewController.m */,
 			);
 			path = iOSStudy;
 			sourceTree = "<group>";
@@ -394,6 +402,8 @@
 				18CECC091A91ACB7005598E4 /* FirstViewControllerViewModel.m */,
 				184F48B01A93323F00C5C22F /* SecondViewControllerViewModel.h */,
 				184F48AE1A93321700C5C22F /* SecondViewControllerViewModel.m */,
+				18D184831AD2904900188C3C /* FavouriteViewControllerViewModel.h */,
+				18D184841AD2904900188C3C /* FavouriteViewControllerViewModel.m */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -688,6 +698,7 @@
 				18DF6D3D1A80D3BC005751E8 /* Reachability.m in Sources */,
 				18B23B281A7A14D100E80854 /* AppDelegate.m in Sources */,
 				184F48AF1A93321700C5C22F /* SecondViewControllerViewModel.m in Sources */,
+				18D184821AD28D1900188C3C /* FavouriteTableViewController.m in Sources */,
 				18B23B2B1A7A14D100E80854 /* FirstViewController.m in Sources */,
 				189EF83A1A83C3AF00F19327 /* BlogDetailViewController.m in Sources */,
 				185EEB4B1A98DC9900BFDB79 /* SettingTableViewController.m in Sources */,
@@ -698,6 +709,7 @@
 				18C845151ACE56150053884F /* MainTabBarViewController.m in Sources */,
 				18C8450F1ACE3E580053884F /* CoreDataUtils.m in Sources */,
 				189EF8331A8399B100F19327 /* BlogBean.m in Sources */,
+				18D184851AD2904900188C3C /* FavouriteViewControllerViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
