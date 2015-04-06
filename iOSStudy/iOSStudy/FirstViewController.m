@@ -27,16 +27,22 @@
     [super viewDidLoad];
 
 
+    
+    
     _tableView.delegate = self;
     _tableView.dataSource = self;
     
+    [self initViewData];
+}
 
+-(void)initViewData{
+    
+    _favouriteType = TYPE_BLOG_FAVOURITE_TYPE;
+    
     _viewModel = [[FirstViewControllerViewModel alloc]init];
     
-    
-    
     [self.tableView addHeaderWithCallback:^{
- 
+        
         
         [_viewModel getDate:^{
             [_tableView reloadData];
@@ -44,21 +50,18 @@
             [self stopTableRefreshing];
         } modelDataReload:^{
             [_tableView reloadData];
-
         } modelDataErrors:^{
             [self stopTableRefreshing];
         } modelDataIsNetworking:^(BOOL isNetWorking) {
             [self stopTableRefreshing];
-        }];
+        } httpAdress:Address_blogs dataType:TYPE_BLOG_SIMPLE_TYPE jsonClass:[BlogBean class]];
+        
+        
         
     }];
     
     [self.tableView headerBeginRefreshing];
-   
-
 }
-
-
 
 /**
  *  停止UITableView刷新
@@ -160,7 +163,7 @@
     NSIndexPath *indexPath = [_tableView indexPathForCell:cell];
 
     
-    [_viewModel saveFavourite:indexPath];
+    [_viewModel saveFavourite:indexPath favouriteType:_favouriteType];
     
     
     [cell hideUtilityButtonsAnimated:YES];
@@ -170,8 +173,6 @@
 
     
 }
-
-
 
 
 -(void)dealloc{

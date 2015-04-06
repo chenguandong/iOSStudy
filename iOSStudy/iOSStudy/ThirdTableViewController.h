@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "ThirdViewControllerViewModel.h"
-@interface ThirdTableViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+#import <SWTableViewCell.h>
+@interface ThirdTableViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,SWTableViewCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property(nonatomic,strong)ThirdViewControllerViewModel *viewModel;
+@property(nonatomic,copy)NSString* favouriteType;
 @end

@@ -89,7 +89,7 @@
     
     //当数据存在事后执行更新操作
     //[CoreDataUtils dataisExist:url inTable:CD_VersionsEntity tableRowName:@"url"]
-    NSPredicate *urlPredicate = [NSPredicate predicateWithFormat:@"%@ = %@",@"url", url];
+    NSPredicate *urlPredicate = [NSPredicate predicateWithFormat:@"url = %@", url];
     if (
         [CoreDataUtils dataisExistTableName:CD_VersionsEntity withPredicate:urlPredicate]
         )

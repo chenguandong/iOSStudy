@@ -16,6 +16,8 @@
 #import "BlogDetailViewController.h"
 #import <SVWebViewController.h>
 #import <MJRefresh.h>
+#import <SVModalWebViewController.h>
+#import "EntityConstants.h"
 @interface SecondViewController ()
 
 @end
@@ -29,46 +31,51 @@
     _tableView.delegate = self;
     _tableView.dataSource = self;
     
+    [self initViewData];
+
+}
+
+
+
+-(void)initViewData{
+    
+    _favouriteType = TYPE_BLOG_FAVOURITE_TYPE;
     
     _viewModel = [[SecondViewControllerViewModel alloc]init];
     
-    
-    
     [self.tableView addHeaderWithCallback:^{
+        
+        
         [_viewModel getDate:^{
-            
             [_tableView reloadData];
             
-             [self stopEndRefreshing];
+            [self stopTableRefreshing];
             
+        } modelDataReload:^{
+            [_tableView reloadData];
         } modelDataErrors:^{
-            
-            [self stopEndRefreshing];
-            
+            [self stopTableRefreshing];
         } modelDataIsNetworking:^(BOOL isNetWorking) {
-            
-            [self stopEndRefreshing];
-            
-        }];
+            [self stopTableRefreshing];
+        } httpAdress:Adress_webs dataType:TYPE_WEB_SIMPLE_TYPE jsonClass:[WebBean class]];
+        
+        
+        
     }];
     
-    
-    
-    
-    
     [self.tableView headerBeginRefreshing];
-    
-    
 }
 
 /**
  *  停止UITableView刷新
  */
--(void)stopEndRefreshing{
+-(void)stopTableRefreshing{
     if ([_tableView isHeaderRefreshing]) {
         [_tableView headerEndRefreshing];
     }
 }
+
+
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
@@ -87,29 +94,33 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     static NSString *CellIdentifier = @"WebCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    SWTableViewCell *cell = (SWTableViewCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell = [[SWTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        
     }
     
     
-    ;
-    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
-    
-    cell.textLabel.text = [_viewModel getBlogBean:indexPath].title;
-    cell.detailTextLabel.text = [_viewModel getBlogBean:indexPath].subTitle;
+    cell.delegate = self;
     
     
-    [cell.imageView setImageWithURL:[NSURL URLWithString:[_viewModel getBlogBean:indexPath].webImage] placeholderImage:[UIImage imageNamed:@"SVWebViewControllerActivitySafari-iPad"]];
+    cell.textLabel.text = [[_viewModel getBlogBean:indexPath]valueForKey:FavouriteBean_title];
+    cell.detailTextLabel.text = [[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_subtitle];
+    
+    
+    
+    cell.rightUtilityButtons =[_viewModel setRightSWCellButtons:[[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_url] withType:TYPE_BLOG_FAVOURITE_TYPE];
+    
+    
+    [cell.imageView setImageWithURL:[NSURL URLWithString:[[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_image_name]] placeholderImage:[UIImage imageNamed:@"SVWebViewControllerActivitySafari-iPad.png"]];
     
 
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    
-    SVModalWebViewController *webViewController = [[SVModalWebViewController alloc] initWithAddress:[_viewModel getBlogBean:indexPath].webUrl];
+
+    SVModalWebViewController *webViewController = [[SVModalWebViewController alloc] initWithAddress:[[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_url]];
     [self presentViewController:webViewController animated:NO completion:NULL];
 }
 
@@ -120,6 +131,53 @@
         
     }
 }
+
+
+#pragma mark-- SWTableViewCell delagate
+
+- (BOOL)swipeableTableViewCellShouldHideUtilityButtonsOnSwipe:(SWTableViewCell *)cell
+{
+    
+    return  YES;
+}
+- (BOOL)swipeableTableViewCell:(SWTableViewCell *)cell canSwipeToState:(SWCellState)state{
+    
+    return YES;
+    
+}
+
+- (void)swipeableTableViewCellDidEndScrolling:(SWTableViewCell *)cell{
+    
+    //根据侧滑按钮是否显示设置箭头标志
+    if (cell.isUtilityButtonsHidden) {
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }else{
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        
+    }
+}
+
+- (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index{
+    
+    
+    NSIndexPath *indexPath = [_tableView indexPathForCell:cell];
+    
+    
+    [_viewModel saveFavourite:indexPath favouriteType:_favouriteType];
+    
+    
+    [cell hideUtilityButtonsAnimated:YES];
+    
+    [_tableView reloadData];
+    
+    
+    
+}
+
+
+
+
+
 
 
 -(void)dealloc{

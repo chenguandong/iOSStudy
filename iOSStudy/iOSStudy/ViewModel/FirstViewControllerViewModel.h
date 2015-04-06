@@ -36,14 +36,6 @@ typedef void (^modelNetWorking)(BOOL isNetWorking);
 @interface FirstViewControllerViewModel : NSObject
 @property(nonatomic,strong)NSArray *array;
 
-/**
- *  获取博客数据
- *
- *  @param modelDataSuccess     获取博客数据成功
- *  @param modelDataErrors      获取博客数据失败
- *  @param modelDataIsNetWoring 是否有网络
- */
--(void)getDate:(modelSuccess)modelDataSuccess modelDataErrors:(modelError)modelDataErrors modelDataIsNetworking:(modelNetWorking)modelDataIsNetWoring;
 
 /**
  *  获取table的行数
@@ -68,7 +60,7 @@ typedef void (^modelNetWorking)(BOOL isNetWorking);
  *
  *  @param indexPath indexPath
  */
--(void)saveFavourite:(NSIndexPath*)indexPath;
+-(void)saveFavourite:(NSIndexPath*)indexPath favouriteType:(NSString*)type;
 
 
 
@@ -77,11 +69,11 @@ typedef void (^modelNetWorking)(BOOL isNetWorking);
  *  请求网络数据
  *
  *  @param modelDataSuccess     请求成功
- *  @param modelPersistentReload 刷新Table
+ *  @param modelDataStart       请求开始
  *  @param modelDataErrors      请求失败
  *  @param modelDataIsNetWoring 网络状态
  */
--(void)getDate:(modelSuccess)modelDataSuccess modelDataReload:(modelPersistentReload)modelDataReload modelDataErrors:(modelError)modelDataErrors modelDataIsNetworking:(modelNetWorking)modelDataIsNetWoring;
+-(void)getDate:(modelSuccess)modelDataSuccess modelDataReload:(modelPersistentReload)modelDataReload modelDataErrors:(modelError)modelDataErrors modelDataIsNetworking:(modelNetWorking)modelDataIsNetWoring httpAdress:(NSString*)httpAdress dataType:(NSString*)dataType jsonClass:(Class)myClass;
 
 
 /**
@@ -93,4 +85,16 @@ typedef void (^modelNetWorking)(BOOL isNetWorking);
  *  @return 要显示的Button集合
  */
 - (NSArray *)setRightSWCellButtons:(NSString*)url withType:(NSString*)type;
+
+#pragma mark -- 持久化所有数据
+-(void)persistenceDataWithType:(NSString*)type;
+
+/**
+ *  判断收藏的URL地址是否存在
+ *
+ *  @param url URL地址
+ *
+ *  @return YES 存在   NO 不存在
+ */
+-(BOOL)isExistSimpleDataWithURL:(NSString*)url;
 @end

@@ -7,8 +7,8 @@
 //
 
 #import "BaseTableViewCell.h"
-
-@interface VideoCell : BaseTableViewCell
+#import <SWTableViewCell.h>
+@interface VideoCell : SWTableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *videoImageView;
 @property (weak, nonatomic) IBOutlet UILabel *videoTitle;
 @property (weak, nonatomic) IBOutlet UILabel *videoSubTitle;

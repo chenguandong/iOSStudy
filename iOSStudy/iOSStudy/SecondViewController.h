@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
 #import "SecondViewControllerViewModel.h"
-@interface SecondViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate>
-
+#import <SWTableViewCell.h>
+@interface SecondViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate,SWTableViewCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property(nonatomic,strong)SecondViewControllerViewModel *viewModel;
+@property(nonatomic,copy)NSString *favouriteType;
 @end
 

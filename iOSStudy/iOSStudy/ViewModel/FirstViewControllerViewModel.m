@@ -48,21 +48,21 @@
  *  @param modelDataErrors      请求失败
  *  @param modelDataIsNetWoring 网络状态
  */
--(void)getDate:(modelSuccess)modelDataSuccess modelDataReload:(modelPersistentReload)modelDataReload modelDataErrors:(modelError)modelDataErrors modelDataIsNetworking:(modelNetWorking)modelDataIsNetWoring{
+-(void)getDate:(modelSuccess)modelDataSuccess modelDataReload:(modelPersistentReload)modelDataReload modelDataErrors:(modelError)modelDataErrors modelDataIsNetworking:(modelNetWorking)modelDataIsNetWoring httpAdress:(NSString*)httpAdress dataType:(NSString*)dataType jsonClass:(Class)myClass{
     
     
-    _array = [[self getPersistenceDataWithType:TYPE_BLOG_SIMPLE_TYPE]copy];
+    _array = [[self getPersistenceDataWithType:dataType]copy];
    
 
     modelDataReload();
     
     __block NSString *versionStr;
     
-    if ([HttpVersionTools checkHttpVersion:Address_blogs nowVersion:[HttpVersionTools getNowHttpVersion:Address_blogs]]) {
+    if ([HttpVersionTools checkHttpVersion:httpAdress nowVersion:[HttpVersionTools getNowHttpVersion:httpAdress]]) {
         
         //
  
-        [NetWorkTools postHttp:Address_blogs success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [NetWorkTools postHttp:httpAdress success:^(AFHTTPRequestOperation *operation, id responseObject) {
             
             NSLog(@"JSON: %@", [operation responseString]);
             
@@ -77,7 +77,7 @@
             
             // NSLog(@"%@arr=",dic[@"bloglists"]);
             
-            NSArray *arr = [MTLJSONAdapter modelsOfClass:[BlogBean class] fromJSONArray:dic[@"bloglists"] error:nil];
+            NSArray *arr = [MTLJSONAdapter modelsOfClass:myClass fromJSONArray:dic[@"bloglists"] error:nil];
             
             
             
@@ -86,13 +86,13 @@
  
             
             //持久化数据
-            [self persistenceData];
+            [self persistenceDataWithType:dataType];
             
             //当前最新版本号存入数据库
             
-            [HttpVersionTools saveNowHttpVersion:Address_blogs version:versionStr];
+            [HttpVersionTools saveNowHttpVersion:httpAdress version:versionStr];
             
-             _array = [[self getPersistenceDataWithType:TYPE_BLOG_SIMPLE_TYPE]copy];
+             _array = [[self getPersistenceDataWithType:dataType]copy];
             
             modelDataSuccess();
             
@@ -124,73 +124,6 @@
 }
 
 
--(void)getDate:(modelSuccess)modelDataSuccess modelDataErrors:(modelError)modelDataErrors modelDataIsNetworking:(modelNetWorking)modelDataIsNetWoring{
-    
-    
-    _array = [[self getPersistenceDataWithType:TYPE_BLOG_SIMPLE_TYPE]copy];
-     modelDataSuccess();
-   
-    
-    __block NSString *versionStr;
-    
-    if ([HttpVersionTools checkHttpVersion:Address_blogs nowVersion:[HttpVersionTools getNowHttpVersion:Address_blogs]]) {
-        
-        //
-        [NetWorkTools postHttp:Address_blogs success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            
-            NSLog(@"JSON: %@", [operation responseString]);
-            
-            NSDictionary *dic = [JsonTools getJsonNSDictionary:[operation responseString]];
-            
-            //NSLog(@"jsonVersion=%@",dic[@"version"]);
-            
-            
-            versionStr =dic[@"version"];
-            
-            //将JSON数据和Model的属性进行绑定
-            
-            // NSLog(@"%@arr=",dic[@"bloglists"]);
-            
-            NSArray *arr = [MTLJSONAdapter modelsOfClass:[BlogBean class] fromJSONArray:dic[@"bloglists"] error:nil];
-            
-       
-            
-            _array = [arr copy];
-            
-            
-            modelDataSuccess();
-            
-            //持久化数据
-            [self persistenceData];
-            
-            //当前最新版本号存入数据库
-            
-            [HttpVersionTools saveNowHttpVersion:Address_blogs version:versionStr];
-            
-            
-        } error:^(AFHTTPRequestOperation *operation, NSError *error) {
-            NSLog(@"Error: %@", error);
-            
-            modelDataErrors();
-            
-        } isNetworking:^(BOOL isNetwork) {
-            
-            
-            modelDataIsNetWoring(isNetwork);
-            
-            
-        }];
-    }else{
-        //直接显示持久化数据 数据显示完毕
-         modelDataSuccess();
-        
-        NSLog(@"cout====%ld",_array.count);
-    }
-    
-
-    
-    
-}
 
 #pragma mark -- 得到持久化的数据
 -(NSArray*)getPersistenceDataWithType:(NSString*)type{
@@ -213,10 +146,10 @@
 }
 
 #pragma mark -- 持久化所有数据
--(void)persistenceData{
+-(void)persistenceDataWithType:(NSString*)type{
     
     //删除已经存在的数据
-    NSPredicate *titlePredicate = [NSPredicate predicateWithFormat:@"type= %@", @"11"];
+    NSPredicate *titlePredicate = [NSPredicate predicateWithFormat:@"type= %@", type];
     [CoreDataUtils deleteDateFromTableName:CD_FAVOURITE_BEAN andNSPredicate:titlePredicate];
     
     
@@ -232,7 +165,7 @@
             [favouriteBean setValue:bean.subTitle forKey:FavouriteBean_subtitle];
             [favouriteBean setValue:bean.image forKey:FavouriteBean_image_name];
             [favouriteBean setValue:bean.url forKey:FavouriteBean_url];
-            [favouriteBean setValue:TYPE_BLOG_SIMPLE_TYPE forKey:FavouriteBean_type];
+            [favouriteBean setValue:type forKey:FavouriteBean_type];
    
             
         }
@@ -250,12 +183,12 @@
 }
 
 
--(void)saveFavourite:(NSIndexPath*)indexPath{
+-(void)saveFavourite:(NSIndexPath*)indexPath favouriteType:(NSString*)type{
     
     NSManagedObject *loveBean = _array[indexPath.row];
     
    
-    NSPredicate *urlPredicate = [NSPredicate predicateWithFormat:@"url= %@ AND type=%@", [loveBean valueForKey:FavouriteBean_url],TYPE_BLOG_FAVOURITE_TYPE];
+    NSPredicate *urlPredicate = [NSPredicate predicateWithFormat:@"url= %@ AND type=%@", [loveBean valueForKey:FavouriteBean_url],type];
     NSArray*favouriteList = [CoreDataUtils queryDataFromTableName:CD_FAVOURITE_BEAN andNSPredicate:urlPredicate];
     if (favouriteList.count!=0) {
         NSLog(@"已经有这条数据了 ");//更新收藏的状态
@@ -305,12 +238,12 @@
  *
  *  @return YES 存在 NO 不存在
  */
--(BOOL)isEXistFavouriteDataWithURL:(NSString*)url andUrlType:(NSString*)type{
-
-    NSPredicate *urlAndurlTypePredicate = [NSPredicate predicateWithFormat:@"url = %@ AND type=%@",url,TYPE_BLOG_FAVOURITE_TYPE];
-    
-    return [CoreDataUtils dataisExistTableName:CD_FAVOURITE_BEAN withPredicate:urlAndurlTypePredicate];
-}
+//-(BOOL)isEXistFavouriteDataWithURL:(NSString*)url andUrlType:(NSString*)type{
+//
+//    NSPredicate *urlAndurlTypePredicate = [NSPredicate predicateWithFormat:@"url = %@ AND type=%@",url,TYPE_BLOG_FAVOURITE_TYPE];
+//    
+//    return [CoreDataUtils dataisExistTableName:CD_FAVOURITE_BEAN withPredicate:urlAndurlTypePredicate];
+//}
 
 /**
  *  判断收藏的URL地址是否存在

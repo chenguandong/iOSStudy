@@ -13,6 +13,12 @@
 @interface FirstViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate,SWTableViewCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property(nonatomic,strong)FirstViewControllerViewModel *viewModel;
+@property(nonatomic,copy)NSString *favouriteType ;
+-(void)initViewData;
 
+/**
+ *  停止UITableView刷新
+ */
+-(void)stopTableRefreshing;
 @end
 
