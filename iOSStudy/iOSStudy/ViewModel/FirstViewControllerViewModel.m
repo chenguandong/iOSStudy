@@ -13,6 +13,7 @@
 #import "HttpVersionTools.h"
 #import "CoreDataUtils.h"
 #import <SWTableViewCell.h>
+#import "EntityConstants.h"
 @implementation FirstViewControllerViewModel
 - (instancetype)init
 {
@@ -205,28 +206,7 @@
     fetchRequest.predicate = predicate;
     
     NSArray *fetchedObjects = [SharedApp.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    
-    /*
-    
-    NSMutableArray *blogArr = [NSMutableArray arrayWithCapacity:10];
-    
 
-        for (NSManagedObject *info in fetchedObjects) {
-            
-           
-                BlogBean *blogBean = [[BlogBean alloc]init];
-                blogBean.title = [info valueForKey:@"title"];
-                blogBean.subTitle=[info valueForKey:@"subtitle"];
-                blogBean.image = [info valueForKey:@"image_name"];
-                blogBean.url = [info valueForKey:@"url"];
-                NSLog(@"image=%@",blogBean.image);
-                [blogArr addObject:blogBean];
-
-
-        }
-
-    
-     */
      
     return fetchedObjects;
 
@@ -245,18 +225,15 @@
         if ([self isExistSimpleDataWithURL:bean.url]) {
             NSLog(@"已经有这条数据了");
         }else{
-            FavouriteBean *favouriteBean = (FavouriteBean*)[NSEntityDescription insertNewObjectForEntityForName:CD_FAVOURITE_BEAN inManagedObjectContext:SharedApp.managedObjectContext];
+            NSManagedObject *favouriteBean =[NSEntityDescription insertNewObjectForEntityForName:CD_FAVOURITE_BEAN inManagedObjectContext:SharedApp.managedObjectContext];
             
             
-            favouriteBean.title = bean.title;
-            favouriteBean.subtitle = bean.subTitle;
-            favouriteBean.image_name = bean.image;
-            favouriteBean.url= bean.url;
-            favouriteBean.type =TYPE_BLOG_SIMPLE_TYPE;
-      
-            
-           
-            
+            [favouriteBean setValue:bean.title forKey:FavouriteBean_title];
+            [favouriteBean setValue:bean.subTitle forKey:FavouriteBean_subtitle];
+            [favouriteBean setValue:bean.image forKey:FavouriteBean_image_name];
+            [favouriteBean setValue:bean.url forKey:FavouriteBean_url];
+            [favouriteBean setValue:TYPE_BLOG_SIMPLE_TYPE forKey:FavouriteBean_type];
+   
             
         }
         
@@ -275,37 +252,46 @@
 
 -(void)saveFavourite:(NSIndexPath*)indexPath{
     
-    BlogBean *loveBean = _array[indexPath.row];
+    NSManagedObject *loveBean = _array[indexPath.row];
     
-    
-    if ([self isEXistFavouriteDataWithURL:loveBean.url andUrlType:TYPE_BLOG_FAVOURITE_TYPE]) {
+   
+    NSPredicate *urlPredicate = [NSPredicate predicateWithFormat:@"url= %@ AND type=%@", [loveBean valueForKey:FavouriteBean_url],TYPE_BLOG_FAVOURITE_TYPE];
+    NSArray*favouriteList = [CoreDataUtils queryDataFromTableName:CD_FAVOURITE_BEAN andNSPredicate:urlPredicate];
+    if (favouriteList.count!=0) {
         NSLog(@"已经有这条数据了 ");//更新收藏的状态
         
         
+        [SharedApp.managedObjectContext deleteObject:favouriteList[0]];
         
         
-    }else{
-        FavouriteBean *favouriteBean = (FavouriteBean*)[NSEntityDescription insertNewObjectForEntityForName:CD_FAVOURITE_BEAN inManagedObjectContext:SharedApp.managedObjectContext];
-        
-        
-        favouriteBean.title = loveBean.title;
-        favouriteBean.subtitle = loveBean.subTitle;
-        favouriteBean.image_name = loveBean.image;
-        favouriteBean.url= loveBean.url;
-        favouriteBean.type =TYPE_BLOG_FAVOURITE_TYPE;
-        
-        
-        
-        NSError *error;
-        BOOL isSaveSuccess =[SharedApp.managedObjectContext save:&error];
-        if (!isSaveSuccess) {
-            NSLog(@"Error: %@,%@",error,[error userInfo]);
-        }else {
-            NSLog(@"Save successful favourite!");
+        NSError *error = nil;
+        [SharedApp.managedObjectContext save:&error];
+        if (error) {
+            
+            NSLog(@"删除收藏失败%@",[error userInfo]);
+        }else{
+            NSLog(@"删除收藏成功");
         }
+    }else{
+        NSManagedObject *favouriteBean  = [NSEntityDescription insertNewObjectForEntityForName:CD_FAVOURITE_BEAN inManagedObjectContext:SharedApp.managedObjectContext];
         
-
+        [favouriteBean setValue:[loveBean valueForKey:FavouriteBean_title] forKey:FavouriteBean_title];
+        [favouriteBean setValue:[loveBean valueForKey:FavouriteBean_subtitle] forKey:FavouriteBean_subtitle];
+        [favouriteBean setValue:[loveBean valueForKey:FavouriteBean_image_name] forKey:FavouriteBean_image_name];
+        [favouriteBean setValue:[loveBean valueForKey:FavouriteBean_url] forKey:FavouriteBean_url];
+        [favouriteBean setValue:TYPE_BLOG_FAVOURITE_TYPE forKey:FavouriteBean_type];
     }
+    
+    NSError *error;
+    BOOL isSaveSuccess =[SharedApp.managedObjectContext save:&error];
+    if (!isSaveSuccess) {
+        NSLog(@"Error: %@,%@",error,[error userInfo]);
+    }else {
+        NSLog(@"Save successful favourite!");
+    }
+
+    
+  
     
     
 }
@@ -391,11 +377,6 @@
      
                                                 title:showText];
     
-    
-    /*
-     [rightUtilityButtons sw_addUtilityButtonWithColor:
-     [UIColor colorWithRed:1.0f green:0.231f blue:0.188 alpha:1.0f]                                     title:@"不喜欢"];
-     */
     return rightUtilityButtons;
     
     
