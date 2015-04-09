@@ -155,9 +155,7 @@
     
     for (BlogBean *bean in _array) {
         
-        if ([self isExistSimpleDataWithURL:bean.url]) {
-            NSLog(@"已经有这条数据了");
-        }else{
+       
             NSManagedObject *favouriteBean =[NSEntityDescription insertNewObjectForEntityForName:CD_FAVOURITE_BEAN inManagedObjectContext:SharedApp.managedObjectContext];
             
             
@@ -166,9 +164,7 @@
             [favouriteBean setValue:bean.image forKey:FavouriteBean_image_name];
             [favouriteBean setValue:bean.url forKey:FavouriteBean_url];
             [favouriteBean setValue:type forKey:FavouriteBean_type];
-   
-            
-        }
+ 
         
     }
     
