@@ -24,4 +24,13 @@
  *  @return 收藏数据的集合
  */
 -(NSArray*)getFavouriteData:(NSString*)type;
+
+/**
+ *  获取cell的数据
+ *
+ *  @param indexPath indexPath
+ *
+ *  @return cell的数据
+ */
+-(NSManagedObject*)getFavouriteObjtBean:(NSIndexPath *)indexPath;
 @end

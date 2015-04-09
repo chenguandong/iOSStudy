@@ -12,9 +12,13 @@
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey{
     
-    [super JSONKeyPathsByPropertyKey];
+    
     return @{
-             @"videoLanguageType": @"videoLanguageType",
+            @"title":@"title",
+             @"subTitle": @"subTitle",
+             @"webImage": @"webImage",
+             @"webUrl": @"webUrl",
+            @"videoLanguageType": @"videoLanguageType"
              };
 }
 @end

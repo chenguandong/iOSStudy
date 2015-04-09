@@ -9,7 +9,9 @@
 #import "FavouriteTableViewController.h"
 #import "Constants .h"
 #import "EntityConstants.h"
-
+#import "STBaseTableViewCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <SVModalWebViewController.h>
 typedef NS_ENUM(NSInteger, segmentedSelect) {
     BlogSelect = 0,
     WebSelect  =1,
@@ -65,7 +67,9 @@ typedef NS_ENUM(NSInteger, segmentedSelect) {
     favouriteType = TYPE_BLOG_FAVOURITE_TYPE;
 
     _viewModel  = [[FavouriteViewControllerViewModel alloc]init];
+    self.tableView.rowHeight = 60;
     
+    [self.tableView registerNib:[UINib nibWithNibName:@"STBaseTableViewCell" bundle:nil] forCellReuseIdentifier:@"FCell"];
 }
 
 
@@ -83,15 +87,20 @@ typedef NS_ENUM(NSInteger, segmentedSelect) {
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     static NSString *CellIdentifier = @"FCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-    }
-
+    STBaseTableViewCell *cell = (STBaseTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier
+                                                                                       forIndexPath:indexPath];
     NSManagedObject *f_objt = _viewModel.array[indexPath.row];
     
-    cell.textLabel.text = [f_objt valueForKey:FavouriteBean_title];
+    cell.title.text = [f_objt valueForKey:FavouriteBean_title];
     
+    cell.subtitle.text = [f_objt valueForKey:FavouriteBean_subtitle];
+    
+
+    [cell.imageIcon setImageWithURL:[NSURL URLWithString:[f_objt valueForKey:FavouriteBean_image_name]] placeholderImage:[UIImage imageNamed:@"SVWebViewControllerActivitySafari-iPad.png"]];
+
+    
+    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 
@@ -128,6 +137,9 @@ typedef NS_ENUM(NSInteger, segmentedSelect) {
     }
 }
 
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    SVModalWebViewController *webViewController = [[SVModalWebViewController alloc] initWithAddress:[[_viewModel getFavouriteObjtBean:indexPath] valueForKey:FavouriteBean_url]];
+    [self presentViewController:webViewController animated:NO completion:NULL];
+}
 
 @end

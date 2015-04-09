@@ -16,11 +16,10 @@
 #import "BlogDetailViewController.h"
 #import <SVWebViewController.h>
 #import <MJRefresh.h>
-#import "BaseTableViewCell.h"
+#import "STBaseTableViewCell.h"
 #import "UIImage+Resize.h"
-#import "VideoCell.h"
 #import <SVModalWebViewController.h>
-
+#import "STBaseTableViewCell.h"
 @interface ThirdTableViewController ()
 
 @end
@@ -65,6 +64,10 @@
     }];
     
     [self.tableView headerBeginRefreshing];
+    
+    _tableView.rowHeight = 60;
+    
+     [self.tableView registerNib:[UINib nibWithNibName:@"STBaseTableViewCell" bundle:nil] forCellReuseIdentifier:@"VideoCell"];
 }
 
 
@@ -99,26 +102,33 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
-    static NSString *CellIdentifier = @"VideoCell";
-    SWTableViewCell *cell = (SWTableViewCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[SWTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-        
-    }
+    static NSString *cellIdentifier = @"VideoCell";
+    
+    STBaseTableViewCell *cell = (STBaseTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier
+                                                                                           forIndexPath:indexPath];
+
     
     
     cell.delegate = self;
+
     
     
-    cell.textLabel.text = [[_viewModel getBlogBean:indexPath]valueForKey:FavouriteBean_title];
-    cell.detailTextLabel.text = [[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_subtitle];
+    cell.title.text = [[_viewModel getBlogBean:indexPath]valueForKey:FavouriteBean_title];
+    cell.subtitle.text = [[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_subtitle];
     
+
+
+    NSLog(@"==%@",  [[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_subtitle]);
     
     
     cell.rightUtilityButtons =[_viewModel setRightSWCellButtons:[[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_url] withType:_favouriteType];
     
     
-    [cell.imageView setImageWithURL:[NSURL URLWithString:[[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_image_name]] placeholderImage:[UIImage imageNamed:@"SVWebViewControllerActivitySafari-iPad.png"]];
+    [cell.imageIcon setImageWithURL:[NSURL URLWithString:[[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_image_name]] placeholderImage:[UIImage imageNamed:@"SVWebViewControllerActivitySafari-iPad.png"]];
+    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
+     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }

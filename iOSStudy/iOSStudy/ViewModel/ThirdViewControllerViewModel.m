@@ -20,9 +20,6 @@
     
     for (VideoBean *bean in self.array) {
         
-        if ([self isExistSimpleDataWithURL:bean.webUrl]) {
-            NSLog(@"已经有这条数据了");
-        }else{
             NSManagedObject *favouriteBean =[NSEntityDescription insertNewObjectForEntityForName:CD_FAVOURITE_BEAN inManagedObjectContext:SharedApp.managedObjectContext];
             
             
@@ -32,8 +29,8 @@
             [favouriteBean setValue:bean.webUrl forKey:FavouriteBean_url];
             [favouriteBean setValue:type forKey:FavouriteBean_type];
             
-            
-        }
+            NSLog(@"==%@",bean.subTitle);
+        
         
     }
     

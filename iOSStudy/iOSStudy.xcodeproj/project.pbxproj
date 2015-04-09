@@ -18,9 +18,7 @@
 		189EF83A1A83C3AF00F19327 /* BlogDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189EF8391A83C3AF00F19327 /* BlogDetailViewController.m */; };
 		18A998931A7C77D0002E7219 /* NetWorkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A998921A7C77D0002E7219 /* NetWorkTools.m */; };
 		18AB47951A99969600E4C030 /* VideoBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB47941A99969600E4C030 /* VideoBean.m */; };
-		18AB47981A99A51200E4C030 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB47971A99A51200E4C030 /* BaseTableViewCell.m */; };
 		18AB479B1A9C59CB00E4C030 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB479A1A9C59CB00E4C030 /* UIImage+Resize.m */; };
-		18AB479F1A9C5E3300E4C030 /* VideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB479E1A9C5E3300E4C030 /* VideoCell.m */; };
 		18AB47AB1AA415A400E4C030 /* FavouriteBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB47AA1AA415A400E4C030 /* FavouriteBean.m */; };
 		18B23B251A7A14D100E80854 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B23B241A7A14D100E80854 /* main.m */; };
 		18B23B281A7A14D100E80854 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B23B271A7A14D100E80854 /* AppDelegate.m */; };
@@ -82,6 +80,8 @@
 		18E2796B1AD61AD50056CC5F /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E279691AD61AD50056CC5F /* iRate.m */; };
 		18E2796E1AD6206F0056CC5F /* LicenesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E2796D1AD6206F0056CC5F /* LicenesViewController.m */; };
 		18E279711AD62CD80056CC5F /* 开源组件.html in Resources */ = {isa = PBXBuildFile; fileRef = 18E279701AD62CD80056CC5F /* 开源组件.html */; };
+		18E3600A1AD67BB500A077B2 /* STBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E360081AD67BB500A077B2 /* STBaseTableViewCell.m */; };
+		18E3600B1AD67BB500A077B2 /* STBaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E360091AD67BB500A077B2 /* STBaseTableViewCell.xib */; };
 		18E6A0B51ACCF7FD00B28D32 /* VersionBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E6A0B41ACCF7FD00B28D32 /* VersionBean.m */; };
 		54A0444849F1931415392FC1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E83ED1B8EA89BC57ACF91BA5 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -117,12 +117,8 @@
 		18A998921A7C77D0002E7219 /* NetWorkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetWorkTools.m; path = Tools/NetWorkTools.m; sourceTree = "<group>"; };
 		18AB47931A99969600E4C030 /* VideoBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoBean.h; path = Bean/videoBean/VideoBean.h; sourceTree = "<group>"; };
 		18AB47941A99969600E4C030 /* VideoBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoBean.m; path = Bean/videoBean/VideoBean.m; sourceTree = "<group>"; };
-		18AB47961A99A51200E4C030 /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTableViewCell.h; path = Base/BaseTableViewCell.h; sourceTree = "<group>"; };
-		18AB47971A99A51200E4C030 /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTableViewCell.m; path = Base/BaseTableViewCell.m; sourceTree = "<group>"; };
 		18AB47991A9C59CB00E4C030 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Resize.h"; path = "libs/UIImage+Resize.h"; sourceTree = "<group>"; };
 		18AB479A1A9C59CB00E4C030 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Resize.m"; path = "libs/UIImage+Resize.m"; sourceTree = "<group>"; };
-		18AB479D1A9C5E3300E4C030 /* VideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoCell.h; path = Cell/VideoCell.h; sourceTree = "<group>"; };
-		18AB479E1A9C5E3300E4C030 /* VideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoCell.m; path = Cell/VideoCell.m; sourceTree = "<group>"; };
 		18AB47A91AA415A400E4C030 /* FavouriteBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavouriteBean.h; path = Bean/FavouriteBean.h; sourceTree = "<group>"; };
 		18AB47AA1AA415A400E4C030 /* FavouriteBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavouriteBean.m; path = Bean/FavouriteBean.m; sourceTree = "<group>"; };
 		18B23B1F1A7A14D000E80854 /* iOSStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,6 +206,9 @@
 		18E2796C1AD6206F0056CC5F /* LicenesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LicenesViewController.h; path = iOSStudy/LicenesViewController.h; sourceTree = "<group>"; };
 		18E2796D1AD6206F0056CC5F /* LicenesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LicenesViewController.m; path = iOSStudy/LicenesViewController.m; sourceTree = "<group>"; };
 		18E279701AD62CD80056CC5F /* 开源组件.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "开源组件.html"; sourceTree = "<group>"; };
+		18E360071AD67BB500A077B2 /* STBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STBaseTableViewCell.h; path = Cell/STBaseTableViewCell.h; sourceTree = "<group>"; };
+		18E360081AD67BB500A077B2 /* STBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STBaseTableViewCell.m; path = Cell/STBaseTableViewCell.m; sourceTree = "<group>"; };
+		18E360091AD67BB500A077B2 /* STBaseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = STBaseTableViewCell.xib; path = Cell/STBaseTableViewCell.xib; sourceTree = "<group>"; };
 		18E6A0B31ACCF7FD00B28D32 /* VersionBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VersionBean.h; path = Bean/versionBean/VersionBean.h; sourceTree = "<group>"; };
 		18E6A0B41ACCF7FD00B28D32 /* VersionBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VersionBean.m; path = Bean/versionBean/VersionBean.m; sourceTree = "<group>"; };
 		2E2CC00A58FD0A745C574BAD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -312,8 +311,9 @@
 		18AB479C1A9C5D7300E4C030 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				18AB479D1A9C5E3300E4C030 /* VideoCell.h */,
-				18AB479E1A9C5E3300E4C030 /* VideoCell.m */,
+				18E360071AD67BB500A077B2 /* STBaseTableViewCell.h */,
+				18E360081AD67BB500A077B2 /* STBaseTableViewCell.m */,
+				18E360091AD67BB500A077B2 /* STBaseTableViewCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -411,8 +411,6 @@
 			children = (
 				18B23B4B1A7A234800E80854 /* BaseViewController.h */,
 				18B23B4C1A7A234800E80854 /* BaseViewController.m */,
-				18AB47961A99A51200E4C030 /* BaseTableViewCell.h */,
-				18AB47971A99A51200E4C030 /* BaseTableViewCell.m */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -670,6 +668,7 @@
 				18D2013C1A960B6100D5F095 /* app_img_768x1024.png in Resources */,
 				18D2011B1A95A6F400D5F095 /* icon_87.png in Resources */,
 				18D2012E1A95A9D600D5F095 /* tabbar_web.png in Resources */,
+				18E3600B1AD67BB500A077B2 /* STBaseTableViewCell.xib in Resources */,
 				18D201301A95A9D600D5F095 /* tabbar_web@3x.png in Resources */,
 				18D2012C1A95A9D600D5F095 /* tabbar_video@2x.png in Resources */,
 				18D2012F1A95A9D600D5F095 /* tabbar_web@2x.png in Resources */,
@@ -733,10 +732,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18AB47981A99A51200E4C030 /* BaseTableViewCell.m in Sources */,
 				18E016E51ACAAB35002A6E59 /* iOSStudy.xcdatamodeld in Sources */,
-				18AB479F1A9C5E3300E4C030 /* VideoCell.m in Sources */,
 				18B23B2E1A7A14D100E80854 /* SecondViewController.m in Sources */,
+				18E3600A1AD67BB500A077B2 /* STBaseTableViewCell.m in Sources */,
 				18B23B4D1A7A234800E80854 /* BaseViewController.m in Sources */,
 				18E2796B1AD61AD50056CC5F /* iRate.m in Sources */,
 				18A998931A7C77D0002E7219 /* NetWorkTools.m in Sources */,
@@ -914,6 +912,7 @@
 					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -943,6 +942,7 @@
 					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

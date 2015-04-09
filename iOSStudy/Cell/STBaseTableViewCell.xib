@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="STBaseTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EOH-pJ-MFU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M2s-JN-egL">
+                        <rect key="frame" x="5" y="5" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="Dtp-3J-hHp"/>
+                            <constraint firstAttribute="width" constant="50" id="vnp-51-5es"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUb-BR-QCa">
+                        <rect key="frame" x="60" y="26" width="260" height="33"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你好我是标题" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCb-Kg-gDM">
+                        <rect key="frame" x="60" y="5" width="260" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="mMl-mL-KVl"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="DUb-BR-QCa" firstAttribute="leading" secondItem="M2s-JN-egL" secondAttribute="trailing" constant="5" id="0Dt-UC-1D9"/>
+                    <constraint firstAttribute="trailing" secondItem="EOH-pJ-MFU" secondAttribute="trailing" id="5qb-Vf-vOh"/>
+                    <constraint firstItem="uCb-Kg-gDM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="6M2-e1-EJM"/>
+                    <constraint firstAttribute="bottom" secondItem="EOH-pJ-MFU" secondAttribute="bottom" id="EdF-MF-V0B"/>
+                    <constraint firstAttribute="bottom" secondItem="DUb-BR-QCa" secondAttribute="bottom" id="HBN-tm-HSQ"/>
+                    <constraint firstItem="EOH-pJ-MFU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Wg4-dJ-vJI"/>
+                    <constraint firstItem="DUb-BR-QCa" firstAttribute="top" secondItem="uCb-Kg-gDM" secondAttribute="bottom" id="Yuk-aR-TWl"/>
+                    <constraint firstAttribute="bottom" secondItem="M2s-JN-egL" secondAttribute="bottom" constant="4" id="dSb-Oo-Ip5"/>
+                    <constraint firstAttribute="trailing" secondItem="DUb-BR-QCa" secondAttribute="trailing" id="gV6-4n-PIV"/>
+                    <constraint firstAttribute="trailing" secondItem="uCb-Kg-gDM" secondAttribute="trailing" id="ihr-9A-5qh"/>
+                    <constraint firstItem="M2s-JN-egL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="qUb-2h-bIe"/>
+                    <constraint firstItem="uCb-Kg-gDM" firstAttribute="leading" secondItem="M2s-JN-egL" secondAttribute="trailing" constant="5" id="swY-fu-QB4"/>
+                    <constraint firstItem="M2s-JN-egL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="uat-ui-Uic"/>
+                    <constraint firstItem="EOH-pJ-MFU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ueE-jk-5PV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="backgroundImageView" destination="EOH-pJ-MFU" id="yjo-H0-vPW"/>
+                <outlet property="imageIcon" destination="M2s-JN-egL" id="M1L-zc-XRm"/>
+                <outlet property="subtitle" destination="DUb-BR-QCa" id="uPg-HZ-n17"/>
+                <outlet property="title" destination="uCb-Kg-gDM" id="5XL-E0-vPh"/>
+            </connections>
+            <point key="canvasLocation" x="210" y="191"/>
+        </tableViewCell>
+    </objects>
+</document>

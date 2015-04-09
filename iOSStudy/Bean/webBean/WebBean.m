@@ -16,7 +16,7 @@
     return @{
              @"name": @"name",
              @"title": @"title",
-             @"subTitle": @"subTitile",
+             @"subTitle": @"subTitle",
              @"webImage": @"webImage",
              @"webUrl": @"webUrl"
              };

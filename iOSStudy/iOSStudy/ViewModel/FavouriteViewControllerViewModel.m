@@ -19,6 +19,10 @@
     }
     return self;
 }
+-(NSManagedObject*)getFavouriteObjtBean:(NSIndexPath *)indexPath{
+    return _array[indexPath.row];
+}
+
 
 
 -(NSArray*)getFavouriteData:(NSString*)type{

@@ -18,6 +18,7 @@
 #import <MJRefresh.h>
 #import <SVModalWebViewController.h>
 #import "EntityConstants.h"
+#import "STBaseTableViewCell.h"
 @interface SecondViewController ()
 
 @end
@@ -64,6 +65,10 @@
     }];
     
     [self.tableView headerBeginRefreshing];
+    
+    _tableView.rowHeight = 60;
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"STBaseTableViewCell" bundle:nil] forCellReuseIdentifier:@"WebCell"];
 }
 
 /**
@@ -94,27 +99,25 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     static NSString *CellIdentifier = @"WebCell";
-    SWTableViewCell *cell = (SWTableViewCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[SWTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-        
-    }
+    STBaseTableViewCell *cell = (STBaseTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier
+                                                                                       forIndexPath:indexPath];
     
     
     cell.delegate = self;
     
     
-    cell.textLabel.text = [[_viewModel getBlogBean:indexPath]valueForKey:FavouriteBean_title];
-    cell.detailTextLabel.text = [[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_subtitle];
+    cell.title.text = [[_viewModel getBlogBean:indexPath]valueForKey:FavouriteBean_title];
+    cell.subtitle.text = [[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_subtitle];
     
     
     
     cell.rightUtilityButtons =[_viewModel setRightSWCellButtons:[[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_url] withType:_favouriteType];
     
     
-    [cell.imageView setImageWithURL:[NSURL URLWithString:[[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_image_name]] placeholderImage:[UIImage imageNamed:@"SVWebViewControllerActivitySafari-iPad.png"]];
+    [cell.imageIcon setImageWithURL:[NSURL URLWithString:[[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_image_name]] placeholderImage:[UIImage imageNamed:@"SVWebViewControllerActivitySafari-iPad.png"]];
     
-
+     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
     return cell;
 }
 
