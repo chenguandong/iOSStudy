@@ -21,8 +21,6 @@
 		18AB47981A99A51200E4C030 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB47971A99A51200E4C030 /* BaseTableViewCell.m */; };
 		18AB479B1A9C59CB00E4C030 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB479A1A9C59CB00E4C030 /* UIImage+Resize.m */; };
 		18AB479F1A9C5E3300E4C030 /* VideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB479E1A9C5E3300E4C030 /* VideoCell.m */; };
-		18AB47A51A9C82FA00E4C030 /* AddBlogTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB47A41A9C82FA00E4C030 /* AddBlogTableViewController.m */; };
-		18AB47A81A9DA40500E4C030 /* DBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB47A71A9DA40500E4C030 /* DBUtils.m */; };
 		18AB47AB1AA415A400E4C030 /* FavouriteBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB47AA1AA415A400E4C030 /* FavouriteBean.m */; };
 		18B23B251A7A14D100E80854 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B23B241A7A14D100E80854 /* main.m */; };
 		18B23B281A7A14D100E80854 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B23B271A7A14D100E80854 /* AppDelegate.m */; };
@@ -82,6 +80,8 @@
 		18E016E51ACAAB35002A6E59 /* iOSStudy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18E016E31ACAAB35002A6E59 /* iOSStudy.xcdatamodeld */; };
 		18E2796A1AD61AD50056CC5F /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18E279671AD61AD50056CC5F /* iRate.bundle */; };
 		18E2796B1AD61AD50056CC5F /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E279691AD61AD50056CC5F /* iRate.m */; };
+		18E2796E1AD6206F0056CC5F /* LicenesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E2796D1AD6206F0056CC5F /* LicenesViewController.m */; };
+		18E279711AD62CD80056CC5F /* 开源组件.html in Resources */ = {isa = PBXBuildFile; fileRef = 18E279701AD62CD80056CC5F /* 开源组件.html */; };
 		18E6A0B51ACCF7FD00B28D32 /* VersionBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E6A0B41ACCF7FD00B28D32 /* VersionBean.m */; };
 		54A0444849F1931415392FC1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E83ED1B8EA89BC57ACF91BA5 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -123,10 +123,6 @@
 		18AB479A1A9C59CB00E4C030 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Resize.m"; path = "libs/UIImage+Resize.m"; sourceTree = "<group>"; };
 		18AB479D1A9C5E3300E4C030 /* VideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoCell.h; path = Cell/VideoCell.h; sourceTree = "<group>"; };
 		18AB479E1A9C5E3300E4C030 /* VideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoCell.m; path = Cell/VideoCell.m; sourceTree = "<group>"; };
-		18AB47A31A9C82FA00E4C030 /* AddBlogTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBlogTableViewController.h; sourceTree = "<group>"; };
-		18AB47A41A9C82FA00E4C030 /* AddBlogTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBlogTableViewController.m; sourceTree = "<group>"; };
-		18AB47A61A9DA40500E4C030 /* DBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBUtils.h; path = Tools/DBUtils.h; sourceTree = "<group>"; };
-		18AB47A71A9DA40500E4C030 /* DBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBUtils.m; path = Tools/DBUtils.m; sourceTree = "<group>"; };
 		18AB47A91AA415A400E4C030 /* FavouriteBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavouriteBean.h; path = Bean/FavouriteBean.h; sourceTree = "<group>"; };
 		18AB47AA1AA415A400E4C030 /* FavouriteBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavouriteBean.m; path = Bean/FavouriteBean.m; sourceTree = "<group>"; };
 		18B23B1F1A7A14D000E80854 /* iOSStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,6 +207,9 @@
 		18E279671AD61AD50056CC5F /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
 		18E279681AD61AD50056CC5F /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
 		18E279691AD61AD50056CC5F /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
+		18E2796C1AD6206F0056CC5F /* LicenesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LicenesViewController.h; path = iOSStudy/LicenesViewController.h; sourceTree = "<group>"; };
+		18E2796D1AD6206F0056CC5F /* LicenesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LicenesViewController.m; path = iOSStudy/LicenesViewController.m; sourceTree = "<group>"; };
+		18E279701AD62CD80056CC5F /* 开源组件.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "开源组件.html"; sourceTree = "<group>"; };
 		18E6A0B31ACCF7FD00B28D32 /* VersionBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VersionBean.h; path = Bean/versionBean/VersionBean.h; sourceTree = "<group>"; };
 		18E6A0B41ACCF7FD00B28D32 /* VersionBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VersionBean.m; path = Bean/versionBean/VersionBean.m; sourceTree = "<group>"; };
 		2E2CC00A58FD0A745C574BAD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -293,8 +292,6 @@
 				18A998921A7C77D0002E7219 /* NetWorkTools.m */,
 				189EF8341A839FC600F19327 /* JsonTools.h */,
 				189EF8351A839FC600F19327 /* JsonTools.m */,
-				18AB47A61A9DA40500E4C030 /* DBUtils.h */,
-				18AB47A71A9DA40500E4C030 /* DBUtils.m */,
 				18C845071ACCFC690053884F /* HttpVersionTools.h */,
 				18C845081ACCFC690053884F /* HttpVersionTools.m */,
 				18C8450D1ACE3E580053884F /* CoreDataUtils.h */,
@@ -366,8 +363,6 @@
 				18D908A61A8A205600B42A42 /* ThirdTableViewController.m */,
 				185EEB491A98DC9900BFDB79 /* SettingTableViewController.h */,
 				185EEB4A1A98DC9900BFDB79 /* SettingTableViewController.m */,
-				18AB47A31A9C82FA00E4C030 /* AddBlogTableViewController.h */,
-				18AB47A41A9C82FA00E4C030 /* AddBlogTableViewController.m */,
 				18B23B2F1A7A14D100E80854 /* Main.storyboard */,
 				18B23B321A7A14D100E80854 /* Images.xcassets */,
 				18B23B341A7A14D100E80854 /* LaunchScreen.xib */,
@@ -377,6 +372,8 @@
 				18C845141ACE56150053884F /* MainTabBarViewController.m */,
 				18D184801AD28D1900188C3C /* FavouriteTableViewController.h */,
 				18D184811AD28D1900188C3C /* FavouriteTableViewController.m */,
+				18E2796C1AD6206F0056CC5F /* LicenesViewController.h */,
+				18E2796D1AD6206F0056CC5F /* LicenesViewController.m */,
 			);
 			path = iOSStudy;
 			sourceTree = "<group>";
@@ -438,6 +435,7 @@
 		18D200F71A95A1FB00D5F095 /*  Resource */ = {
 			isa = PBXGroup;
 			children = (
+				18E2796F1AD62CD80056CC5F /* html */,
 				18D200F81A95A21A00D5F095 /* images */,
 			);
 			name = " Resource";
@@ -524,6 +522,15 @@
 			);
 			name = iRate;
 			path = libs/iRate;
+			sourceTree = "<group>";
+		};
+		18E2796F1AD62CD80056CC5F /* html */ = {
+			isa = PBXGroup;
+			children = (
+				18E279701AD62CD80056CC5F /* 开源组件.html */,
+			);
+			name = html;
+			path = " Resource/html";
 			sourceTree = "<group>";
 		};
 		18E6A0B21ACCF7C600B28D32 /* VersionBean */ = {
@@ -656,6 +663,7 @@
 				18D2011E1A95A6F400D5F095 /* icon_180.png in Resources */,
 				18D2012B1A95A9D600D5F095 /* tabbar_video.png in Resources */,
 				18D2013F1A960B6100D5F095 /* app_img_2048x1536.png in Resources */,
+				18E279711AD62CD80056CC5F /* 开源组件.html in Resources */,
 				185EEB4F1A98E0BA00BFDB79 /* tabbar_setting.png in Resources */,
 				18D2013D1A960B6100D5F095 /* app_img_1024x768.png in Resources */,
 				18D201161A95A6F400D5F095 /* icon_29.png in Resources */,
@@ -732,8 +740,7 @@
 				18B23B4D1A7A234800E80854 /* BaseViewController.m in Sources */,
 				18E2796B1AD61AD50056CC5F /* iRate.m in Sources */,
 				18A998931A7C77D0002E7219 /* NetWorkTools.m in Sources */,
-				18AB47A81A9DA40500E4C030 /* DBUtils.m in Sources */,
-				18AB47A51A9C82FA00E4C030 /* AddBlogTableViewController.m in Sources */,
+				18E2796E1AD6206F0056CC5F /* LicenesViewController.m in Sources */,
 				18D908A71A8A205600B42A42 /* ThirdTableViewController.m in Sources */,
 				18C8450C1ACD41C40053884F /* BlogJsonBean.m in Sources */,
 				18AB479B1A9C59CB00E4C030 /* UIImage+Resize.m in Sources */,

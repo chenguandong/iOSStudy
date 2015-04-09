@@ -20,20 +20,10 @@ PODS:
   - AFNetworking/UIKit (2.5.2):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - FMDB (2.5):
-    - FMDB/standard (= 2.5)
-  - FMDB/common (2.5)
-  - FMDB/standard (2.5):
-    - FMDB/common
-  - Mantle (1.5.4):
-    - Mantle/extobjc (= 1.5.4)
-  - Mantle/extobjc (1.5.4)
+  - Mantle (2.0):
+    - Mantle/extobjc (= 2.0)
+  - Mantle/extobjc (2.0)
   - MJRefresh (1.4.3)
-  - NJKWebViewProgress (0.2.3):
-    - NJKWebViewProgress/Core (= 0.2.3)
-    - NJKWebViewProgress/ProgressView (= 0.2.3)
-  - NJKWebViewProgress/Core (0.2.3)
-  - NJKWebViewProgress/ProgressView (0.2.3)
   - SDWebImage (3.7.2):
     - SDWebImage/Core (= 3.7.2)
   - SDWebImage/Core (3.7.2)
@@ -43,10 +33,8 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
-  - FMDB
   - Mantle
   - MJRefresh
-  - NJKWebViewProgress
   - SDWebImage
   - SVProgressHUD
   - SVWebViewController
@@ -54,10 +42,8 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: fefbce9660acb17f48ae0011292d4da0f457bf36
-  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
-  Mantle: 60acd0cd363e27d945bda0a6b8e90577112d28f3
+  Mantle: 17de73ef929db2234d76fde2aacfb89ab11c61e8
   MJRefresh: 6eb09aefa9622f0908fdf42d63c2070478c04c42
-  NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   SVWebViewController: c36dda7326e81fcae0abf5d02bf7bbf7e41be901

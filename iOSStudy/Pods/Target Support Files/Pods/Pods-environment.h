@@ -48,24 +48,6 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 5
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 2
 
-// FMDB
-#define COCOAPODS_POD_AVAILABLE_FMDB
-#define COCOAPODS_VERSION_MAJOR_FMDB 2
-#define COCOAPODS_VERSION_MINOR_FMDB 5
-#define COCOAPODS_VERSION_PATCH_FMDB 0
-
-// FMDB/common
-#define COCOAPODS_POD_AVAILABLE_FMDB_common
-#define COCOAPODS_VERSION_MAJOR_FMDB_common 2
-#define COCOAPODS_VERSION_MINOR_FMDB_common 5
-#define COCOAPODS_VERSION_PATCH_FMDB_common 0
-
-// FMDB/standard
-#define COCOAPODS_POD_AVAILABLE_FMDB_standard
-#define COCOAPODS_VERSION_MAJOR_FMDB_standard 2
-#define COCOAPODS_VERSION_MINOR_FMDB_standard 5
-#define COCOAPODS_VERSION_PATCH_FMDB_standard 0
-
 // MJRefresh
 #define COCOAPODS_POD_AVAILABLE_MJRefresh
 #define COCOAPODS_VERSION_MAJOR_MJRefresh 1
@@ -74,33 +56,15 @@
 
 // Mantle
 #define COCOAPODS_POD_AVAILABLE_Mantle
-#define COCOAPODS_VERSION_MAJOR_Mantle 1
-#define COCOAPODS_VERSION_MINOR_Mantle 5
-#define COCOAPODS_VERSION_PATCH_Mantle 4
+#define COCOAPODS_VERSION_MAJOR_Mantle 2
+#define COCOAPODS_VERSION_MINOR_Mantle 0
+#define COCOAPODS_VERSION_PATCH_Mantle 0
 
 // Mantle/extobjc
 #define COCOAPODS_POD_AVAILABLE_Mantle_extobjc
-#define COCOAPODS_VERSION_MAJOR_Mantle_extobjc 1
-#define COCOAPODS_VERSION_MINOR_Mantle_extobjc 5
-#define COCOAPODS_VERSION_PATCH_Mantle_extobjc 4
-
-// NJKWebViewProgress
-#define COCOAPODS_POD_AVAILABLE_NJKWebViewProgress
-#define COCOAPODS_VERSION_MAJOR_NJKWebViewProgress 0
-#define COCOAPODS_VERSION_MINOR_NJKWebViewProgress 2
-#define COCOAPODS_VERSION_PATCH_NJKWebViewProgress 3
-
-// NJKWebViewProgress/Core
-#define COCOAPODS_POD_AVAILABLE_NJKWebViewProgress_Core
-#define COCOAPODS_VERSION_MAJOR_NJKWebViewProgress_Core 0
-#define COCOAPODS_VERSION_MINOR_NJKWebViewProgress_Core 2
-#define COCOAPODS_VERSION_PATCH_NJKWebViewProgress_Core 3
-
-// NJKWebViewProgress/ProgressView
-#define COCOAPODS_POD_AVAILABLE_NJKWebViewProgress_ProgressView
-#define COCOAPODS_VERSION_MAJOR_NJKWebViewProgress_ProgressView 0
-#define COCOAPODS_VERSION_MINOR_NJKWebViewProgress_ProgressView 2
-#define COCOAPODS_VERSION_PATCH_NJKWebViewProgress_ProgressView 3
+#define COCOAPODS_VERSION_MAJOR_Mantle_extobjc 2
+#define COCOAPODS_VERSION_MINOR_Mantle_extobjc 0
+#define COCOAPODS_VERSION_PATCH_Mantle_extobjc 0
 
 // SDWebImage
 #define COCOAPODS_POD_AVAILABLE_SDWebImage
