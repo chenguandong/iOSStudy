@@ -33,7 +33,7 @@ typedef void (^modelError)();
  */
 typedef void (^modelNetWorking)(BOOL isNetWorking);
 
-@interface FirstViewControllerViewModel : NSObject
+@interface BlogViewControllerViewModel : NSObject
 @property(nonatomic,strong)NSArray *array;
 
 

@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
-#import "SecondViewControllerViewModel.h"
+#import "WebViewControllerViewModel.h"
 #import <SWTableViewCell.h>
-@interface SecondViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate,SWTableViewCellDelegate>
+@interface WebViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate,SWTableViewCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property(nonatomic,strong)SecondViewControllerViewModel *viewModel;
+@property(nonatomic,strong)WebViewControllerViewModel *viewModel;
 @property(nonatomic,copy)NSString *favouriteType;
 @end
 

@@ -6,10 +6,11 @@
 //  Copyright (c) 2015年 chenguandong. All rights reserved.
 //
 
-#import "ThirdViewControllerViewModel.h"
+#import "WebViewControllerViewModel.h"
+#import "CoreDataUtils.h"
+#import "EntityConstants.h"
 
-@implementation ThirdViewControllerViewModel
-
+@implementation WebViewControllerViewModel
 
 -(void)persistenceDataWithType:(NSString *)type{
     
@@ -18,8 +19,9 @@
     [CoreDataUtils deleteDateFromTableName:CD_FAVOURITE_BEAN andNSPredicate:titlePredicate];
     
     
-    for (VideoBean *bean in self.array) {
+    for (WebBean *bean in self.array) {
         
+       
             NSManagedObject *favouriteBean =[NSEntityDescription insertNewObjectForEntityForName:CD_FAVOURITE_BEAN inManagedObjectContext:SharedApp.managedObjectContext];
             
             
@@ -29,8 +31,8 @@
             [favouriteBean setValue:bean.webUrl forKey:FavouriteBean_url];
             [favouriteBean setValue:type forKey:FavouriteBean_type];
             
-            NSLog(@"==%@",bean.subTitle);
-        
+            
+
         
     }
     
@@ -41,7 +43,6 @@
     }else {
         NSLog(@"Save successful favourite!");
     }
-    
-}
 
+}
 @end

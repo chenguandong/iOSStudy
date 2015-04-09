@@ -9,9 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "NetWorkTools.h"
 #import "JsonTools.h"
-#import "WebBean.h"
-#import "FirstViewControllerViewModel.h"
-
-@interface SecondViewControllerViewModel : FirstViewControllerViewModel
+#import "VideoBean.h"
+#import "EntityConstants.h"
+#import "CoreDataUtils.h"
+#import "BlogViewControllerViewModel.h"
+@interface VideoViewControllerViewModel : BlogViewControllerViewModel
 
 @end

@@ -1,12 +1,12 @@
 //
-//  ThirdTableViewController.m
+//  FirstViewController.m
 //  iOSStudy
 //
-//  Created by chenguandong on 15/2/10.
+//  Created by chenguandong on 15/1/29.
 //  Copyright (c) 2015年 chenguandong. All rights reserved.
 //
 
-#import "ThirdTableViewController.h"
+#import "BlogViewController.h"
 #import "NetWorkTools.h"
 #import "Constants .h"
 #import <SVProgressHUD/SVProgressHUD.h>
@@ -16,33 +16,31 @@
 #import "BlogDetailViewController.h"
 #import <SVWebViewController.h>
 #import <MJRefresh.h>
+#import "EntityConstants.h"
 #import "STBaseTableViewCell.h"
-#import "UIImage+Resize.h"
-#import <SVModalWebViewController.h>
-#import "STBaseTableViewCell.h"
-@interface ThirdTableViewController ()
+@interface BlogViewController ()
 
 @end
 
-@implementation ThirdTableViewController
+@implementation BlogViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
 
+
+    
+    
     _tableView.delegate = self;
     _tableView.dataSource = self;
     
     [self initViewData];
-    
-    
 }
 
 -(void)initViewData{
     
-    _favouriteType = TYPE_VIDEO_FAVOURITE_TYPE;
+    _favouriteType = TYPE_BLOG_FAVOURITE_TYPE;
     
-    _viewModel = [[ThirdViewControllerViewModel alloc]init];
+    _viewModel = [[BlogViewControllerViewModel alloc]init];
     
     [self.tableView addHeaderWithCallback:^{
         
@@ -51,15 +49,15 @@
             [_tableView reloadData];
             
             [self stopTableRefreshing];
-            
         } modelDataReload:^{
             [_tableView reloadData];
         } modelDataErrors:^{
             [self stopTableRefreshing];
         } modelDataIsNetworking:^(BOOL isNetWorking) {
             [self stopTableRefreshing];
-        } httpAdress:Adress_videos dataType:TYPE_VIDEO_SIMPLE_TYPE jsonClass:[VideoBean class]];
-
+        } httpAdress:Address_blogs dataType:TYPE_BLOG_SIMPLE_TYPE jsonClass:[BlogBean class]];
+        
+        
         
     }];
     
@@ -67,12 +65,8 @@
     
     _tableView.rowHeight = 60;
     
-     [self.tableView registerNib:[UINib nibWithNibName:@"STBaseTableViewCell" bundle:nil] forCellReuseIdentifier:@"VideoCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"STBaseTableViewCell" bundle:nil] forCellReuseIdentifier:@"Cell"];
 }
-
-
-
-
 
 /**
  *  停止UITableView刷新
@@ -82,8 +76,6 @@
         [_tableView headerEndRefreshing];
     }
 }
-
-
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
@@ -100,50 +92,44 @@
 // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    
-    static NSString *cellIdentifier = @"VideoCell";
-    
-    STBaseTableViewCell *cell = (STBaseTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier
-                                                                                           forIndexPath:indexPath];
 
-    
-    
+    static NSString *CellIdentifier = @"Cell";
+    STBaseTableViewCell *cell = (STBaseTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier
+                                                                                       forIndexPath:indexPath];
+   
     cell.delegate = self;
 
-    
-    
+
     cell.title.text = [[_viewModel getBlogBean:indexPath]valueForKey:FavouriteBean_title];
     cell.subtitle.text = [[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_subtitle];
-    
 
-
-    NSLog(@"==%@",  [[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_subtitle]);
     
     
-    cell.rightUtilityButtons =[_viewModel setRightSWCellButtons:[[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_url] withType:_favouriteType];
+     cell.rightUtilityButtons =[_viewModel setRightSWCellButtons:[[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_url] withType:TYPE_BLOG_FAVOURITE_TYPE];
     
     
     [cell.imageIcon setImageWithURL:[NSURL URLWithString:[[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_image_name]] placeholderImage:[UIImage imageNamed:@"SVWebViewControllerActivitySafari-iPad.png"]];
     
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
-     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
 
+
+
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    
-    SVModalWebViewController *webViewController = [[SVModalWebViewController alloc] initWithAddress:[[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_url]];
+
+    SVModalWebViewController *webViewController = [[SVModalWebViewController alloc] initWithAddress:[[_viewModel getBlogBean:indexPath]valueForKey:FavouriteBean_url]];
     [self presentViewController:webViewController animated:NO completion:NULL];
+ 
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
+
     if ([segue.identifier isEqualToString:@"SVWebViewController"]) {
-        
+      
         
     }
 }
@@ -153,13 +139,13 @@
 
 - (BOOL)swipeableTableViewCellShouldHideUtilityButtonsOnSwipe:(SWTableViewCell *)cell
 {
-    
+
     return  YES;
 }
 - (BOOL)swipeableTableViewCell:(SWTableViewCell *)cell canSwipeToState:(SWCellState)state{
     
     return YES;
-    
+
 }
 
 - (void)swipeableTableViewCellDidEndScrolling:(SWTableViewCell *)cell{
@@ -169,7 +155,7 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }else{
         cell.accessoryType = UITableViewCellAccessoryNone;
-        
+
     }
 }
 
@@ -177,7 +163,7 @@
     
     
     NSIndexPath *indexPath = [_tableView indexPathForCell:cell];
-    
+
     
     [_viewModel saveFavourite:indexPath favouriteType:_favouriteType];
     
@@ -186,25 +172,21 @@
     
     [_tableView reloadData];
     
-    
+
     
 }
-
-
-
 
 
 -(void)dealloc{
     _tableView.delegate = nil;
     _tableView.dataSource = nil;
     _viewModel = nil;
-    
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end

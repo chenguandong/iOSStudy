@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ThirdViewControllerViewModel.h"
+#import "VideoViewControllerViewModel.h"
 #import <SWTableViewCell.h>
-@interface ThirdTableViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,SWTableViewCellDelegate>
+@interface VideoTableViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,SWTableViewCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property(nonatomic,strong)ThirdViewControllerViewModel *viewModel;
+@property(nonatomic,strong)VideoViewControllerViewModel *viewModel;
 @property(nonatomic,copy)NSString* favouriteType;
 @end

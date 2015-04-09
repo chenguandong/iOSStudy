@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 chenguandong. All rights reserved.
 //
 
-#import "FirstViewControllerViewModel.h"
+#import "BlogViewControllerViewModel.h"
 #import "FavouriteBean.h"
 #import "Constants .h"
 #import "BlogJsonBean.h"
@@ -14,7 +14,7 @@
 #import "CoreDataUtils.h"
 #import <SWTableViewCell.h>
 #import "EntityConstants.h"
-@implementation FirstViewControllerViewModel
+@implementation BlogViewControllerViewModel
 - (instancetype)init
 {
     self = [super init];

@@ -1,12 +1,12 @@
 //
-//  SecondViewController.m
+//  ThirdTableViewController.m
 //  iOSStudy
 //
-//  Created by chenguandong on 15/1/29.
+//  Created by chenguandong on 15/2/10.
 //  Copyright (c) 2015年 chenguandong. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "VideoTableViewController.h"
 #import "NetWorkTools.h"
 #import "Constants .h"
 #import <SVProgressHUD/SVProgressHUD.h>
@@ -16,33 +16,33 @@
 #import "BlogDetailViewController.h"
 #import <SVWebViewController.h>
 #import <MJRefresh.h>
-#import <SVModalWebViewController.h>
-#import "EntityConstants.h"
 #import "STBaseTableViewCell.h"
-@interface SecondViewController ()
+#import "UIImage+Resize.h"
+#import <SVModalWebViewController.h>
+#import "STBaseTableViewCell.h"
+@interface VideoTableViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation VideoTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+
     _tableView.delegate = self;
     _tableView.dataSource = self;
     
     [self initViewData];
-
+    
+    
 }
-
-
 
 -(void)initViewData{
     
-    _favouriteType = TYPE_WEB_FAVOURITE_TYPE;
+    _favouriteType = TYPE_VIDEO_FAVOURITE_TYPE;
     
-    _viewModel = [[SecondViewControllerViewModel alloc]init];
+    _viewModel = [[VideoViewControllerViewModel alloc]init];
     
     [self.tableView addHeaderWithCallback:^{
         
@@ -58,9 +58,8 @@
             [self stopTableRefreshing];
         } modelDataIsNetworking:^(BOOL isNetWorking) {
             [self stopTableRefreshing];
-        } httpAdress:Adress_webs dataType:TYPE_WEB_SIMPLE_TYPE jsonClass:[WebBean class]];
-        
-        
+        } httpAdress:Adress_videos dataType:TYPE_VIDEO_SIMPLE_TYPE jsonClass:[VideoBean class]];
+
         
     }];
     
@@ -68,8 +67,12 @@
     
     _tableView.rowHeight = 60;
     
-    [self.tableView registerNib:[UINib nibWithNibName:@"STBaseTableViewCell" bundle:nil] forCellReuseIdentifier:@"WebCell"];
+     [self.tableView registerNib:[UINib nibWithNibName:@"STBaseTableViewCell" bundle:nil] forCellReuseIdentifier:@"VideoCell"];
 }
+
+
+
+
 
 /**
  *  停止UITableView刷新
@@ -98,17 +101,24 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    static NSString *CellIdentifier = @"WebCell";
-    STBaseTableViewCell *cell = (STBaseTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier
-                                                                                       forIndexPath:indexPath];
+    
+    static NSString *cellIdentifier = @"VideoCell";
+    
+    STBaseTableViewCell *cell = (STBaseTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier
+                                                                                           forIndexPath:indexPath];
+
     
     
     cell.delegate = self;
+
     
     
     cell.title.text = [[_viewModel getBlogBean:indexPath]valueForKey:FavouriteBean_title];
     cell.subtitle.text = [[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_subtitle];
     
+
+
+    NSLog(@"==%@",  [[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_subtitle]);
     
     
     cell.rightUtilityButtons =[_viewModel setRightSWCellButtons:[[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_url] withType:_favouriteType];
@@ -116,13 +126,16 @@
     
     [cell.imageIcon setImageWithURL:[NSURL URLWithString:[[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_image_name]] placeholderImage:[UIImage imageNamed:@"SVWebViewControllerActivitySafari-iPad.png"]];
     
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
      cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-
+    
+    
     SVModalWebViewController *webViewController = [[SVModalWebViewController alloc] initWithAddress:[[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_url]];
     [self presentViewController:webViewController animated:NO completion:NULL];
 }
@@ -181,8 +194,6 @@
 
 
 
-
-
 -(void)dealloc{
     _tableView.delegate = nil;
     _tableView.dataSource = nil;
@@ -194,5 +205,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end

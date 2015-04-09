@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
-#import "FirstViewControllerViewModel.h"
+#import "BlogViewControllerViewModel.h"
 #import <SWTableViewCell.h>
-@interface FirstViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate,SWTableViewCellDelegate>
+@interface BlogViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate,SWTableViewCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property(nonatomic,strong)FirstViewControllerViewModel *viewModel;
+@property(nonatomic,strong)BlogViewControllerViewModel *viewModel;
 @property(nonatomic,copy)NSString *favouriteType ;
 -(void)initViewData;
 
