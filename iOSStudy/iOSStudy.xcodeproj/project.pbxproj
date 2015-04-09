@@ -80,6 +80,8 @@
 		18DF6D3F1A80D40D005751E8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DF6D3E1A80D40D005751E8 /* SystemConfiguration.framework */; };
 		18E016AA1ACAA898002A6E59 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E016A91ACAA898002A6E59 /* CoreData.framework */; };
 		18E016E51ACAAB35002A6E59 /* iOSStudy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18E016E31ACAAB35002A6E59 /* iOSStudy.xcdatamodeld */; };
+		18E2796A1AD61AD50056CC5F /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18E279671AD61AD50056CC5F /* iRate.bundle */; };
+		18E2796B1AD61AD50056CC5F /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E279691AD61AD50056CC5F /* iRate.m */; };
 		18E6A0B51ACCF7FD00B28D32 /* VersionBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E6A0B41ACCF7FD00B28D32 /* VersionBean.m */; };
 		54A0444849F1931415392FC1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E83ED1B8EA89BC57ACF91BA5 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -206,6 +208,9 @@
 		18DF6D3E1A80D40D005751E8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		18E016A91ACAA898002A6E59 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		18E016E41ACAAB35002A6E59 /* iOSStudy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSStudy.xcdatamodel; sourceTree = "<group>"; };
+		18E279671AD61AD50056CC5F /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
+		18E279681AD61AD50056CC5F /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
+		18E279691AD61AD50056CC5F /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
 		18E6A0B31ACCF7FD00B28D32 /* VersionBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VersionBean.h; path = Bean/versionBean/VersionBean.h; sourceTree = "<group>"; };
 		18E6A0B41ACCF7FD00B28D32 /* VersionBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VersionBean.m; path = Bean/versionBean/VersionBean.m; sourceTree = "<group>"; };
 		2E2CC00A58FD0A745C574BAD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -500,6 +505,7 @@
 		18DF6D3A1A80D3A4005751E8 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				18E279661AD61AD50056CC5F /* iRate */,
 				18CB71221AD55C0C00D72204 /* APService.h */,
 				18AB47991A9C59CB00E4C030 /* UIImage+Resize.h */,
 				18AB479A1A9C59CB00E4C030 /* UIImage+Resize.m */,
@@ -507,6 +513,17 @@
 				18DF6D3C1A80D3BC005751E8 /* Reachability.m */,
 			);
 			name = libs;
+			sourceTree = "<group>";
+		};
+		18E279661AD61AD50056CC5F /* iRate */ = {
+			isa = PBXGroup;
+			children = (
+				18E279671AD61AD50056CC5F /* iRate.bundle */,
+				18E279681AD61AD50056CC5F /* iRate.h */,
+				18E279691AD61AD50056CC5F /* iRate.m */,
+			);
+			name = iRate;
+			path = libs/iRate;
 			sourceTree = "<group>";
 		};
 		18E6A0B21ACCF7C600B28D32 /* VersionBean */ = {
@@ -633,6 +650,7 @@
 				18D2012D1A95A9D600D5F095 /* tabbar_video@3x.png in Resources */,
 				18D201181A95A6F400D5F095 /* icon_58.png in Resources */,
 				185EEB511A98E0BA00BFDB79 /* tabbar_setting@3x.png in Resources */,
+				18E2796A1AD61AD50056CC5F /* iRate.bundle in Resources */,
 				18D2011D1A95A6F400D5F095 /* icon_152.png in Resources */,
 				18D201191A95A6F400D5F095 /* icon_76.png in Resources */,
 				18D2011E1A95A6F400D5F095 /* icon_180.png in Resources */,
@@ -712,6 +730,7 @@
 				18AB479F1A9C5E3300E4C030 /* VideoCell.m in Sources */,
 				18B23B2E1A7A14D100E80854 /* SecondViewController.m in Sources */,
 				18B23B4D1A7A234800E80854 /* BaseViewController.m in Sources */,
+				18E2796B1AD61AD50056CC5F /* iRate.m in Sources */,
 				18A998931A7C77D0002E7219 /* NetWorkTools.m in Sources */,
 				18AB47A81A9DA40500E4C030 /* DBUtils.m in Sources */,
 				18AB47A51A9C82FA00E4C030 /* AddBlogTableViewController.m in Sources */,

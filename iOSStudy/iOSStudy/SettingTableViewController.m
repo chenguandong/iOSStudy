@@ -7,7 +7,7 @@
 //
 
 #import "SettingTableViewController.h"
-
+#import "iRate.h"
 @interface SettingTableViewController ()
 
 @end
@@ -31,23 +31,10 @@
     if (indexPath.section==0) {
         switch (indexPath.row) {
             case 0:
-            {
-                // Email Subject
-                NSString *emailTitle = @"Test Email";
-                // Email Content
-                NSString *messageBody = @"iOS programming is so fun!";
-                // To address
-                NSArray *toRecipents = [NSArray arrayWithObject:@"chenguandong@163.com"];
-                
-                MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
-                mc.mailComposeDelegate = self;
-                [mc setSubject:emailTitle];
-                [mc setMessageBody:messageBody isHTML:NO];
-                [mc setToRecipients:toRecipents];
-                
-                // Present mail view controller on screen
-                [self presentViewController:mc animated:YES completion:NULL];
-            }
+                [self sendEmail];
+                break;
+            case 1:
+                [self rateApp];
                 break;
                 
             default:
@@ -80,6 +67,48 @@
     
     // Close the Mail Interface
     [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+#pragma mark -- 发送意见反馈
+-(void)sendEmail{
+
+    {
+        // Email Subject
+        NSString *emailTitle = @"Test Email";
+        // Email Content
+        NSString *messageBody = @"iOS programming is so fun!";
+        // To address
+        NSArray *toRecipents = [NSArray arrayWithObject:@"chenguandong@163.com"];
+        
+        MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+        mc.mailComposeDelegate = self;
+        [mc setSubject:emailTitle];
+        [mc setMessageBody:messageBody isHTML:NO];
+        [mc setToRecipients:toRecipents];
+        
+        // Present mail view controller on screen
+        [self presentViewController:mc animated:YES completion:NULL];
+    }
+
+}
+
+#pragma mark -- 给应用评分
+-(void)rateApp{
+
+    [iRate sharedInstance].applicationBundleID = @"com.cgd.iOSStudy";
+    /*
+    [iRate sharedInstance].onlyPromptIfLatestVersion = NO;
+    
+    //enable preview mode
+    [iRate sharedInstance].previewMode = YES;
+    
+    */
+    
+    //mark as rated
+    [iRate sharedInstance].ratedThisVersion = YES;
+    
+    //launch app store
+    [[iRate sharedInstance] openRatingsPageInAppStore];
 }
 
 - (void)didReceiveMemoryWarning {
