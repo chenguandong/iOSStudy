@@ -18,6 +18,7 @@
 #import <MJRefresh.h>
 #import "EntityConstants.h"
 #import "STBaseTableViewCell.h"
+
 @interface BlogViewController ()
 
 @end
@@ -33,7 +34,15 @@
     _tableView.delegate = self;
     _tableView.dataSource = self;
     
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(notificationReloadData:) name:notifacationBlogReload object:nil];
+    
     [self initViewData];
+}
+
+-(void)notificationReloadData:(NSNotification*)notifacation{
+    
+    
+    [_tableView reloadData];
 }
 
 -(void)initViewData{
@@ -56,8 +65,7 @@
         } modelDataIsNetworking:^(BOOL isNetWorking) {
             [self stopTableRefreshing];
         } httpAdress:Address_blogs dataType:TYPE_BLOG_SIMPLE_TYPE jsonClass:[BlogBean class]];
-        
-        
+
         
     }];
     
@@ -181,6 +189,8 @@
     _tableView.delegate = nil;
     _tableView.dataSource = nil;
     _viewModel = nil;
+    
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:notifacationBlogReload object:nil];
 
 }
 

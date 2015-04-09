@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "VideoViewControllerViewModel.h"
 #import <SWTableViewCell.h>
-@interface VideoTableViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,SWTableViewCellDelegate>
+#import "BaseViewController.h"
+@interface VideoTableViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate,SWTableViewCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property(nonatomic,strong)VideoViewControllerViewModel *viewModel;

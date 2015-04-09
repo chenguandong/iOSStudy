@@ -34,8 +34,15 @@
     
     [self initViewData];
 
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(notificationReloadData:) name:notifacationWebReload object:nil];
 }
 
+-(void)notificationReloadData:(NSNotification*)notifacation{
+    
+    
+    [_tableView reloadData];
+}
 
 
 -(void)initViewData{
@@ -187,6 +194,7 @@
     _tableView.delegate = nil;
     _tableView.dataSource = nil;
     _viewModel = nil;
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:notifacationWebReload object:nil];
     
 }
 

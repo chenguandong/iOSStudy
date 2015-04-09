@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "NotificationCenterConstants.h"
 @interface BaseViewController : UIViewController
 
 @end

@@ -12,6 +12,7 @@
 #import "STBaseTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <SVModalWebViewController.h>
+#import "NotificationCenterConstants.h"
 typedef NS_ENUM(NSInteger, segmentedSelect) {
     BlogSelect = 0,
     WebSelect  =1,
@@ -119,13 +120,23 @@ typedef NS_ENUM(NSInteger, segmentedSelect) {
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete object from database
-        [SharedApp.managedObjectContext deleteObject:[self.viewModel.array objectAtIndex:indexPath.row]];
+        
+        NSManagedObject *deleteObjt =[self.viewModel.array objectAtIndex:indexPath.row];
+        
+        
+        [SharedApp.managedObjectContext deleteObject:deleteObjt];
         
         NSError *error = nil;
         if (![SharedApp.managedObjectContext save:&error]) {
             NSLog(@"Can't Delete! %@ %@", error, [error localizedDescription]);
             return;
         }
+        
+        
+        
+        
+       
+        
         
         // Remove device from table view
 //        [self.viewModel.array removeObjectAtIndex:indexPath.row];
@@ -134,6 +145,19 @@ typedef NS_ENUM(NSInteger, segmentedSelect) {
 //        [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
         
         [self reloadData];
+        
+        if ([favouriteType isEqualToString:TYPE_BLOG_FAVOURITE_TYPE]) {
+             [[NSNotificationCenter defaultCenter]postNotificationName:notifacationBlogReload object:nil userInfo:nil];
+        }else if  ([favouriteType isEqualToString:TYPE_WEB_FAVOURITE_TYPE]){
+        
+            [[NSNotificationCenter defaultCenter]postNotificationName:notifacationWebReload object:nil userInfo:nil];
+            
+        }else{
+        
+            [[NSNotificationCenter defaultCenter]postNotificationName:notifacationVideoReload object:nil userInfo:nil];
+        }
+        
+        
     }
 }
 
