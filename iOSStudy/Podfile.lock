@@ -23,10 +23,11 @@ PODS:
   - Mantle (2.0):
     - Mantle/extobjc (= 2.0)
   - Mantle/extobjc (2.0)
-  - MJRefresh (1.4.3)
+  - MJRefresh (1.4.4)
   - SDWebImage (3.7.2):
     - SDWebImage/Core (= 3.7.2)
   - SDWebImage/Core (3.7.2)
+  - Shimmer (1.0.2)
   - SVProgressHUD (1.1.3)
   - SVWebViewController (1.0)
   - SWTableViewCell (0.3.7)
@@ -36,6 +37,7 @@ DEPENDENCIES:
   - Mantle
   - MJRefresh
   - SDWebImage
+  - Shimmer
   - SVProgressHUD
   - SVWebViewController
   - SWTableViewCell (~> 0.3.7)
@@ -43,8 +45,9 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: fefbce9660acb17f48ae0011292d4da0f457bf36
   Mantle: 17de73ef929db2234d76fde2aacfb89ab11c61e8
-  MJRefresh: 6eb09aefa9622f0908fdf42d63c2070478c04c42
+  MJRefresh: e4a25dd1f3afbe5c547ff0d434cb40997803bc81
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
+  Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   SVWebViewController: c36dda7326e81fcae0abf5d02bf7bbf7e41be901
   SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579

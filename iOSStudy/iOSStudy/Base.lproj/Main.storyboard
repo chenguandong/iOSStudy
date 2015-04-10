@@ -379,24 +379,38 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="z5l-4I-vsu">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="deJ-U7-95l">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anim_01.png" translatesAutoresizingMaskIntoConstraints="NO" id="deJ-U7-95l">
                                 <rect key="frame" x="150" y="150" width="300" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="9uw-jF-Ylb"/>
                                     <constraint firstAttribute="width" constant="300" id="AvO-DR-z2S"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2x3-QF-nih" customClass="FBShimmeringView">
+                                <rect key="frame" x="116" y="119" width="368" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="51q-YK-3Gh"/>
+                                    <constraint firstAttribute="width" constant="368" id="id4-nO-vPJ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.064078811629999996" green="0.80681046199999995" blue="0.75914180109999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="z5l-4I-vsu" secondAttribute="trailing" id="56A-01-LWo"/>
                             <constraint firstItem="z5l-4I-vsu" firstAttribute="top" secondItem="wwg-Mb-zRW" secondAttribute="top" id="Kg4-cD-uYV"/>
+                            <constraint firstItem="deJ-U7-95l" firstAttribute="top" secondItem="2x3-QF-nih" secondAttribute="bottom" constant="-19" id="LM7-ox-gbb"/>
                             <constraint firstItem="ILw-e5-qty" firstAttribute="top" secondItem="z5l-4I-vsu" secondAttribute="bottom" id="gFq-Io-WVz"/>
                             <constraint firstAttribute="centerX" secondItem="deJ-U7-95l" secondAttribute="centerX" id="gYl-Aq-Ts3"/>
+                            <constraint firstItem="2x3-QF-nih" firstAttribute="centerX" secondItem="deJ-U7-95l" secondAttribute="centerX" id="gZc-PE-5Mq"/>
                             <constraint firstItem="z5l-4I-vsu" firstAttribute="leading" secondItem="wwg-Mb-zRW" secondAttribute="leading" id="nnZ-12-Ayz"/>
                             <constraint firstAttribute="centerY" secondItem="deJ-U7-95l" secondAttribute="centerY" id="vCT-PN-C3w"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animationImageView" destination="deJ-U7-95l" id="9tX-Mt-zAg"/>
+                        <outlet property="shinmmerView" destination="2x3-QF-nih" id="BqX-OV-dXN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Wa-Zm-6wO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -478,12 +492,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="anim_01.png" width="1024" height="1024"/>
         <image name="tabbar_blog.png" width="25" height="25"/>
         <image name="tabbar_setting.png" width="25" height="25"/>
         <image name="tabbar_video.png" width="25" height="25"/>
         <image name="tabbar_web.png" width="25" height="25"/>
         <image name="welcome_bg.png" width="1536" height="2048"/>
-        <image name="welcome_icon.png" width="1242" height="1192"/>
     </resources>
     <color key="tintColor" red="0.9450981021" green="0.13725490870000001" blue="0.03529411927" alpha="1" colorSpace="deviceRGB"/>
 </document>

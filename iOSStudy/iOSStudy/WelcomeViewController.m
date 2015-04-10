@@ -30,6 +30,34 @@
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(versionSuccess:) name:notifacationVersionSuccess object:nil];
     
+    NSMutableArray *imageArray = [NSMutableArray arrayWithCapacity:20];
+    for (int i =1; i<21; i++) {
+        
+        NSString *imageName = [NSString stringWithFormat:@"anim_%.2d.png",i];
+    
+        NSLog(@"%@",imageName);
+        [imageArray addObject:[UIImage imageNamed:imageName]];
+    }
+    
+    
+    _animationImageView.animationImages = imageArray;
+    _animationImageView.animationRepeatCount = 0;
+    _animationImageView.animationDuration = 10;
+    
+    [_animationImageView startAnimating];
+    
+    
+    UILabel *loadingLabel = [[UILabel alloc] initWithFrame:_shinmmerView.bounds];
+    loadingLabel.textColor = [UIColor whiteColor];
+    loadingLabel.font =[UIFont systemFontOfSize:40];
+    loadingLabel.textAlignment = NSTextAlignmentCenter;
+    loadingLabel.text = NSLocalizedString(@"正在更新数据...", nil);
+    _shinmmerView.contentView = loadingLabel;
+    
+    // Start shimmering.
+    _shinmmerView.shimmering = YES;
+
+
 }
 
 -(void)versionSuccess:(NSNotification*)notifacation{

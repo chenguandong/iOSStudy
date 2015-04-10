@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <FBShimmeringView.h>
 @interface WelcomeViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *animationImageView;
+@property (weak, nonatomic) IBOutlet FBShimmeringView *shinmmerView;
 
 @end
