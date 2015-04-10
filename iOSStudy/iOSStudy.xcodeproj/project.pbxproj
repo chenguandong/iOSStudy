@@ -109,6 +109,9 @@
 		18EC47E51AD7C62F00C397E5 /* anim_18.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EC47D11AD7C62F00C397E5 /* anim_18.png */; };
 		18EC47E61AD7C62F00C397E5 /* anim_19.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EC47D21AD7C62F00C397E5 /* anim_19.png */; };
 		18EC47E71AD7C62F00C397E5 /* anim_20.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EC47D31AD7C62F00C397E5 /* anim_20.png */; };
+		18EC47EB1AD7FE8200C397E5 /* tabbar_ favourite.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EC47E81AD7FE8200C397E5 /* tabbar_ favourite.png */; };
+		18EC47EC1AD7FE8200C397E5 /* tabbar_ favourite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EC47E91AD7FE8200C397E5 /* tabbar_ favourite@2x.png */; };
+		18EC47ED1AD7FE8200C397E5 /* tabbar_ favourite@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EC47EA1AD7FE8200C397E5 /* tabbar_ favourite@3x.png */; };
 		54A0444849F1931415392FC1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E83ED1B8EA89BC57ACF91BA5 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -264,6 +267,9 @@
 		18EC47D11AD7C62F00C397E5 /* anim_18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = anim_18.png; sourceTree = "<group>"; };
 		18EC47D21AD7C62F00C397E5 /* anim_19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = anim_19.png; sourceTree = "<group>"; };
 		18EC47D31AD7C62F00C397E5 /* anim_20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = anim_20.png; sourceTree = "<group>"; };
+		18EC47E81AD7FE8200C397E5 /* tabbar_ favourite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabbar_ favourite.png"; path = " Resource/images/tabbar/tabbar_ favourite.png"; sourceTree = "<group>"; };
+		18EC47E91AD7FE8200C397E5 /* tabbar_ favourite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabbar_ favourite@2x.png"; path = " Resource/images/tabbar/tabbar_ favourite@2x.png"; sourceTree = "<group>"; };
+		18EC47EA1AD7FE8200C397E5 /* tabbar_ favourite@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabbar_ favourite@3x.png"; path = " Resource/images/tabbar/tabbar_ favourite@3x.png"; sourceTree = "<group>"; };
 		2E2CC00A58FD0A745C574BAD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E83ED1B8EA89BC57ACF91BA5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -523,6 +529,9 @@
 		18D2010C1A95A6D500D5F095 /* tabBar */ = {
 			isa = PBXGroup;
 			children = (
+				18EC47E81AD7FE8200C397E5 /* tabbar_ favourite.png */,
+				18EC47E91AD7FE8200C397E5 /* tabbar_ favourite@2x.png */,
+				18EC47EA1AD7FE8200C397E5 /* tabbar_ favourite@3x.png */,
 				185EEB4C1A98E0BA00BFDB79 /* tabbar_setting.png */,
 				185EEB4D1A98E0BA00BFDB79 /* tabbar_setting@2x.png */,
 				185EEB4E1A98E0BA00BFDB79 /* tabbar_setting@3x.png */,
@@ -706,6 +715,11 @@
 				TargetAttributes = {
 					18B23B1E1A7A14D000E80854 = {
 						CreatedOnToolsVersion = 6.1.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					18B23B3A1A7A14D100E80854 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -752,6 +766,7 @@
 				18EC47E51AD7C62F00C397E5 /* anim_18.png in Resources */,
 				18EC47AC1AD7949100C397E5 /* img_1024x768.png in Resources */,
 				18EC47B91AD7AE3200C397E5 /* welcome_bg.png in Resources */,
+				18EC47ED1AD7FE8200C397E5 /* tabbar_ favourite@3x.png in Resources */,
 				18EC47DC1AD7C62F00C397E5 /* anim_09.png in Resources */,
 				18D2011D1A95A6F400D5F095 /* icon_152.png in Resources */,
 				18D201191A95A6F400D5F095 /* icon_76.png in Resources */,
@@ -769,6 +784,7 @@
 				18EC47E41AD7C62F00C397E5 /* anim_17.png in Resources */,
 				18EC47D41AD7C62F00C397E5 /* anim_01.png in Resources */,
 				18D201161A95A6F400D5F095 /* icon_29.png in Resources */,
+				18EC47EC1AD7FE8200C397E5 /* tabbar_ favourite@2x.png in Resources */,
 				18EC47BE1AD7C22300C397E5 /* about_us.html in Resources */,
 				18D2011B1A95A6F400D5F095 /* icon_87.png in Resources */,
 				18EC47DF1AD7C62F00C397E5 /* anim_12.png in Resources */,
@@ -786,6 +802,7 @@
 				18EC47E31AD7C62F00C397E5 /* anim_16.png in Resources */,
 				18D2011C1A95A6F400D5F095 /* icon_120.png in Resources */,
 				18EC47A91AD7949100C397E5 /* img_640x1136.png in Resources */,
+				18EC47EB1AD7FE8200C397E5 /* tabbar_ favourite.png in Resources */,
 				18EC47E21AD7C62F00C397E5 /* anim_15.png in Resources */,
 				18D201221A95A70900D5F095 /* tabbar_blog.png in Resources */,
 				18EC47A81AD7949100C397E5 /* img_640x960.png in Resources */,

@@ -419,11 +419,11 @@
             </objects>
             <point key="canvasLocation" x="-982" y="249"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--收藏-->
         <scene sceneID="a8f-1P-R3z">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KNB-eQ-hTP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="8Gx-f0-bsw"/>
+                    <tabBarItem key="tabBarItem" title="收藏" image="tabbar_ favourite.png" id="8Gx-f0-bsw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZGN-nB-PQU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -496,6 +496,7 @@
     </scenes>
     <resources>
         <image name="anim_01.png" width="1024" height="1024"/>
+        <image name="tabbar_ favourite.png" width="25" height="25"/>
         <image name="tabbar_blog.png" width="25" height="25"/>
         <image name="tabbar_setting.png" width="25" height="25"/>
         <image name="tabbar_video.png" width="25" height="25"/>

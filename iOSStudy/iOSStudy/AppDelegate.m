@@ -106,6 +106,8 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
 - (void)application:(UIApplication *)application
 didRegisterUserNotificationSettings:
 (UIUserNotificationSettings *)notificationSettings {
+
+
 }
 
 // Called when your app has been activated by the user selecting an action from
@@ -117,6 +119,8 @@ didRegisterUserNotificationSettings:
 handleActionWithIdentifier:(NSString *)identifier
 forLocalNotification:(UILocalNotification *)notification
   completionHandler:(void (^)())completionHandler {
+
+
 }
 
 // Called when your app has been activated by the user selecting an action from
@@ -128,15 +132,20 @@ forLocalNotification:(UILocalNotification *)notification
 handleActionWithIdentifier:(NSString *)identifier
 forRemoteNotification:(NSDictionary *)userInfo
   completionHandler:(void (^)())completionHandler {
+
+
 }
 #endif
+
 
 - (void)application:(UIApplication *)application
 didReceiveRemoteNotification:(NSDictionary *)userInfo {
     [APService handleRemoteNotification:userInfo];
     NSLog(@"收到通知:%@", [self logDic:userInfo]);
     //[rootViewController addNotificationCount];
+    //[self pushBage];
 }
+
 
 - (void)application:(UIApplication *)application
 didReceiveRemoteNotification:(NSDictionary *)userInfo
@@ -145,7 +154,7 @@ fetchCompletionHandler:
     [APService handleRemoteNotification:userInfo];
     NSLog(@"收到通知:%@", [self logDic:userInfo]);
     //[rootViewController addNotificationCount];
-    
+    //[self pushBage];
     completionHandler(UIBackgroundFetchResultNewData);
 }
 

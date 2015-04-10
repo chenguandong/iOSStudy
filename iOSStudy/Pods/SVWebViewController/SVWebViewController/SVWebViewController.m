@@ -9,7 +9,7 @@
 #import "SVWebViewControllerActivityChrome.h"
 #import "SVWebViewControllerActivitySafari.h"
 #import "SVWebViewController.h"
-
+#import "SVProgressHUD.h"
 @interface SVWebViewController () <UIWebViewDelegate>
 
 @property (nonatomic, strong) UIBarButtonItem *backBarButtonItem;
@@ -227,6 +227,8 @@
 - (void)webViewDidStartLoad:(UIWebView *)webView {
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     [self updateToolbarItems];
+    [SVProgressHUD show];
+
 }
 
 
@@ -235,6 +237,7 @@
     
     self.navigationItem.title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
     [self updateToolbarItems];
+    [SVProgressHUD dismiss];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {

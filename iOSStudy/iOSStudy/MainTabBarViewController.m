@@ -7,13 +7,20 @@
 //
 
 #import "MainTabBarViewController.h"
-
+#import "AppDelegate.h"
 @interface MainTabBarViewController ()
 
 @end
 
 @implementation MainTabBarViewController
 
+
+-(void)viewWillAppear:(BOOL)animated{
+
+    [super viewWillAppear:YES];
+    [[UIApplication sharedApplication]setApplicationIconBadgeNumber:0];
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -33,5 +40,25 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+/*
+ 
+ -(void)pushBage{
+ 
+ 
+ NSUserDefaults *defalut = [NSUserDefaults standardUserDefaults];
+ 
+ NSInteger i = [defalut integerForKey:@"bage"];
+ i++;
+ 
+ [defalut setInteger:i forKey:@"bage"];
+ 
+ [defalut synchronize];
+ 
+ [[UIApplication sharedApplication]setApplicationIconBadgeNumber:i];
+ }
+ */
+
 
 @end
