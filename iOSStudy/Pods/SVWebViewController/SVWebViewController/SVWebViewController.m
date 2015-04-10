@@ -101,6 +101,7 @@
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         [self.navigationController setToolbarHidden:YES animated:animated];
     }
+    [SVProgressHUD dismiss];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {

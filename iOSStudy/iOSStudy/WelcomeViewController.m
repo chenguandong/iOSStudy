@@ -22,16 +22,29 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
 
+      [_animationImageView startAnimating];
     
     
+
+
+}
+
+-(void)versionSuccess:(NSNotification*)notifacation{
+    [self goNextPage];
+    
+
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(versionSuccess:) name:notifacationVersionSuccess object:nil];
     
     NSMutableArray *imageArray = [NSMutableArray arrayWithCapacity:20];
     for (int i =1; i<21; i++) {
         
         NSString *imageName = [NSString stringWithFormat:@"anim_%.2d.png",i];
-    
-        NSLog(@"%@",imageName);
+        
         [imageArray addObject:[UIImage imageNamed:imageName]];
     }
     
@@ -40,7 +53,7 @@
     _animationImageView.animationRepeatCount = 0;
     _animationImageView.animationDuration = 10;
     
-    [_animationImageView startAnimating];
+    
     
     
     UILabel *loadingLabel = [[UILabel alloc] initWithFrame:_shinmmerView.bounds];
@@ -52,26 +65,18 @@
     
     // Start shimmering.
     _shinmmerView.shimmering = YES;
-
-
-}
-
--(void)versionSuccess:(NSNotification*)notifacation{
-    [self goNextPage];
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-
 }
 
 -(void)goNextPage{
     [self performSegueWithIdentifier:@"mainTab" sender:self];
 }
 
+
+
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:YES];
+    
+    [_animationImageView stopAnimating];
     
     [[NSNotificationCenter defaultCenter]removeObserver:self name:notifacationVersionSuccess object:nil];
 }
