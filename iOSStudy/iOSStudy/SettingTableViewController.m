@@ -8,6 +8,7 @@
 
 #import "SettingTableViewController.h"
 #import "iRate.h"
+#import "LicenesViewController.h"
 @interface SettingTableViewController ()
 
 @end
@@ -74,9 +75,9 @@
 
     {
         // Email Subject
-        NSString *emailTitle = @"Test Email";
+        NSString *emailTitle = @"意见反馈";
         // Email Content
-        NSString *messageBody = @"iOS programming is so fun!";
+        NSString *messageBody = @"意见反馈";
         // To address
         NSArray *toRecipents = [NSArray arrayWithObject:@"chenguandong@163.com"];
         
@@ -188,5 +189,20 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    LicenesViewController *coll = [segue destinationViewController];
+
+    NSLog(@"%@",segue.identifier);
+    
+    if ([segue.identifier isEqualToString:@"licenes"]) {
+        coll.htmlName = @"licenes.html";
+    }else{
+        coll.htmlName = @"about_us.html";
+    }
+    
+    // Pass the selected object to the new view controller.
+}
+
 
 @end

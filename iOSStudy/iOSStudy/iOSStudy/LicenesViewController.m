@@ -13,9 +13,11 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     
-    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"开源组件.html" ofType:nil]];
+    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:_htmlName ofType:nil]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [_webView loadRequest:request];
 }
+
+
 
 @end

@@ -10,5 +10,5 @@
 #import "BaseViewController.h"
 @interface LicenesViewController :BaseViewController
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
-
+@property(nonatomic,copy)NSString *htmlName;
 @end

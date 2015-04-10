@@ -72,7 +72,7 @@
 		18E2796A1AD61AD50056CC5F /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18E279671AD61AD50056CC5F /* iRate.bundle */; };
 		18E2796B1AD61AD50056CC5F /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E279691AD61AD50056CC5F /* iRate.m */; };
 		18E2796E1AD6206F0056CC5F /* LicenesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E2796D1AD6206F0056CC5F /* LicenesViewController.m */; };
-		18E279711AD62CD80056CC5F /* 开源组件.html in Resources */ = {isa = PBXBuildFile; fileRef = 18E279701AD62CD80056CC5F /* 开源组件.html */; };
+		18E279711AD62CD80056CC5F /* licenes.html in Resources */ = {isa = PBXBuildFile; fileRef = 18E279701AD62CD80056CC5F /* licenes.html */; };
 		18E3600A1AD67BB500A077B2 /* STBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E360081AD67BB500A077B2 /* STBaseTableViewCell.m */; };
 		18E3600B1AD67BB500A077B2 /* STBaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E360091AD67BB500A077B2 /* STBaseTableViewCell.xib */; };
 		18E6A0B51ACCF7FD00B28D32 /* VersionBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E6A0B41ACCF7FD00B28D32 /* VersionBean.m */; };
@@ -224,7 +224,7 @@
 		18E279691AD61AD50056CC5F /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
 		18E2796C1AD6206F0056CC5F /* LicenesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LicenesViewController.h; path = iOSStudy/LicenesViewController.h; sourceTree = "<group>"; };
 		18E2796D1AD6206F0056CC5F /* LicenesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LicenesViewController.m; path = iOSStudy/LicenesViewController.m; sourceTree = "<group>"; };
-		18E279701AD62CD80056CC5F /* 开源组件.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "开源组件.html"; sourceTree = "<group>"; };
+		18E279701AD62CD80056CC5F /* licenes.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = licenes.html; sourceTree = "<group>"; };
 		18E360071AD67BB500A077B2 /* STBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STBaseTableViewCell.h; path = Cell/STBaseTableViewCell.h; sourceTree = "<group>"; };
 		18E360081AD67BB500A077B2 /* STBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STBaseTableViewCell.m; path = Cell/STBaseTableViewCell.m; sourceTree = "<group>"; };
 		18E360091AD67BB500A077B2 /* STBaseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = STBaseTableViewCell.xib; path = Cell/STBaseTableViewCell.xib; sourceTree = "<group>"; };
@@ -587,7 +587,7 @@
 			isa = PBXGroup;
 			children = (
 				18EC47BD1AD7C22300C397E5 /* about_us.html */,
-				18E279701AD62CD80056CC5F /* 开源组件.html */,
+				18E279701AD62CD80056CC5F /* licenes.html */,
 			);
 			name = html;
 			path = " Resource/html";
@@ -761,7 +761,7 @@
 				18D2012B1A95A9D600D5F095 /* tabbar_video.png in Resources */,
 				18EC47BA1AD7AE3200C397E5 /* welcome_icon.png in Resources */,
 				18EC47E71AD7C62F00C397E5 /* anim_20.png in Resources */,
-				18E279711AD62CD80056CC5F /* 开源组件.html in Resources */,
+				18E279711AD62CD80056CC5F /* licenes.html in Resources */,
 				185EEB4F1A98E0BA00BFDB79 /* tabbar_setting.png in Resources */,
 				18EC47D81AD7C62F00C397E5 /* anim_05.png in Resources */,
 				18EC47DB1AD7C62F00C397E5 /* anim_08.png in Resources */,
