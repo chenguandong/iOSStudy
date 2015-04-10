@@ -13,6 +13,7 @@
 #import "MainTabBarViewController.h"
 #import <SVProgressHUD.h>
 #import "VersionBean.h"
+#import "NotificationCenterConstants.h"
 @interface WelcomeViewController ()
 
 @end
@@ -22,34 +23,33 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
-    NSLog(@"------checkNetworking");
+
     
     [SVProgressHUD show];
+    
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(versionSuccess:) name:notifacationVersionSuccess object:nil];
+    
+}
+
+-(void)versionSuccess:(NSNotification*)notifacation{
+    [self goNextPage];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    //获取服务器HTTP当前版本号
-    SharedApp.isNetworking = YES;
-    [HttpVersionTools getVersions:^(NSArray *versionLists) {
-        SharedApp.versionLists = versionLists;
-        
-        for (VersionBean *vBean in SharedApp.versionLists) {
-            NSLog(@"version =%@",vBean.urlVersion);
-        }
-        
-        [self goNextPage];
-    } v_error:^{
-        [self goNextPage];
-    } v_netWork:^(BOOL isNetWorking) {
-        [self goNextPage];
-    }];
+
+
 }
 
 -(void)goNextPage{
     [self performSegueWithIdentifier:@"mainTab" sender:self];
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:YES];
+    
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:notifacationVersionSuccess object:nil];
 }
 
 - (void)didReceiveMemoryWarning {

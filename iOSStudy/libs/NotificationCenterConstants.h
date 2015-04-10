@@ -12,3 +12,6 @@
 UIKIT_EXTERN NSString *const notifacationBlogReload;
 UIKIT_EXTERN NSString *const notifacationWebReload;
 UIKIT_EXTERN NSString *const notifacationVideoReload;
+
+//通知版本号更新成功
+UIKIT_EXTERN NSString *const notifacationVersionSuccess;

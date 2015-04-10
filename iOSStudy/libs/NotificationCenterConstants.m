@@ -11,3 +11,6 @@
  NSString *const notifacationBlogReload =@"notifacationBlogReload";
  NSString *const notifacationWebReload = @"notifacationWebReload";
  NSString *const notifacationVideoReload = @"notifacationVideoReload";
+
+//通知版本号更新成功
+ NSString *const notifacationVersionSuccess = @"notifacationVersionSuccess";

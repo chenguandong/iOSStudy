@@ -124,7 +124,7 @@
         <scene sceneID="dz9-JO-KpG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K1y-G1-Ga4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="博客" image="tabbar_blog.png" badgeValue="1" id="acW-dT-cKf" colorLabel="IBBuiltInLabel-Red">
+                    <tabBarItem key="tabBarItem" title="博客" image="tabbar_blog.png" id="acW-dT-cKf" colorLabel="IBBuiltInLabel-Red">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -243,40 +243,6 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="给应用评分" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Uv-G0-brC">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="资助我们" id="1C5-Qm-uj9">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Q9V-C2-S7D" style="IBUITableViewCellStyleDefault" id="Pld-uD-ab6">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pld-uD-ab6" id="8OS-6m-Yhw">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="支付宝鼓励" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q9V-C2-S7D">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="u9h-9Z-2Hq" style="IBUITableViewCellStyleDefault" id="jam-tr-gee">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jam-tr-gee" id="clI-Rr-oGX">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="加入我们" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u9h-9Z-2Hq">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -410,8 +376,26 @@
                                     <segue destination="49e-Tb-3d3" kind="modal" identifier="mainTab" modalTransitionStyle="flipHorizontal" id="uFR-Rb-Ffg"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="z5l-4I-vsu">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="deJ-U7-95l">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="9uw-jF-Ylb"/>
+                                    <constraint firstAttribute="width" constant="300" id="AvO-DR-z2S"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.064078811629999996" green="0.80681046199999995" blue="0.75914180109999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="z5l-4I-vsu" secondAttribute="trailing" id="56A-01-LWo"/>
+                            <constraint firstItem="z5l-4I-vsu" firstAttribute="top" secondItem="wwg-Mb-zRW" secondAttribute="top" id="Kg4-cD-uYV"/>
+                            <constraint firstItem="ILw-e5-qty" firstAttribute="top" secondItem="z5l-4I-vsu" secondAttribute="bottom" id="gFq-Io-WVz"/>
+                            <constraint firstAttribute="centerX" secondItem="deJ-U7-95l" secondAttribute="centerX" id="gYl-Aq-Ts3"/>
+                            <constraint firstItem="z5l-4I-vsu" firstAttribute="leading" secondItem="wwg-Mb-zRW" secondAttribute="leading" id="nnZ-12-Ayz"/>
+                            <constraint firstAttribute="centerY" secondItem="deJ-U7-95l" secondAttribute="centerY" id="vCT-PN-C3w"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Wa-Zm-6wO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -498,6 +482,8 @@
         <image name="tabbar_setting.png" width="25" height="25"/>
         <image name="tabbar_video.png" width="25" height="25"/>
         <image name="tabbar_web.png" width="25" height="25"/>
+        <image name="welcome_bg.png" width="1536" height="2048"/>
+        <image name="welcome_icon.png" width="1242" height="1192"/>
     </resources>
     <color key="tintColor" red="0.9450981021" green="0.13725490870000001" blue="0.03529411927" alpha="1" colorSpace="deviceRGB"/>
 </document>

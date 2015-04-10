@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "NetWorkTools.h"
 #import "APService.h"
+#import "WelcomeTools.h"
 @interface AppDelegate ()
 
 @end
@@ -19,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     // Do any additional setup after loading the view.
-    [NetWorkTools checkNetworking];
+    [WelcomeTools sharedInstance];
 
     [self setGlobalStyle];
     
