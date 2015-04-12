@@ -1,3 +1,6 @@
+
+![Alt text] (https://raw.githubusercontent.com/chenguandong/iOSStudy/CoreDataJoin/iOSStudy/iOSStudy/%20Resource/images/appicon/icon_120.png)
+_____________________________________________
 # 关于iOSStudy
 <pre>
 iOSStudy 灵感来源于作者自学iOS开发的经验,收藏了一些博客视频网站等内容,希望可以帮助初学者找到更好的学习资源,作者也会不断的更新完善软件和内容,如果本软件对您的学习有所帮助欢迎到评分界面深深地点个赞,您的支持将是我前进的动力↖(^ω^)↗
