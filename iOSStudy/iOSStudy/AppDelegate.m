@@ -91,78 +91,43 @@
 
 }
 
-#pragma mark -- push delagate
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     
     // Required
     [APService registerDeviceToken:deviceToken];
 }
-- (void)application:(UIApplication *)application
-didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
-    NSLog(@"did Fail To Register For Remote Notifications With Error: %@", error);
+
+
+
+
+- (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)userInfo completionHandler:(void(^)())completionHandler NS_AVAILABLE_IOS(8_0){
+
+    NSLog(@"%s",__func__);
+    NSLog(@"%@",[self logDic:userInfo]);
+    
 }
 
-#if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_7_1
-- (void)application:(UIApplication *)application
-didRegisterUserNotificationSettings:
-(UIUserNotificationSettings *)notificationSettings {
-
-
-}
-
-// Called when your app has been activated by the user selecting an action from
-// a local notification.
-// A nil action identifier indicates the default action.
-// You should call the completion handler as soon as you've finished handling
-// the action.
-- (void)application:(UIApplication *)application
-handleActionWithIdentifier:(NSString *)identifier
-forLocalNotification:(UILocalNotification *)notification
-  completionHandler:(void (^)())completionHandler {
-
-
-}
-
-// Called when your app has been activated by the user selecting an action from
-// a remote notification.
-// A nil action identifier indicates the default action.
-// You should call the completion handler as soon as you've finished handling
-// the action.
-- (void)application:(UIApplication *)application
-handleActionWithIdentifier:(NSString *)identifier
-forRemoteNotification:(NSDictionary *)userInfo
-  completionHandler:(void (^)())completionHandler {
-
-
-}
-#endif
-
-
-- (void)application:(UIApplication *)application
-didReceiveRemoteNotification:(NSDictionary *)userInfo {
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    
+    
+    
+    NSLog(@"%s",__func__);
+    NSLog(@"%@",[self logDic:userInfo]);
+    
+    // Required
     [APService handleRemoteNotification:userInfo];
-    NSLog(@"收到通知:%@", [self logDic:userInfo]);
-    //[rootViewController addNotificationCount];
-    //[self pushBage];
 }
 
-
-- (void)application:(UIApplication *)application
-didReceiveRemoteNotification:(NSDictionary *)userInfo
-fetchCompletionHandler:
-(void (^)(UIBackgroundFetchResult))completionHandler {
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    
+    
+    NSLog(@"%s",__func__);
+    
+    NSLog(@"%@",[self logDic:userInfo]);
+    // IOS 7 Support Required
     [APService handleRemoteNotification:userInfo];
-    NSLog(@"收到通知:%@", [self logDic:userInfo]);
-    //[rootViewController addNotificationCount];
-    //[self pushBage];
     completionHandler(UIBackgroundFetchResultNewData);
 }
-
-- (void)application:(UIApplication *)application
-didReceiveLocalNotification:(UILocalNotification *)notification {
-    [APService showLocalNotificationAtFront:notification identifierKey:nil];
-}
-
 // log NSSet with UTF8
 // if not ,log will be \Uxxx
 - (NSString *)logDic:(NSDictionary *)dic {
