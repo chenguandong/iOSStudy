@@ -11,11 +11,26 @@
 #ifndef iOSStudy_Constants__h
 #define iOSStudy_Constants__h
 
-#define Address_blogs @"https://raw.githubusercontent.com/chenguandong/iOSStudy/CoreDataJoin/iOSStudyJsonData/blogs.json"
-#define Adress_webs @"https://raw.githubusercontent.com/chenguandong/iOSStudy/CoreDataJoin/iOSStudyJsonData/webs.json"
-#define Adress_videos @"https://raw.githubusercontent.com/chenguandong/iOSStudy/CoreDataJoin/iOSStudyJsonData/videos.json"
 
-#define Adress_versions @"https://raw.githubusercontent.com/chenguandong/iOSStudy/CoreDataJoin/iOSStudyJsonData/versions.json"
+
+/****OSChina数据源地址**
+#define Address_blogs @"https://git.oschina.net/FooKaa/helloworld/raw/master/blogs.json"
+#define Adress_webs @"https://git.oschina.net/FooKaa/helloworld/raw/master/webs.json"
+#define Adress_videos @"https://git.oschina.net/FooKaa/helloworld/raw/master/videos.json"
+
+#define Adress_versions @"https://git.oschina.net/FooKaa/helloworld/raw/master/versions.json"
+***/
+/**
+ github 数据源地址**/
+ 
+ #define Address_blogs @"https://raw.githubusercontent.com/chenguandong/iOSStudy/CoreDataJoin/iOSStudyJsonData/blogs.json"
+ #define Adress_webs @"https://raw.githubusercontent.com/chenguandong/iOSStudy/CoreDataJoin/iOSStudyJsonData/webs.json"
+ #define Adress_videos @"https://raw.githubusercontent.com/chenguandong/iOSStudy/CoreDataJoin/iOSStudyJsonData/videos.json"
+ 
+ #define Adress_versions @"https://raw.githubusercontent.com/chenguandong/iOSStudy/CoreDataJoin/iOSStudyJsonData/versions.json"
+
+
+
 
 #define SharedApp ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 
