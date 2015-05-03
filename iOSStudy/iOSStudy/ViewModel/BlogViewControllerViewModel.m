@@ -138,7 +138,7 @@
     //指定对结果的排序方式
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:FavouriteBean_title ascending:NO];
     NSArray *sortDescriptions = [[NSArray alloc]initWithObjects:sortDescriptor, nil];
-    //[fetchRequest setSortDescriptors:sortDescriptions];
+    [fetchRequest setSortDescriptors:sortDescriptions];
     
     
     
