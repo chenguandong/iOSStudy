@@ -14,5 +14,5 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageIcon;
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UILabel *subtitle;
--(void)setImageScale;
+
 @end

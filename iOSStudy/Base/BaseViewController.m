@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "Constants .h"
 
 @interface BaseViewController ()
 
@@ -14,10 +15,15 @@
 
 @implementation BaseViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
+
 }
+
+
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];

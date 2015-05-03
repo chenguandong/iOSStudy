@@ -14,6 +14,7 @@
 		185EEB501A98E0BA00BFDB79 /* tabbar_setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 185EEB4D1A98E0BA00BFDB79 /* tabbar_setting@2x.png */; };
 		185EEB511A98E0BA00BFDB79 /* tabbar_setting@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 185EEB4E1A98E0BA00BFDB79 /* tabbar_setting@3x.png */; };
 		187E96991AD6BED500D164FA /* NotificationCenterConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E96981AD6BED500D164FA /* NotificationCenterConstants.m */; };
+		189BC7DC1AE4ED7C0051EDCD /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BC7DB1AE4ED7C0051EDCD /* UINavigationBar+Awesome.m */; };
 		189EF8331A8399B100F19327 /* BlogBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 189EF8321A8399B100F19327 /* BlogBean.m */; };
 		189EF8361A839FC600F19327 /* JsonTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 189EF8351A839FC600F19327 /* JsonTools.m */; };
 		189EF83A1A83C3AF00F19327 /* BlogDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189EF8391A83C3AF00F19327 /* BlogDetailViewController.m */; };
@@ -138,6 +139,8 @@
 		185EEB4E1A98E0BA00BFDB79 /* tabbar_setting@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabbar_setting@3x.png"; path = " Resource/images/tabbar/tabbar_setting@3x.png"; sourceTree = "<group>"; };
 		187E96971AD6BED500D164FA /* NotificationCenterConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotificationCenterConstants.h; path = libs/NotificationCenterConstants.h; sourceTree = "<group>"; };
 		187E96981AD6BED500D164FA /* NotificationCenterConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotificationCenterConstants.m; path = libs/NotificationCenterConstants.m; sourceTree = "<group>"; };
+		189BC7DA1AE4ED7C0051EDCD /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+Awesome.h"; path = "libs/UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
+		189BC7DB1AE4ED7C0051EDCD /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+Awesome.m"; path = "libs/UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
 		189EF8311A8399B100F19327 /* BlogBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlogBean.h; path = Bean/blogBean/BlogBean.h; sourceTree = "<group>"; };
 		189EF8321A8399B100F19327 /* BlogBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlogBean.m; path = Bean/blogBean/BlogBean.m; sourceTree = "<group>"; };
 		189EF8341A839FC600F19327 /* JsonTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JsonTools.h; path = Tools/JsonTools.h; sourceTree = "<group>"; };
@@ -569,6 +572,8 @@
 		18DF6D3A1A80D3A4005751E8 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				189BC7DA1AE4ED7C0051EDCD /* UINavigationBar+Awesome.h */,
+				189BC7DB1AE4ED7C0051EDCD /* UINavigationBar+Awesome.m */,
 				18E279661AD61AD50056CC5F /* iRate */,
 				18CB71221AD55C0C00D72204 /* APService.h */,
 				18AB47991A9C59CB00E4C030 /* UIImage+Resize.h */,
@@ -889,6 +894,7 @@
 				18D184821AD28D1900188C3C /* FavouriteTableViewController.m in Sources */,
 				18B23B2B1A7A14D100E80854 /* BlogViewController.m in Sources */,
 				189EF83A1A83C3AF00F19327 /* BlogDetailViewController.m in Sources */,
+				189BC7DC1AE4ED7C0051EDCD /* UINavigationBar+Awesome.m in Sources */,
 				185EEB4B1A98DC9900BFDB79 /* SettingTableViewController.m in Sources */,
 				187E96991AD6BED500D164FA /* NotificationCenterConstants.m in Sources */,
 				18C845121ACE4A580053884F /* WelcomeViewController.m in Sources */,

@@ -18,7 +18,9 @@
 #import <MJRefresh.h>
 #import "EntityConstants.h"
 #import "STBaseTableViewCell.h"
+#import "UINavigationBar+Awesome.h"
 
+#define NAVBAR_CHANGE_POINT 50
 @interface BlogViewController ()
 
 @end
@@ -37,6 +39,9 @@
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(notificationReloadData:) name:notifacationBlogReload object:nil];
     
     [self initViewData];
+    
+   // [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor orangeColor]];
+    
 }
 
 -(void)notificationReloadData:(NSNotification*)notifacation{
@@ -90,7 +95,20 @@
     
 }
 
-
+/*
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    UIColor * color = [UIColor colorWithRed:0/255.0 green:175/255.0 blue:240/255.0 alpha:1];
+    CGFloat offsetY = scrollView.contentOffset.y;
+    if (offsetY > NAVBAR_CHANGE_POINT) {
+        CGFloat alpha = 1 - ((NAVBAR_CHANGE_POINT + 64 - offsetY) / 64);
+        
+        [self.navigationController.navigationBar lt_setBackgroundColor:[color colorWithAlphaComponent:alpha]];
+    } else {
+        [self.navigationController.navigationBar lt_setBackgroundColor:[color colorWithAlphaComponent:0]];
+    }
+}
+*/
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [_viewModel getNumberOfRowsInSection];
@@ -117,6 +135,8 @@
     
     
     [cell.imageIcon setImageWithURL:[NSURL URLWithString:[[_viewModel getBlogBean:indexPath] valueForKey:FavouriteBean_image_name]] placeholderImage:[UIImage imageNamed:@"SVWebViewControllerActivitySafari-iPad.png"]];
+    
+
     
 
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;

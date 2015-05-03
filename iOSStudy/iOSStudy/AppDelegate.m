@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "APService.h"
 #import "WelcomeTools.h"
+
 @interface AppDelegate ()
 
 @end
@@ -22,6 +23,13 @@
     [WelcomeTools sharedInstance];
 
     [self setGlobalStyle];
+    
+    
+    //setUrl cache
+    NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:4 * 1024 * 1024
+                                                         diskCapacity:20 * 1024 * 1024
+                                                             diskPath:nil];
+    [NSURLCache setSharedURLCache:URLCache];
     
     
     // Required
@@ -82,6 +90,10 @@
     
     //导航返回按钮颜色
     [[UINavigationBar appearance] setTintColor:[UIColor redColor]];
+    
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
 }
 
 

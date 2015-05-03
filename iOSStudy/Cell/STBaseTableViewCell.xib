@@ -23,6 +23,12 @@
                             <constraint firstAttribute="height" constant="50" id="Dtp-3J-hHp"/>
                             <constraint firstAttribute="width" constant="50" id="vnp-51-5es"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath=".layer.contentsScale">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath=".layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUb-BR-QCa">
                         <rect key="frame" x="60" y="26" width="260" height="33"/>

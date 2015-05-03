@@ -11,15 +11,21 @@
 #ifndef iOSStudy_Constants__h
 #define iOSStudy_Constants__h
 
+//1 OSchina 0 github
 
+#define kHttpSource 0
 
-/****OSChina数据源地址**
+#if kHttpSource
+
+/****OSChina数据源地址*****/
 #define Address_blogs @"https://git.oschina.net/FooKaa/helloworld/raw/master/blogs.json"
 #define Adress_webs @"https://git.oschina.net/FooKaa/helloworld/raw/master/webs.json"
 #define Adress_videos @"https://git.oschina.net/FooKaa/helloworld/raw/master/videos.json"
 
 #define Adress_versions @"https://git.oschina.net/FooKaa/helloworld/raw/master/versions.json"
-***/
+
+
+#else
 /**
  github 数据源地址**/
  
@@ -29,7 +35,7 @@
  
  #define Adress_versions @"https://raw.githubusercontent.com/chenguandong/iOSStudy/CoreDataJoin/iOSStudyJsonData/versions.json"
 
-
+#endif
 
 
 #define SharedApp ((AppDelegate *)[[UIApplication sharedApplication] delegate])

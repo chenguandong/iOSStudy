@@ -13,17 +13,14 @@
 - (void)awakeFromNib {
     // Initialization code
    self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    _imageIcon.layer.cornerRadius = 5;
+    _imageIcon.layer.masksToBounds = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
     // Configure the view for the selected state
 }
 
--(void)setImageScale{
-    _imageIcon.layer.contentsScale = 30;
-    _imageIcon.layer.masksToBounds = YES;
-}
 
 @end
