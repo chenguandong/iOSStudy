@@ -1,0 +1,69 @@
+
+/* Class = "UITabBarController"; title = "博客"; ObjectID = "49e-Tb-3d3"; */
+"49e-Tb-3d3.title" = "Blog";
+
+/* Class = "UILabel"; text = "开源许可"; ObjectID = "5QR-7R-yRv"; */
+"5QR-7R-yRv.text" = "Open source license";
+
+/* Class = "UITabBarItem"; title = "收藏"; ObjectID = "8Gx-f0-bsw"; */
+"8Gx-f0-bsw.title" = "Favourite";
+
+/* Class = "UILabel"; text = "给应用评分"; ObjectID = "9Uv-G0-brC"; */
+"9Uv-G0-brC.text" = "Rate";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "DUN-jA-nZ1"; */
+"DUN-jA-nZ1.text" = "Title";
+
+/* Class = "UITabBarItem"; title = "设置"; ObjectID = "MEY-jV-QF5"; */
+"MEY-jV-QF5.title" = "Setting";
+
+/* Class = "UISegmentedControl"; VcJ-XZ-Bc3.segmentTitles[0] = "博客"; ObjectID = "VcJ-XZ-Bc3"; */
+"VcJ-XZ-Bc3.segmentTitles[0]" = "Blog";
+
+/* Class = "UISegmentedControl"; VcJ-XZ-Bc3.segmentTitles[1] = "网站"; ObjectID = "VcJ-XZ-Bc3"; */
+"VcJ-XZ-Bc3.segmentTitles[1]" = "Web";
+
+/* Class = "UISegmentedControl"; VcJ-XZ-Bc3.segmentTitles[2] = "视频"; ObjectID = "VcJ-XZ-Bc3"; */
+"VcJ-XZ-Bc3.segmentTitles[2]" = "Video";
+
+/* Class = "UINavigationItem"; title = "推荐博客"; ObjectID = "WaC-jM-KHt"; */
+"WaC-jM-KHt.title" = "Recommend Blog";
+
+/* Class = "UITableViewSection"; footerTitle = "官方博客:http://iosstudy.lofter.com/"; ObjectID = "YWs-ix-bRc"; */
+"YWs-ix-bRc.footerTitle" = "BlogAdress:http://iosstudy.lofter.com/";
+
+/* Class = "UITableViewSection"; headerTitle = "关于我们"; ObjectID = "YWs-ix-bRc"; */
+"YWs-ix-bRc.headerTitle" = "About us";
+
+/* Class = "UINavigationItem"; title = "推荐网站"; ObjectID = "YiK-bv-9gx"; */
+"YiK-bv-9gx.title" = "Recommend Web";
+
+/* Class = "UINavigationItem"; title = "开源协议"; ObjectID = "ZNU-fK-evW"; */
+"ZNU-fK-evW.title" = "Open source license";
+
+/* Class = "UILabel"; text = "关于"; ObjectID = "ZgU-bl-sae"; */
+"ZgU-bl-sae.text" = "About";
+
+/* Class = "UITabBarItem"; title = "博客"; ObjectID = "acW-dT-cKf"; */
+"acW-dT-cKf.title" = "Blog";
+
+/* Class = "UITabBarItem"; title = "网站"; ObjectID = "cPa-gy-q4n"; */
+"cPa-gy-q4n.title" = "Web";
+
+/* Class = "UITabBarItem"; title = "视频"; ObjectID = "fbE-WQ-JZW"; */
+"fbE-WQ-JZW.title" = "Video";
+
+/* Class = "UINavigationItem"; title = "设置"; ObjectID = "gf0-0D-9bS"; */
+"gf0-0D-9bS.title" = "Setting";
+
+/* Class = "UILabel"; text = "意见反馈"; ObjectID = "o5j-bN-LCE"; */
+"o5j-bN-LCE.text" = "Feedback";
+
+/* Class = "UINavigationItem"; title = "推荐视频"; ObjectID = "otE-MF-bXm"; */
+"otE-MF-bXm.title" = "Recommend Video";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "rkz-vV-hB8"; */
+"rkz-vV-hB8.text" = "Subtitle";
+
+/* Class = "UITableViewController"; title = "设置"; ObjectID = "wtw-i4-ZN0"; */
+"wtw-i4-ZN0.title" = "Setting";

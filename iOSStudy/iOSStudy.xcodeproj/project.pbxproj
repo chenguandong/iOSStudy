@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1839702E1B0182720098318E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18B23B231A7A14D100E80854 /* Info.plist */; };
 		184F48AF1A93321700C5C22F /* WebViewControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 184F48AE1A93321700C5C22F /* WebViewControllerViewModel.m */; };
 		184F48B41A93340F00C5C22F /* WebBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 184F48B31A93340F00C5C22F /* WebBean.m */; };
 		185EEB4B1A98DC9900BFDB79 /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EEB4A1A98DC9900BFDB79 /* SettingTableViewController.m */; };
@@ -128,6 +129,8 @@
 
 /* Begin PBXFileReference section */
 		05EB633B553B549AA5102110 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		183970301B0182A00098318E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		183970321B0182A60098318E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		184F48AE1A93321700C5C22F /* WebViewControllerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewControllerViewModel.m; path = iOSStudy/ViewModel/WebViewControllerViewModel.m; sourceTree = "<group>"; };
 		184F48B01A93323F00C5C22F /* WebViewControllerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewControllerViewModel.h; path = iOSStudy/ViewModel/WebViewControllerViewModel.h; sourceTree = "<group>"; };
 		184F48B21A93340F00C5C22F /* WebBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebBean.h; path = Bean/webBean/WebBean.h; sourceTree = "<group>"; };
@@ -778,6 +781,7 @@
 				18D201191A95A6F400D5F095 /* icon_76.png in Resources */,
 				18EC47DA1AD7C62F00C397E5 /* anim_07.png in Resources */,
 				18EC47B01AD7949100C397E5 /* img_2208x1242.png in Resources */,
+				1839702E1B0182720098318E /* Info.plist in Resources */,
 				18D2011E1A95A6F400D5F095 /* icon_180.png in Resources */,
 				18D2012B1A95A9D600D5F095 /* tabbar_video.png in Resources */,
 				18EC47BA1AD7AE3200C397E5 /* welcome_icon.png in Resources */,
@@ -931,6 +935,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				18B23B301A7A14D100E80854 /* Base */,
+				183970301B0182A00098318E /* en */,
+				183970321B0182A60098318E /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1051,7 +1057,7 @@
 					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7ede2157-30b8-44eb-8161-e3a71f95fec4";
+				PROVISIONING_PROFILE = "feb3a09a-149c-4598-b0c8-274119d8d229";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1085,7 +1091,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7ede2157-30b8-44eb-8161-e3a71f95fec4";
+				PROVISIONING_PROFILE = "feb3a09a-149c-4598-b0c8-274119d8d229";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

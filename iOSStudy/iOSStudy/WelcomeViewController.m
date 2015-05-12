@@ -60,7 +60,7 @@
     loadingLabel.textColor = [UIColor whiteColor];
     loadingLabel.font =[UIFont systemFontOfSize:40];
     loadingLabel.textAlignment = NSTextAlignmentCenter;
-    loadingLabel.text = NSLocalizedString(@"正在更新数据...", nil);
+    loadingLabel.text = NSLocalizedString(@"Loding Data...", nil);
     _shinmmerView.contentView = loadingLabel;
     
     // Start shimmering.

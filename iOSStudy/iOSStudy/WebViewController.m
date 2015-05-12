@@ -51,9 +51,7 @@
     
     _viewModel = [[WebViewControllerViewModel alloc]init];
     
-    [self.tableView addHeaderWithCallback:^{
-        
-        
+    [self.tableView addLegendHeaderWithRefreshingBlock:^{
         [_viewModel getDate:^{
             [_tableView reloadData];
             
@@ -67,11 +65,15 @@
             [self stopTableRefreshing];
         } httpAdress:Adress_webs dataType:TYPE_WEB_SIMPLE_TYPE jsonClass:[WebBean class]];
         
-        
-        
     }];
     
-    [self.tableView headerBeginRefreshing];
+
+    // 隐藏时间
+    self.tableView.header.updatedTimeHidden = YES;
+    // 隐藏状态
+    self.tableView.header.stateHidden = YES;
+    
+    [self.tableView.header beginRefreshing];
     
     _tableView.rowHeight = 60;
     
@@ -82,8 +84,8 @@
  *  停止UITableView刷新
  */
 -(void)stopTableRefreshing{
-    if ([_tableView isHeaderRefreshing]) {
-        [_tableView headerEndRefreshing];
+    if ([_tableView.header isRefreshing]) {
+        [_tableView.header endRefreshing];
     }
 }
 
