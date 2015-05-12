@@ -20,11 +20,10 @@ PODS:
   - AFNetworking/UIKit (2.5.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - ECSlidingViewController (2.0.3)
   - Mantle (2.0):
     - Mantle/extobjc (= 2.0)
   - Mantle/extobjc (2.0)
-  - MJRefresh (1.4.5)
+  - MJRefresh (1.4.6)
   - SDWebImage (3.7.2):
     - SDWebImage/Core (= 3.7.2)
   - SDWebImage/Core (3.7.2)
@@ -35,7 +34,6 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
-  - ECSlidingViewController (~> 2.0.3)
   - Mantle
   - MJRefresh
   - SDWebImage
@@ -46,9 +44,8 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: e1d86c2a96bb5d2e7408da36149806706ee122fe
-  ECSlidingViewController: 6485c14f23b4487e9946535421ca8f111f86cc53
-  Mantle: 17de73ef929db2234d76fde2aacfb89ab11c61e8
-  MJRefresh: 4b24394e577ea399fbc926e5b6072317aae2c152
+  Mantle: d7c75b6fb789b20f7ae30cd0d09435fe545896ff
+  MJRefresh: 2eaa3fd8f67fbb86497840fb0167446f7eb61dc7
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1

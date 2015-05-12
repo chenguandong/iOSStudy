@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1839702E1B0182720098318E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18B23B231A7A14D100E80854 /* Info.plist */; };
+		183970351B01A6C50098318E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 183970371B01A6C50098318E /* Localizable.strings */; };
 		184F48AF1A93321700C5C22F /* WebViewControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 184F48AE1A93321700C5C22F /* WebViewControllerViewModel.m */; };
 		184F48B41A93340F00C5C22F /* WebBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 184F48B31A93340F00C5C22F /* WebBean.m */; };
 		185EEB4B1A98DC9900BFDB79 /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EEB4A1A98DC9900BFDB79 /* SettingTableViewController.m */; };
@@ -131,6 +132,8 @@
 		05EB633B553B549AA5102110 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		183970301B0182A00098318E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		183970321B0182A60098318E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		183970361B01A6C50098318E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		183970381B01A6C70098318E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		184F48AE1A93321700C5C22F /* WebViewControllerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewControllerViewModel.m; path = iOSStudy/ViewModel/WebViewControllerViewModel.m; sourceTree = "<group>"; };
 		184F48B01A93323F00C5C22F /* WebViewControllerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewControllerViewModel.h; path = iOSStudy/ViewModel/WebViewControllerViewModel.h; sourceTree = "<group>"; };
 		184F48B21A93340F00C5C22F /* WebBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebBean.h; path = Bean/webBean/WebBean.h; sourceTree = "<group>"; };
@@ -451,6 +454,7 @@
 				18D200F71A95A1FB00D5F095 /*  Resource */,
 				18B23B231A7A14D100E80854 /* Info.plist */,
 				18B23B241A7A14D100E80854 /* main.m */,
+				183970371B01A6C50098318E /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -806,6 +810,7 @@
 				18EC47D91AD7C62F00C397E5 /* anim_06.png in Resources */,
 				18D201301A95A9D600D5F095 /* tabbar_web@3x.png in Resources */,
 				18D2012C1A95A9D600D5F095 /* tabbar_video@2x.png in Resources */,
+				183970351B01A6C50098318E /* Localizable.strings in Resources */,
 				18D2012F1A95A9D600D5F095 /* tabbar_web@2x.png in Resources */,
 				18EC47AA1AD7949100C397E5 /* img_750x1334.png in Resources */,
 				18D201171A95A6F400D5F095 /* icon_40.png in Resources */,
@@ -931,6 +936,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		183970371B01A6C50098318E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				183970361B01A6C50098318E /* en */,
+				183970381B01A6C70098318E /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		18B23B2F1A7A14D100E80854 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

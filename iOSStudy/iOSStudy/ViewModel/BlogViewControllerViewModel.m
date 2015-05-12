@@ -292,9 +292,9 @@
     NSString *showText ;
     
     if ([self queryisFavourite:url withType:type]) {
-        showText = textNameUnFavourite;
+        showText = NSLocalizedString(@"unlove", nil);
     }else{
-        showText = textNameFavourite;
+        showText = NSLocalizedString(@"love", nil);
     }
     
     

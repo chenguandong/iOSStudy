@@ -8,6 +8,7 @@
 
 
 #import "AppDelegate.h"
+#import <Foundation/Foundation.h>
 #ifndef iOSStudy_Constants__h
 #define iOSStudy_Constants__h
 
@@ -52,8 +53,6 @@
 #define CD_VersionsEntity @"VersionsEntity"
 
 
-static NSString *const textNameFavourite = @"收藏";
-static NSString *const textNameUnFavourite = @"取消收藏";
 
 static NSString *const TYPE_BLOG_SIMPLE_TYPE = @"1";
 static NSString *const TYPE_WEB_SIMPLE_TYPE = @"2";

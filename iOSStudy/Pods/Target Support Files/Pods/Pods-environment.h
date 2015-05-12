@@ -48,17 +48,11 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 5
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 3
 
-// ECSlidingViewController
-#define COCOAPODS_POD_AVAILABLE_ECSlidingViewController
-#define COCOAPODS_VERSION_MAJOR_ECSlidingViewController 2
-#define COCOAPODS_VERSION_MINOR_ECSlidingViewController 0
-#define COCOAPODS_VERSION_PATCH_ECSlidingViewController 3
-
 // MJRefresh
 #define COCOAPODS_POD_AVAILABLE_MJRefresh
 #define COCOAPODS_VERSION_MAJOR_MJRefresh 1
 #define COCOAPODS_VERSION_MINOR_MJRefresh 4
-#define COCOAPODS_VERSION_PATCH_MJRefresh 5
+#define COCOAPODS_VERSION_PATCH_MJRefresh 6
 
 // Mantle
 #define COCOAPODS_POD_AVAILABLE_Mantle

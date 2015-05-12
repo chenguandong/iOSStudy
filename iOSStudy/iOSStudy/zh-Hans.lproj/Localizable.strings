@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  iOSStudy
+
+  Created by chenguandong on 15/5/12.
+  Copyright (c) 2015年 chenguandong. All rights reserved.
+*/
+"loadData" = "正在更新数据...";
+"love" =  "收藏";
+"unlove" = "取消收藏";
