@@ -32,7 +32,7 @@
 
 +(void)initNetWork{
     // Allocate a reachability object
-    reach = [Reachability reachabilityWithHostname:@"www.douban.com"];
+    reach = [Reachability reachabilityWithHostname:@"www.baidu.com"];
     
     // Set the blocks
     reach.reachableBlock = ^(Reachability*reach)
